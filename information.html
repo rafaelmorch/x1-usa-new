@@ -2,17 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information - X1 USA Series</title>
-    <link rel="stylesheet" href="style.css"> <!-- Importando o estilo global -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🔹 Seção de Informação */
+        .info-section {
+            background: url('Shot 4.mp4') no-repeat center center;
+            background-size: cover;
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        /* 🔹 Sobreposição escura para melhorar a leitura */
+        .info-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .info-container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .info-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* 🔹 Caixa branca transparente */
+        .info-box {
+            background: rgba(255, 255, 255, 0.7);
+            color: black;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        /* 🔹 Botões */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #Ff0000, #002147);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+    </style>
 </head>
 <body>
-
-    <!-- 🔹 Fundo com Vídeo -->
-    <div class="video-container">
-        <video src="Shot 4.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="video-overlay"></div> <!-- Camada preta semi-transparente -->
 
     <!-- 🔹 Cabeçalho -->
     <header>
@@ -27,31 +100,24 @@
                 <li><a href="information.html" class="active">Information</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> 
+            <div class="menu-toggle">&#9776;</div> <!-- Ícone de menu para mobile -->
         </nav>
     </header>
 
     <!-- 🔹 Seção de Informações -->
-    <section class="information-section">
-        <h2>Event Information</h2>
-        <p>
-            Welcome to the **X1 USA Series 2025**! This tournament provides young athletes the perfect platform to showcase their talent and compete at the highest level. 
-            Experience thrilling 1v1 matches and an unforgettable atmosphere. Check out all the details below:
-        </p>
+    <section class="info-section">
+        <div class="info-container">
+            <h2>📅 Event Information</h2>
+            <p>Welcome to the **X1 USA Series 2025**! This tournament brings together the best young talents for a high-intensity 1v1 soccer competition.</p>
 
-        <div class="info-box">
-            <h3>📅 Date & Location</h3>
-            <p>March 22, 2025 | Washington, DC</p>
-        </div>
+            <div class="info-box">📍 <strong>Location:</strong> Washington, DC</div>
+            <div class="info-box">📆 <strong>Date:</strong> March 22, 2025</div>
+            <div class="info-box">⚽ <strong>Categories:</strong> Sub 8, Sub 10, Sub 12</div>
 
-        <div class="info-box">
-            <h3>⚽ Categories</h3>
-            <p>Sub 8, Sub 10, and Sub 12</p>
-        </div>
-
-        <div class="button-container">
-            <a href="Regulamento-X1-USA-SERIES.pdf" class="btn" target="_blank">📜 View Regulations</a>
-            <a href="Planejamento-X1-USA-Series-2025.xlsx" class="btn" target="_blank">📅 View Match Schedule</a>
+            <div class="button-container">
+                <a href="Regulamento X1 USA SERIES.pdf" class="btn" target="_blank">📜 View Regulations</a>
+                <a href="Planejamento X1 Florida Series - 2025.xlsx" class="btn" target="_blank">📅 View Match Schedule</a>
+            </div>
         </div>
     </section>
 
@@ -60,12 +126,10 @@
         <p>&copy; 2025 X1 USA Series. All rights reserved.</p>
     </footer>
 
-    <!-- 🔹 Script para menu mobile -->
     <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.nav-links');
-            menu.classList.toggle('active');
-        }
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
     </script>
 
 </body>
