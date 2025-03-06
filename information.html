@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Information - X1 USA Series</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Importando o estilo global -->
 </head>
 <body>
+
+    <!-- 🔹 Fundo com Vídeo -->
+    <div class="video-container">
+        <video src="Shot 4.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-overlay"></div> <!-- Camada preta semi-transparente -->
 
     <!-- 🔹 Cabeçalho -->
     <header>
@@ -21,42 +27,45 @@
                 <li><a href="information.html" class="active">Information</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle">&#9776;</div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> 
         </nav>
     </header>
 
-    <!-- 🔹 Hero Section -->
-    <section class="hero-section">
-        <h1>Event Information</h1>
-        <p>All you need to know about the X1 USA Series 2025.</p>
+    <!-- 🔹 Seção de Informações -->
+    <section class="information-section">
+        <h2>Event Information</h2>
+        <p>
+            Welcome to the **X1 USA Series 2025**! This tournament provides young athletes the perfect platform to showcase their talent and compete at the highest level. 
+            Experience thrilling 1v1 matches and an unforgettable atmosphere. Check out all the details below:
+        </p>
+
+        <div class="info-box">
+            <h3>📅 Date & Location</h3>
+            <p>March 22, 2025 | Washington, DC</p>
+        </div>
+
+        <div class="info-box">
+            <h3>⚽ Categories</h3>
+            <p>Sub 8, Sub 10, and Sub 12</p>
+        </div>
+
+        <div class="button-container">
+            <a href="Regulamento-X1-USA-SERIES.pdf" class="btn" target="_blank">📜 View Regulations</a>
+            <a href="Planejamento-X1-USA-Series-2025.xlsx" class="btn" target="_blank">📅 View Match Schedule</a>
+        </div>
     </section>
-
-    <!-- 🔹 Linha Divisória -->
-    <div class="section-divider"></div>
-
-    <!-- 🔹 Detalhes do Torneio -->
-    <section class="info-section">
-        <h2>Tournament Details</h2>
-        <p><strong>📅 Date:</strong> March 22, 2025</p>
-        <p><strong>📍 Location:</strong> Audi Field, Washington, DC</p>
-        <p><strong>🏆 Categories:</strong> U-8, U-10, and U-12</p>
-        <br>
-        <a href="Regulamento_X1_USA_SERIES.pdf" target="_blank" class="register-btn">View Rules</a>
-        <a href="Planejamento_X1_Florida_Series_2025.xlsx" target="_blank" class="register-btn">View Schedule</a>
-    </section>
-
-    <!-- 🔹 Linha Divisória -->
-    <div class="section-divider"></div>
 
     <!-- 🔹 Rodapé -->
     <footer>
         <p>&copy; 2025 X1 USA Series. All rights reserved.</p>
     </footer>
 
+    <!-- 🔹 Script para menu mobile -->
     <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-            document.querySelector(".nav-links").classList.toggle("active");
-        });
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
     </script>
 
 </body>
