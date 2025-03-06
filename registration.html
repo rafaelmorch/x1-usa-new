@@ -6,7 +6,7 @@
     <title>Registration - X1 USA Series</title>
     <link rel="stylesheet" href="style.css"> <!-- Mantém o CSS externo -->
     <style>
-        /* 🔹 Fundo mais claro */
+        /* 🔹 Seção de Registro com Fundo */
         .registration-section {
             position: relative;
             width: 100%;
@@ -17,19 +17,9 @@
             text-align: center;
             color: white;
             overflow: hidden;
-        }
-
-        .registration-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('Stadium.png') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('./Stadium.png') no-repeat center center;
             background-size: cover;
-            filter: brightness(1.3); /* 🔹 Imagem mais clara */
-            z-index: -1;
         }
 
         /* 🔹 Texto "REGISTRATION" Responsivo */
@@ -43,53 +33,6 @@
         @media (max-width: 768px) {
             .registration-section h2 {
                 font-size: 2.5rem; /* 🔹 Reduz tamanho no celular */
-            }
-        }
-
-        /* 🔹 Seção de Detalhes */
-        .challenge-section {
-            background-color: #f4f4f4;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .challenge-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .challenge-text {
-            flex: 1;
-            text-align: left;
-            font-size: 1.3rem;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .challenge-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .challenge-image img {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        /* 🔹 Responsividade */
-        @media (max-width: 768px) {
-            .challenge-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .challenge-text {
-                text-align: center;
             }
         }
     </style>
