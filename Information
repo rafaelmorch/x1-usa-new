@@ -21,48 +21,43 @@
                 <li><a href="information.html" class="active">Information</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <div class="menu-toggle">&#9776;</div>
         </nav>
     </header>
 
-    <!-- 🔹 Seção de Informação do Torneio -->
-    <section class="info-hero">
-        <h1>All You Need to Know About X1 USA Series</h1>
-        <p>Get the latest details about the biggest 1v1 soccer competition in the USA!</p>
+    <!-- 🔹 Hero Section -->
+    <section class="hero-section">
+        <h1>Event Information</h1>
+        <p>All you need to know about the X1 USA Series 2025.</p>
     </section>
 
     <!-- 🔹 Linha Divisória -->
     <div class="section-divider"></div>
 
-    <!-- 🔹 Seção de Detalhes do Torneio -->
-    <section class="tournament-details">
+    <!-- 🔹 Detalhes do Torneio -->
+    <section class="info-section">
         <h2>Tournament Details</h2>
         <p><strong>📅 Date:</strong> March 22, 2025</p>
-        <p><strong>📍 Location:</strong> Audi Field, Washington DC</p>
-        <p><strong>🛑 Categories:</strong> Sub 8, Sub 10, Sub 12</p>
-        <p><strong>📜 Rules & Regulations:</strong> <a href="Regulamento_X1_USA.pdf" target="_blank">Download Here</a></p>
-        <p><strong>📊 Match Schedule:</strong> <a href="Planejamento_X1_USA.xlsx" target="_blank">View Schedule</a></p>
+        <p><strong>📍 Location:</strong> Audi Field, Washington, DC</p>
+        <p><strong>🏆 Categories:</strong> U-8, U-10, and U-12</p>
+        <br>
+        <a href="Regulamento_X1_USA_SERIES.pdf" target="_blank" class="register-btn">View Rules</a>
+        <a href="Planejamento_X1_Florida_Series_2025.xlsx" target="_blank" class="register-btn">View Schedule</a>
     </section>
 
-    <!-- 🔹 Seção de FAQ -->
-    <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq">
-            <p><strong>How can I register?</strong></p>
-            <p>Simply visit the <a href="registration.html">Registration Page</a> and follow the instructions.</p>
-        </div>
-        <div class="faq">
-            <p><strong>What should I bring to the tournament?</strong></p>
-            <p>Each player must bring proper gear, including shin guards, cleats, and a team uniform.</p>
-        </div>
-        <div class="faq">
-            <p><strong>Where can I find the schedule?</strong></p>
-            <p>You can download the full match schedule <a href="Planejamento_X1_USA.xlsx" target="_blank">here</a>.</p>
-        </div>
-    </section>
+    <!-- 🔹 Linha Divisória -->
+    <div class="section-divider"></div>
 
+    <!-- 🔹 Rodapé -->
     <footer>
         <p>&copy; 2025 X1 USA Series. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>
