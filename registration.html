@@ -10,7 +10,7 @@
         .registration-section {
             position: relative;
             width: 100%;
-            height: 100vh;
+            height: 50vh; /* 🔹 Altura reduzida */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,41 +32,18 @@
             z-index: -1;
         }
 
-        /* 🔹 Quadrado escuro para o texto */
-        .registration-box {
-            background: rgba(0, 0, 0, 0.7); /* 🔹 Fundo escuro semitransparente */
-            padding: 40px;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 90%;
-        }
-
+        /* 🔹 Texto "REGISTRATION" Responsivo */
         .registration-section h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 4rem;
         }
 
-        .registration-section p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        /* 🔹 Botão */
-        .register-btn {
-            display: inline-block;
-            background: linear-gradient(to right, #Ff0000, #051094);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: transform 0.2s;
-        }
-
-        .register-btn:hover {
-            transform: scale(1.05);
+        @media (max-width: 768px) {
+            .registration-section h2 {
+                font-size: 2.5rem; /* 🔹 Reduz tamanho no celular */
+            }
         }
 
         /* 🔹 Seção de Detalhes */
@@ -137,19 +114,9 @@
     </header>
 
     <!-- 🔹 Seção de Registro -->
-<section class="registration-section" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Stadium.png') no-repeat center center; background-size: cover; padding: 60px 20px; text-align: center;">
-    <h2 style="font-family: 'Lato', sans-serif; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 4rem;">
-        REGISTRATION
-    </h2>
-</section>
-
-<style>
-    @media (max-width: 768px) {
-        .registration-section h2 {
-            font-size: 2.5rem; /* Diminui a fonte em telas menores */
-        }
-    }
-</style>
+    <section class="registration-section">
+        <h2>REGISTRATION</h2>
+    </section>
 
     <!-- 🔹 Linha Divisória -->
     <div class="section-divider"></div>
