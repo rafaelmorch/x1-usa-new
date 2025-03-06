@@ -170,7 +170,6 @@ nav {
 }
 
 /* 🔹 Seção de Experiência */
-/* 🔹 Seção de Experiência */
 .experience-section {
     background: white;
     padding: 60px 20px;
@@ -221,6 +220,7 @@ nav {
 }
 
 /* 🔹 Botão de Registro */
+/* 🔹 Botão de Registro */
 .register-btn {
     display: inline-block;
     background: linear-gradient(to right, #Ff0000, #051094);
@@ -232,12 +232,16 @@ nav {
     font-size: 1.3rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
-    margin-top: 10px; /* 🔹 Adiciona espaçamento antes do botão */
+    margin-top: 10px;
+    min-width: 220px; /* 🔹 Define um tamanho mínimo fixo */
+    text-align: center;
 }
 
+/* 🔹 Efeito Hover */
 .register-btn:hover {
     transform: scale(1.05);
 }
+
 
 /* 🔹 Responsividade */
 @media (max-width: 1024px) {
