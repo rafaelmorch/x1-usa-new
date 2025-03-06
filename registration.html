@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registration - X1 USA Series</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Importando o estilo global -->
 </head>
 <body>
 
@@ -21,14 +21,13 @@
                 <li><a href="information.html">Information</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle">&#9776;</div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> 
         </nav>
     </header>
 
-    <!-- 🔹 Hero Section -->
-    <section class="hero-section">
-        <h1>Registration</h1>
-        <p>Secure your spot in the X1 USA Series 2025 now!</p>
+    <!-- 🔹 Seção Registration com imagem de fundo -->
+    <section class="registration-header">
+        <h2>REGISTRATION</h2>
     </section>
 
     <!-- 🔹 Linha Divisória -->
@@ -36,23 +35,34 @@
 
     <!-- 🔹 Seção de Registro -->
     <section class="registration-section">
-        <h2>Register Now</h2>
-        <p>Click the button below to complete your registration.</p>
-        <a href="https://form.jotform.com/250294639803159" target="_blank" class="register-btn">Register Here</a>
+        <div class="registration-container">
+            <div class="registration-text">
+                <h2>X1 USA Series 2025: The Ultimate 1v1 Challenge!</h2>
+                <p>
+                    <strong>The X1 USA Series 2025</strong> is the premier 1v1 tournament in the U.S., designed to help young players showcase their skills and compete in an intense and thrilling environment. 
+                    With participants traveling from around the globe, the X1 USA Series offers the perfect stage to test your abilities against top talent in a competitive atmosphere.
+                </p>
+                <p><strong>Don’t miss out!</strong> Register now and secure your spot in this unparalleled experience of skill, competition, and passion.</p>
+                
+                <a href="https://form.jotform.com/250294639803159" target="_blank" class="register-btn">Register Now</a>
+            </div>
+            <div class="registration-image">
+                <img src="bolaquebrandovidro.png" alt="Player holding ball">
+            </div>
+        </div>
     </section>
-
-    <!-- 🔹 Linha Divisória -->
-    <div class="section-divider"></div>
 
     <!-- 🔹 Rodapé -->
     <footer>
         <p>&copy; 2025 X1 USA Series. All rights reserved.</p>
     </footer>
 
+    <!-- 🔹 Script para menu mobile -->
     <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-            document.querySelector(".nav-links").classList.toggle("active");
-        });
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
     </script>
 
 </body>
