@@ -39,7 +39,7 @@
         /* 🔹 Seção de Detalhes do Torneio */
         .challenge-section {
             background-color: #f4f4f4;
-            padding: 80px 20px;
+            padding: 40px 20px 80px; /* 🔹 Reduzi o padding superior */
             text-align: center;
         }
 
@@ -135,78 +135,25 @@
     <!-- 🔹 Linha Divisória -->
     <div class="section-divider"></div>
 
-<!-- 🔹 Seção de Detalhes do Torneio -->
-<section class="challenge-section">
-    <div class="challenge-container">
-        <div class="challenge-text">
-            <h2 style="color: #002147;">The Ultimate 1v1 Challenge!</h2>
-            <p>
-                The <strong>X1 USA Series 2025</strong> is the premier 1v1 tournament in the U.S., designed to help young players showcase their skills and compete in an intense and thrilling environment.
-                With participants from around the world, the tournament provides the perfect stage for top talent in a highly competitive atmosphere.
-            </p>
-            <p>
-                Don't miss out! Register now and secure your spot in this unparalleled experience of skill, competition, and passion.
-            </p>
-            <a href="https://form.jotform.com/250294639803159" class="register-btn" target="_blank">Register Now</a>
+    <!-- 🔹 Seção de Detalhes do Torneio -->
+    <section class="challenge-section">
+        <div class="challenge-container">
+            <div class="challenge-text">
+                <h2 style="color: #002147;">The Ultimate 1v1 Challenge!</h2>
+                <p>
+                    The <strong>X1 USA Series 2025</strong> is the premier 1v1 tournament in the U.S., designed to help young players showcase their skills and compete in an intense and thrilling environment.
+                    With participants from around the world, the tournament provides the perfect stage for top talent in a highly competitive atmosphere.
+                </p>
+                <p>
+                    Don't miss out! Register now and secure your spot in this unparalleled experience of skill, competition, and passion.
+                </p>
+                <a href="https://form.jotform.com/250294639803159" class="register-btn" target="_blank">Register Now</a>
+            </div>
+            <div class="challenge-image">
+                <img src="bolaquebrandovidro.png" alt="Player holding ball">
+            </div>
         </div>
-        <div class="challenge-image">
-            <img src="bolaquebrandovidro.png" alt="Player holding ball">
-        </div>
-    </div>
-</section>
-
-<style>
-    .challenge-container {
-        display: flex;
-        align-items: stretch; /* 🔹 Mantém o texto e a imagem com a mesma altura */
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 30px;
-    }
-
-    .challenge-text {
-        flex: 1;
-        padding: 20px;
-        text-align: left;
-        font-size: 1.2rem;
-        line-height: 1.6;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .challenge-image {
-        flex: 1;
-        display: flex;
-        align-items: center;
-    }
-
-    .challenge-image img {
-        width: 100%;
-        object-fit: cover; /* 🔹 Garante que a imagem cubra bem a área */
-        height: auto; /* 🔹 Ajuste dinâmico da altura */
-        max-height: 100%; /* 🔹 Evita que fique desproporcional */
-    }
-
-    /* 🔹 Responsividade */
-    @media (max-width: 1024px) {
-        .challenge-container {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .challenge-text {
-            text-align: center;
-        }
-
-        .challenge-image img {
-            max-width: 90%;
-        }
-    }
-</style>
-
+    </section>
 
     <!-- 🔹 Rodapé -->
     <footer>
