@@ -13,33 +13,42 @@ body, html {
 }
 
 /* 🔹 Cabeçalho Responsivo */
+/* 🔹 Cabeçalho Responsivo */
 header {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.5); /* 🔹 Deixa mais transparente */
     position: fixed;
     width: 100%;
     z-index: 1000;
     padding: 15px 0;
 }
 
+/* 🔹 Estilização do Navbar */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 🔹 Mantém os elementos bem distribuídos */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* 🔹 Logo e Texto */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 40px; /* 🔹 Reduz o tamanho do logo */
+    height: 40px; /* 🔹 Ajuste no tamanho do logo */
     margin-right: 10px;
 }
 
+.logo h1 {
+    color: white; /* 🔹 Torna o texto "X1 USA Series" branco */
+    font-size: 1.5rem;
+}
+
+/* 🔹 Links do Menu */
 .nav-links {
     list-style: none;
     display: flex;
@@ -56,12 +65,41 @@ nav {
     font-size: 1rem;
 }
 
+/* 🔹 Ícone do Menu Mobile */
 .menu-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
     color: white;
+    position: absolute;
+    right: 20px; /* 🔹 Posiciona no canto direito */
+    top: 50%;
+    transform: translateY(-50%);
 }
+
+/* 🔹 Responsividade do Menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
 
 /* 🔹 Seção Hero com Vídeo Responsivo */
 .hero-section {
