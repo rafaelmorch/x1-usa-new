@@ -14,36 +14,34 @@ body, html {
 
 /* 🔹 Cabeçalho Responsivo */
 header {
-    background: rgba(0, 0, 0, 0.5); /* 🔹 Deixa mais transparente */
+    background: rgba(0, 0, 0, 0.5); /* 🔹 Transparente */
     position: fixed;
     width: 100%;
     z-index: 1000;
     padding: 15px 0;
 }
 
-/* 🔹 Estilização do Navbar */
 nav {
     display: flex;
-    justify-content: space-between; /* 🔹 Mantém os elementos bem distribuídos */
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* 🔹 Logo e Texto */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 40px; /* 🔹 Ajuste no tamanho do logo */
+    height: 40px;
     margin-right: 10px;
 }
 
 .logo h1 {
-    color: white; /* 🔹 Torna o texto "X1 USA Series" branco */
+    color: white;
     font-size: 1.5rem;
 }
 
@@ -62,11 +60,11 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    position: relative; /* 🔹 Permite adicionar o underline */
+    position: relative;
     padding-bottom: 5px;
 }
 
-/* 🔹 Efeito de Underline Vermelho na Página Ativa */
+/* 🔹 Underline Vermelho na Página Ativa */
 .nav-links a.active::after {
     content: "";
     position: absolute;
@@ -74,10 +72,10 @@ nav {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: red; /* 🔹 Underline vermelho */
+    background-color: red;
 }
 
-/* 🔹 Efeito de Underline ao Passar o Mouse */
+/* 🔹 Hover do Underline */
 .nav-links a:hover::after {
     content: "";
     position: absolute;
@@ -95,89 +93,9 @@ nav {
     cursor: pointer;
     color: white;
     position: absolute;
-    right: 20px; /* 🔹 Posiciona no canto direito */
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
-}
-
-/* 🔹 Responsividade do Menu */
-/* 🔹 Ajustes para Tablets */
-@media (max-width: 1024px) {
-    .hero-section {
-        height: 70vh; /* 🔹 Diminui a altura do vídeo */
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .experience-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .experience-text {
-        text-align: center;
-        font-size: 1.1rem; /* 🔹 Reduz um pouco a fonte da Experiência */
-    }
-
-    .experience-image img {
-        max-width: 90%;
-    }
-    
-    .map-container iframe {
-        height: 350px; /* 🔹 Reduz um pouco a altura do mapa */
-    }
-}
-
-/* 🔹 Ajustes para Celulares */
-@media (max-width: 768px) {
-    .hero-section {
-        height: 60vh; /* 🔹 Reduz ainda mais a altura do vídeo */
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .experience-text {
-        font-size: 1rem; /* 🔹 Reduz um pouco mais a fonte da Experiência */
-    }
-
-    .map-container iframe {
-        height: 300px; /* 🔹 Diminui mais a altura do mapa */
-    }
-}
-
-/* 🔹 Ajustes para Telas Pequenas */
-@media (max-width: 480px) {
-    .hero-section {
-        height: 50vh; /* 🔹 Deixa o vídeo menor em telas pequenas */
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1rem;
-    }
-
-    .experience-text {
-        font-size: 0.95rem; /* 🔹 Ajusta para não ocupar muito espaço */
-    }
-
-    .map-container iframe {
-        height: 250px; /* 🔹 Reduz bastante a altura do mapa */
-    }
 }
 
 /* 🔹 Seção Hero com Vídeo Responsivo */
@@ -197,27 +115,7 @@ nav {
     object-fit: cover;
 }
 
-.hero-content {
-    position: absolute;
-    text-align: center;
-    z-index: 2;
-    color: white;
-    text-shadow: 2px 2px 10px black;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.hero-content h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* 🔹 Linha Divisória Entre as Seções */
+/* 🔹 Linha Divisória */
 .section-divider {
     width: 100%;
     height: 15px;
@@ -242,7 +140,7 @@ nav {
 
 .experience-container {
     display: flex;
-    align-items: stretch; /* 🔹 Mantém o texto e a imagem com o mesmo tamanho */
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -271,11 +169,10 @@ nav {
     width: 100%;
     max-width: 500px;
     border-radius: 15px;
-    object-fit: cover; /* 🔹 Garante que a imagem cubra bem a área */
-    height: auto; /* 🔹 Permite que a imagem cresça proporcionalmente ao texto */
+    object-fit: cover;
+    height: auto;
 }
 
-/* 🔹 Botão de Registro */
 /* 🔹 Botão de Registro */
 .register-btn {
     display: inline-block;
@@ -289,146 +186,49 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     margin-top: 10px;
-    min-width: 220px; /* 🔹 Define um tamanho mínimo fixo */
+    min-width: 220px;
     text-align: center;
 }
 
-/* 🔹 Efeito Hover */
-.register-btn:hover {
-    transform: scale(1.05);
-}
-
-
-/* 🔹 Responsividade */
+/* 🔹 Ajustes de Responsividade */
 @media (max-width: 1024px) {
-    .experience-container {
-        flex-direction: column;
-        text-align: center;
+    .hero-section {
+        height: 70vh;
     }
 
     .experience-text {
-        text-align: center;
+        font-size: 1.1rem;
     }
 
-    .experience-image img {
-        max-width: 90%;
-    }
-}
-
-/* 🔹 Seção Localização */
-.location-section {
-    background: #f4f4f4;
-    padding: 60px 20px;
-}
-
-.location-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #002147;
-}
-
-.map-container {
-    max-width: 900px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 450px;
-    border: none;
-}
-
-/* 🔹 Rodapé */
-footer {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-}
-
-/* 🔹 🔥 Responsividade 🔥 */
-@media (max-width: 1024px) {
-    header nav {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .experience-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .experience-image img {
-        width: 90%;
-        max-width: 500px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem;
+    .map-container iframe {
+        height: 350px;
     }
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .hero-section {
-        height: 75vh;
+        height: 60vh;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    .experience-text {
+        font-size: 1rem;
     }
 
-    .hero-content h2 {
-        font-size: 1.2rem;
+    .map-container iframe {
+        height: 300px;
     }
 }
 
 @media (max-width: 480px) {
     .hero-section {
-        height: 70vh;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1rem;
+        height: 50vh;
     }
 
     .experience-text {
-        text-align: center;
+        font-size: 0.95rem;
     }
 
-    .register-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
+    .map-container iframe {
+        height: 250px;
     }
 }
