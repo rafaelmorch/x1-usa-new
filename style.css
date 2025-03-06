@@ -13,7 +13,6 @@ body, html {
 }
 
 /* 🔹 Cabeçalho Responsivo */
-/* 🔹 Cabeçalho Responsivo */
 header {
     background: rgba(0, 0, 0, 0.5); /* 🔹 Deixa mais transparente */
     position: fixed;
@@ -147,6 +146,7 @@ nav {
 }
 
 /* 🔹 Seção de Experiência */
+/* 🔹 Seção de Experiência */
 .experience-section {
     background: white;
     padding: 60px 20px;
@@ -163,7 +163,7 @@ nav {
 
 .experience-container {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* 🔹 Mantém o texto e a imagem com o mesmo tamanho */
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -177,11 +177,23 @@ nav {
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .experience-image img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 500px;
     border-radius: 15px;
+    object-fit: cover; /* 🔹 Garante que a imagem cubra bem a área */
+    height: auto; /* 🔹 Permite que a imagem cresça proporcionalmente ao texto */
 }
 
 /* 🔹 Botão de Registro */
@@ -196,10 +208,27 @@ nav {
     font-size: 1.3rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    margin-top: 10px; /* 🔹 Adiciona espaçamento antes do botão */
 }
 
 .register-btn:hover {
     transform: scale(1.05);
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 1024px) {
+    .experience-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .experience-text {
+        text-align: center;
+    }
+
+    .experience-image img {
+        max-width: 90%;
+    }
 }
 
 /* 🔹 Seção Localização */
