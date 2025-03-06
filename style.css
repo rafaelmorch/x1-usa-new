@@ -1,195 +1,49 @@
-/* 🔹 Reset Básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+/* 🔹 Seção Hero da Página de Registro */
+.registration-hero {
+    background: url('stadium.png') no-repeat center center;
+    background-size: cover;
     text-align: center;
-    overflow-x: hidden;
-}
-
-/* 🔹 Cabeçalho Responsivo */
-header {
-    background: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    padding: 15px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.logo h1 {
     color: white;
+    padding: 100px 20px;
+}
+
+.registration-hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px black;
+}
+
+.registration-hero p {
     font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px black;
 }
 
-/* 🔹 Links do Menu */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-    padding-bottom: 5px;
-}
-
-/* 🔹 Underline Vermelho na Página Ativa */
-.nav-links a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: red;
-}
-
-/* 🔹 Hover do Underline */
-.nav-links a:hover::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: red;
-}
-
-/* 🔹 Ícone do Menu Mobile */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* 🔹 Seção Hero com Vídeo Responsivo */
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.hero-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* 🔹 Linha Divisória */
-.section-divider {
-    width: 100%;
-    height: 15px;
-    background: linear-gradient(to right, #Ff0000, #002147);
-    margin: 20px 0;
-}
-
-/* 🔹 Seção de Experiência */
-.experience-section {
+/* 🔹 Seção de Informações de Registro */
+.registration-info {
     background: white;
-    padding: 60px 20px;
     color: black;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.experience-section h2 {
+.registration-info h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    text-align: center;
     color: #002147;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.experience-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
-}
-
-.experience-text {
-    flex: 1;
-    padding: 20px;
-    text-align: left;
+.registration-info p {
     font-size: 1.2rem;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-bottom: 10px;
 }
 
-.experience-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.experience-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    height: auto;
-}
-
-/* 🔹 Botão de Registro */
-.register-btn {
-    display: inline-block;
-    background: linear-gradient(to right, #Ff0000, #051094);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
+.registration-info a {
+    color: #ff0000;
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.3rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-    margin-top: 10px;
-    min-width: 220px;
-    text-align: center;
 }
 
-.register-btn:hover {
-    transform: scale(1.05);
+.registration-info a:hover {
+    text-decoration: underline;
 }
