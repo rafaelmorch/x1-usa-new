@@ -21,12 +21,13 @@
                 <li><a href="information.html">Information</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
 
     <!-- 🔹 Seção Hero com Vídeo -->
     <section class="hero-section">
-        <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline></video>
+        <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop></video>
     </section>
 
     <!-- 🔹 Linha Divisória -->
@@ -75,12 +76,10 @@
     </footer>
 
     <script>
-        document.getElementById("heroVideo").addEventListener("ended", function () {
-            setTimeout(() => {
-                this.currentTime = 0;
-                this.play();
-            }, 5000);
-        });
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
     </script>
 
 </body>
