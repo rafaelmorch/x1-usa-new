@@ -14,7 +14,7 @@ body, html {
 
 /* 🔹 Cabeçalho Responsivo */
 header {
-    background: rgba(0, 0, 0, 0.5); /* 🔹 Transparente */
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -190,45 +190,6 @@ nav {
     text-align: center;
 }
 
-/* 🔹 Ajustes de Responsividade */
-@media (max-width: 1024px) {
-    .hero-section {
-        height: 70vh;
-    }
-
-    .experience-text {
-        font-size: 1.1rem;
-    }
-
-    .map-container iframe {
-        height: 350px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        height: 60vh;
-    }
-
-    .experience-text {
-        font-size: 1rem;
-    }
-
-    .map-container iframe {
-        height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        height: 50vh;
-    }
-
-    .experience-text {
-        font-size: 0.95rem;
-    }
-
-    .map-container iframe {
-        height: 250px;
-    }
+.register-btn:hover {
+    transform: scale(1.05);
 }
