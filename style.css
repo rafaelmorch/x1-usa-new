@@ -62,6 +62,30 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 1rem;
+    position: relative; /* 🔹 Permite adicionar o underline */
+    padding-bottom: 5px;
+}
+
+/* 🔹 Efeito de Underline Vermelho na Página Ativa */
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red; /* 🔹 Underline vermelho */
+}
+
+/* 🔹 Efeito de Underline ao Passar o Mouse */
+.nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: red;
 }
 
 /* 🔹 Ícone do Menu Mobile */
