@@ -101,28 +101,84 @@ nav {
 }
 
 /* 🔹 Responsividade do Menu */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+/* 🔹 Ajustes para Tablets */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 70vh; /* 🔹 Diminui a altura do vídeo */
     }
 
-    .nav-links {
-        display: none;
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .experience-container {
         flex-direction: column;
         text-align: center;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 10px 0;
     }
 
-    .nav-links.active {
-        display: flex;
+    .experience-text {
+        text-align: center;
+        font-size: 1.1rem; /* 🔹 Reduz um pouco a fonte da Experiência */
+    }
+
+    .experience-image img {
+        max-width: 90%;
+    }
+    
+    .map-container iframe {
+        height: 350px; /* 🔹 Reduz um pouco a altura do mapa */
     }
 }
 
+/* 🔹 Ajustes para Celulares */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh; /* 🔹 Reduz ainda mais a altura do vídeo */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .experience-text {
+        font-size: 1rem; /* 🔹 Reduz um pouco mais a fonte da Experiência */
+    }
+
+    .map-container iframe {
+        height: 300px; /* 🔹 Diminui mais a altura do mapa */
+    }
+}
+
+/* 🔹 Ajustes para Telas Pequenas */
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50vh; /* 🔹 Deixa o vídeo menor em telas pequenas */
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+
+    .experience-text {
+        font-size: 0.95rem; /* 🔹 Ajusta para não ocupar muito espaço */
+    }
+
+    .map-container iframe {
+        height: 250px; /* 🔹 Reduz bastante a altura do mapa */
+    }
+}
 
 /* 🔹 Seção Hero com Vídeo Responsivo */
 .hero-section {
