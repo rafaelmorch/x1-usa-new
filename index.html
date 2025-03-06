@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>X1 USA Series</title>
     <link rel="stylesheet" href="style.css"> <!-- Link para o CSS externo -->
+    <style>
+        /* 🔹 Ajustes para telas menores */
+        @media (max-width: 768px) {
+            .experience-section h2 {
+                font-size: 1.8rem; /* 🔹 Reduz o tamanho do título */
+            }
+
+            .experience-text p {
+                font-size: 1rem; /* 🔹 Reduz tamanho do texto */
+            }
+
+            .register-btn {
+                font-size: 1rem; /* 🔹 Reduz o tamanho do botão */
+                padding: 12px 25px; /* 🔹 Mantém boa proporção */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -16,17 +33,16 @@
                 <h1>X1 USA Series</h1>
             </div>
             <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="registration.html">Registration</a></li>
-    <li><a href="information.html">Information</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-</ul>
-
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
             <div class="menu-toggle">&#9776;</div> <!-- Ícone de menu para mobile -->
         </nav>
     </header>
 
-        <!-- 🔹 Seção Hero com Vídeo -->
+    <!-- 🔹 Seção Hero com Vídeo -->
     <section class="hero-section">
         <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop></video>
     </section>
