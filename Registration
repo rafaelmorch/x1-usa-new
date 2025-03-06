@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration - X1 USA Series</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🔹 Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Logo_X1.png" alt="X1 Logo">
+                <h1>X1 USA Series</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🔹 Seção de Registro -->
+    <section class="registration-hero">
+        <h1>Register for the X1 USA Series</h1>
+        <p>Join the ultimate 1v1 soccer challenge at Audi Field, Washington DC. Secure your spot today!</p>
+        <a href="https://form.jotform.com/250294639803159" class="register-btn" target="_blank">Register Now</a>
+    </section>
+
+    <!-- 🔹 Linha Divisória -->
+    <div class="section-divider"></div>
+
+    <!-- 🔹 Seção de Informações de Registro -->
+    <section class="registration-info">
+        <h2>Registration Details</h2>
+        <p><strong>📅 Date:</strong> March 22, 2025</p>
+        <p><strong>📍 Location:</strong> Audi Field, Washington DC</p>
+        <p><strong>🛑 Categories:</strong> Sub 8, Sub 10, Sub 12</p>
+        <p><strong>📜 Rules & Regulations:</strong> <a href="Regulamento_X1_USA.pdf" target="_blank">Download Here</a></p>
+        <p><strong>📊 Match Schedule:</strong> <a href="Planejamento_X1_USA.xlsx" target="_blank">View Schedule</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 X1 USA Series. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
