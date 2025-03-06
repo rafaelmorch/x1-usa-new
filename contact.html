@@ -2,9 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - X1 USA Series</title>
-    <link rel="stylesheet" href="style.css"> <!-- Importando o estilo global -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🔹 Seção de Contato */
+        .contact-section {
+            background: url('contactus.png') no-repeat center center;
+            background-size: cover;
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* 🔹 Estilos do Formulário */
+        .contact-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* 🔹 Botão */
+        .contact-section button {
+            background: linear-gradient(to right, #Ff0000, #002147);
+            color: white;
+            padding: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-section button:hover {
+            transform: scale(1.05);
+        }
+
+        /* 🔹 Informações de Contato */
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,24 +94,43 @@
                 <li><a href="information.html">Information</a></li>
                 <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> 
+            <div class="menu-toggle">&#9776;</div> <!-- Ícone de menu para mobile -->
         </nav>
     </header>
-    
+
+    <!-- 🔹 Seção de Contato -->
     <section class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Have questions or need assistance? Send us a message below!</p>
-        <form action="mailto:administration@emsoccer.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <img src='Logo_X1.png' alt='X1 Logo' style='height: 180px;'>
+        <div class="contact-container">
+            <h2>📩 Get in Touch</h2>
+            <p>If you have any questions or need assistance, feel free to reach out. We'll get back to you as soon as possible!</p>
+
+            <!-- 📌 Formulário de Contato -->
+            <form action="mailto:administration@emsoccer.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- 📌 Informações de Contato -->
+            <div class="contact-info">
+                <p><strong>Email:</strong> administration@emsoccer.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Location:</strong> Washington, DC</p>
+            </div>
+        </div>
     </section>
 
+    <!-- 🔹 Rodapé -->
     <footer>
         <p>&copy; 2025 X1 USA Series. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
+
 </body>
 </html>
