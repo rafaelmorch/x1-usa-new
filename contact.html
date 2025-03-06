@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us - X1 USA Series</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Importando o estilo global -->
 </head>
 <body>
 
@@ -21,42 +21,34 @@
                 <li><a href="information.html">Information</a></li>
                 <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle">&#9776;</div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> 
         </nav>
     </header>
 
-    <!-- 🔹 Hero Section -->
-    <section class="hero-section">
-        <h1>Contact Us</h1>
-        <p>Have questions? Get in touch with us!</p>
-    </section>
-
-    <!-- 🔹 Linha Divisória -->
-    <div class="section-divider"></div>
-
-    <!-- 🔹 Formulário de Contato -->
+    <!-- 🔹 Seção de Contato -->
     <section class="contact-section">
-        <h2>Get in Touch</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Send us a message below!</p>
+        <form action="mailto:administration@emsoccer.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="register-btn">Send Message</button>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
+        <img src='Logo_X1.png' alt='X1 Logo' style='height: 180px;'>
     </section>
-
-    <!-- 🔹 Linha Divisória -->
-    <div class="section-divider"></div>
 
     <!-- 🔹 Rodapé -->
     <footer>
         <p>&copy; 2025 X1 USA Series. All rights reserved.</p>
     </footer>
 
+    <!-- 🔹 Script para menu mobile -->
     <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-            document.querySelector(".nav-links").classList.toggle("active");
-        });
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
     </script>
 
 </body>
