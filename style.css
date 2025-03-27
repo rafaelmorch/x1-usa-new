@@ -242,15 +242,25 @@ footer .social-icons {
 }
 
 footer .social-icons a {
-    color: white;
     font-size: 1.6rem;
-    margin: 0 10px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 0 12px;
+    transition: transform 0.3s ease;
 }
 
 footer .social-icons a:hover {
-    color: #ffd700;
-    transform: scale(1.2);
+    transform: scale(1.3);
+}
+
+footer .social-icons a i.fa-instagram {
+    color: #E1306C;
+}
+
+footer .social-icons a i.fa-facebook-f {
+    color: #1877F2;
+}
+
+footer .social-icons a i.fa-x-twitter {
+    color: #000000;
 }
 
 /* 🔹 Responsividade */
