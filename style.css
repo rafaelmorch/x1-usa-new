@@ -14,40 +14,37 @@ body, html {
 
 /* 🔹 Cabeçalho Responsivo */
 header {
-    background: rgba(0, 0, 0, 0.5); /* 🔹 Deixa mais transparente */
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
     z-index: 1000;
     padding: 15px 0;
 }
 
-/* 🔹 Estilização do Navbar */
 nav {
     display: flex;
-    justify-content: space-between; /* 🔹 Mantém os elementos bem distribuídos */
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* 🔹 Logo e Texto */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 40px; /* 🔹 Ajuste no tamanho do logo */
+    height: 40px;
     margin-right: 10px;
 }
 
 .logo h1 {
-    color: white; /* 🔹 Torna o texto "X1 USA Series" branco */
+    color: white;
     font-size: 1.5rem;
 }
 
-/* 🔹 Links do Menu */
 .nav-links {
     list-style: none;
     display: flex;
@@ -58,27 +55,15 @@ nav {
     display: inline;
 }
 
-/* 🔹 Links do Menu */
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    position: relative; /* 🔹 Permite adicionar o underline */
+    position: relative;
     padding-bottom: 5px;
 }
 
-/* 🔹 Efeito de Underline Vermelho na Página Ativa */
-.nav-links a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: red; /* 🔹 Underline vermelho */
-}
-
-/* 🔹 Efeito de Underline ao Passar o Mouse */
+.nav-links a.active::after,
 .nav-links a:hover::after {
     content: "";
     position: absolute;
@@ -89,7 +74,6 @@ nav {
     background-color: red;
 }
 
-
 /* 🔹 Ícone do Menu Mobile */
 .menu-toggle {
     display: none;
@@ -97,49 +81,12 @@ nav {
     cursor: pointer;
     color: white;
     position: absolute;
-    right: 20px; /* 🔹 Posiciona no canto direito */
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* 🔹 Responsividade do Menu */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
-
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-}
-
-/* 🔹 Seção Hero com Vídeo Responsivo */
+/* 🔹 Hero com Vídeo Responsivo */
 .hero-section {
     position: relative;
     width: 100%;
@@ -176,7 +123,7 @@ nav {
     font-weight: bold;
 }
 
-/* 🔹 Linha Divisória Entre as Seções */
+/* 🔹 Linha Divisória */
 .section-divider {
     width: 100%;
     height: 15px;
@@ -201,7 +148,7 @@ nav {
 
 .experience-container {
     display: flex;
-    align-items: stretch; /* 🔹 Mantém o texto e a imagem com o mesmo tamanho */
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -230,8 +177,8 @@ nav {
     width: 100%;
     max-width: 500px;
     border-radius: 15px;
-    object-fit: cover; /* 🔹 Garante que a imagem cubra bem a área */
-    height: auto; /* 🔹 Permite que a imagem cresça proporcionalmente ao texto */
+    object-fit: cover;
+    height: auto;
 }
 
 /* 🔹 Botão de Registro */
@@ -247,31 +194,13 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     margin-top: 10px;
-    min-width: 220px; /* 🔹 Define um tamanho mínimo fixo */
+    min-width: 220px;
     text-align: center;
 }
 
-/* 🔹 Efeito Hover */
 .register-btn:hover {
     transform: scale(1.05);
 }
-
-/* 🔹 Responsividade */
-@media (max-width: 1024px) {
-    .experience-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .experience-text {
-        text-align: center;
-    }
-
-    .experience-image img {
-        max-width: 90%;
-    }
-}
-
 
 /* 🔹 Seção Localização */
 .location-section {
@@ -307,7 +236,24 @@ footer {
     margin-top: 40px;
 }
 
-/* 🔹 🔥 Responsividade 🔥 */
+/* 🔹 Ícones Sociais no Rodapé */
+footer .social-icons {
+    margin-bottom: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.6rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+/* 🔹 Responsividade */
 @media (max-width: 1024px) {
     header nav {
         flex-direction: column;
