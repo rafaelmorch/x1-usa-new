@@ -4,212 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>X1 USA</title>
+    
+    <!-- 🔹 Font Awesome para ícones sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- 🔹 Link para CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        /* 🔹 Estilo global */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* 🔹 Cabeçalho */
-        header {
-            position: fixed;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        nav ul li a.active::after {
-            content: "";
-            display: block;
-            height: 2px;
-            background-color: #ffd700;
-            margin-top: 2px;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* 🔹 Hero com vídeo responsivo */
-        .hero-section {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .hero-section video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        /* 🔹 Linha divisória */
-        .section-divider {
-            height: 10px;
-            background: linear-gradient(to right, #ffd700, #002147);
-        }
-
-        /* 🔹 Seção experiência */
-        .experience-section {
-            padding: 60px 20px;
-            background-color: #fff;
-        }
-
-        .experience-section h2 {
-            text-align: center;
-            color: #002147;
-            font-size: 2.5rem;
-        }
-
-        .experience-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 40px auto 0 auto;
-            align-items: center;
-        }
-
-        .experience-text {
-            flex: 1;
-        }
-
-        .experience-text p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        .register-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            background: linear-gradient(to right, #ffd700, #002147);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
-        }
-
-        .experience-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .experience-image img {
-            max-width: 100%;
-            border-radius: 15px;
-        }
-
-        /* 🔹 Seção localização */
-        .location-section {
-            padding: 60px 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        .location-section h2 {
-            font-size: 2.2rem;
-            color: #002147;
-        }
-
-        .map-container {
-            margin-top: 20px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* 🔹 Rodapé */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
-
-        /* 🔹 Responsivo */
+        /* 🔹 Ajustes para telas menores */
         @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background: rgba(0, 0, 0, 0.8);
-                position: absolute;
-                top: 60px;
-                right: 0;
-                padding: 10px 20px;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .experience-container {
-                flex-direction: column;
-                gap: 30px;
-            }
-
             .experience-section h2 {
                 font-size: 1.8rem;
             }
-
             .experience-text p {
                 font-size: 1rem;
             }
-
             .register-btn {
                 font-size: 1rem;
                 padding: 12px 25px;
-            }
-
-            .hero-section video {
-                object-fit: contain;
-                height: 100%;
-                width: 100%;
             }
         }
     </style>
@@ -233,7 +46,7 @@
         </nav>
     </header>
 
-    <!-- 🔹 Seção Hero com vídeo responsivo -->
+    <!-- 🔹 Seção Hero com Vídeo -->
     <section class="hero-section">
         <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop></video>
     </section>
@@ -258,6 +71,7 @@
                     Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,  
                     the <strong>X1 USA</strong> is where the future of soccer takes center stage.
                 </p>
+                <br>
                 <a href="registration.html" class="register-btn">Register Now</a>
             </div>
             <div class="experience-image">
@@ -281,8 +95,19 @@
         </div>
     </section>
 
-    <!-- 🔹 Rodapé -->
+    <!-- 🔹 Rodapé com ícones sociais -->
     <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/seuusuario" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/seuusuario" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/seuusuario" target="_blank" aria-label="X / Twitter">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
         <p>&copy; 2025 X1 USA. All rights reserved.</p>
     </footer>
 
@@ -291,5 +116,6 @@
             document.querySelector(".nav-links").classList.toggle("active");
         });
     </script>
+
 </body>
 </html>
