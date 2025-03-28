@@ -69,16 +69,21 @@
     </div>
 
     <!-- 🔹 Logo na lateral -->
-    <div style="
-        position: absolute;
-        z-index: 2;
-        left: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-    ">
-        <img src="Logo_X1.png" alt="Logo X1" style="width: 280px; max-width: 80vw; height: auto;">
-    </div>
-</section>
+<div style="
+    position: absolute;
+    z-index: 2;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+">
+    <img src="Logo_X1.png" alt="Logo X1"
+        style="
+            width: 350px;
+            max-width: 80vw;
+            height: auto;
+        "
+        class="responsive-logo">
+</div>
 
     <!-- 🔹 Linha Divisória -->
     <div class="section-divider"></div>
@@ -146,6 +151,18 @@
             document.querySelector(".nav-links").classList.toggle("active");
         });
     </script>
+<script>
+    function adjustLogoSize() {
+        const logo = document.querySelector('.responsive-logo');
+        if (window.innerWidth < 768) {
+            logo.style.width = '180px';
+        } else {
+            logo.style.width = '350px';
+        }
+    }
 
+    window.addEventListener('resize', adjustLogoSize);
+    window.addEventListener('load', adjustLogoSize);
+</script>
 </body>
 </html>
