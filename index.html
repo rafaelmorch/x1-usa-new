@@ -47,9 +47,21 @@
     </header>
 
     <!-- 🔹 Seção Hero com Vídeo -->
-    <section class="hero-section">
-        <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop></video>
-    </section>
+<section class="hero-section" style="position: relative; width: 100%; height: 90vh; overflow: hidden;">
+    <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop 
+        style="width: 100%; height: 100%; object-fit: cover;"></video>
+
+    <!-- Logo sobre o vídeo -->
+    <div style="
+        position: absolute;
+        z-index: 2;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    ">
+        <img src="Logo_X1.png" alt="Logo X1" style="width: 280px; max-width: 80vw; height: auto;">
+    </div>
+</section>
 
     <!-- 🔹 Linha Divisória -->
     <div class="section-divider"></div>
