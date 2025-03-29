@@ -157,27 +157,22 @@
     function adjustHeroElements() {
         const logo = document.querySelector('.responsive-logo');
         const title = document.querySelector('.tournament-title');
-        const x1 = document.querySelector('.x1-text');
+        const logoContainer = logo?.parentElement;
 
         if (window.innerWidth < 768) {
             logo.style.width = '260px';
             if (title) title.style.fontSize = '2.5rem';
-            if (x1 && !x1.classList.contains('line-break')) {
-                x1.innerHTML = "<br>X1"; // 👉 força quebra de linha
-                x1.classList.add('line-break');
-            }
+            if (logoContainer) logoContainer.style.left = '2%'; // 🔹 move mais pra esquerda no mobile
         } else {
             logo.style.width = '455px';
             if (title) title.style.fontSize = '4rem';
-            if (x1 && x1.classList.contains('line-break')) {
-                x1.innerHTML = " X1"; // 👉 volta para mesma linha
-                x1.classList.remove('line-break');
-            }
+            if (logoContainer) logoContainer.style.left = '5%'; // 🔹 mantém a posição no desktop
         }
     }
 
     window.addEventListener('resize', adjustHeroElements);
     window.addEventListener('load', adjustHeroElements);
+</script>
 </script>
 </body>
 </html>
