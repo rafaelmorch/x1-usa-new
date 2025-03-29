@@ -69,7 +69,8 @@
     text-align: center;
     white-space: nowrap;
 ">
-    TOURNAMENTS X1
+    <span class="tournament-text">TOURNAMENTS</span>
+    <span class="x1-text"> X1</span>
 </div>
 
     <!-- 🔹 Logo -->
@@ -156,13 +157,22 @@
     function adjustHeroElements() {
         const logo = document.querySelector('.responsive-logo');
         const title = document.querySelector('.tournament-title');
+        const x1 = document.querySelector('.x1-text');
 
         if (window.innerWidth < 768) {
             logo.style.width = '260px';
-            if (title) title.style.fontSize = '2rem';
+            if (title) title.style.fontSize = '2.5rem';
+            if (x1 && !x1.classList.contains('line-break')) {
+                x1.innerHTML = "<br>X1"; // 👉 força quebra de linha
+                x1.classList.add('line-break');
+            }
         } else {
             logo.style.width = '455px';
-            if (title) title.style.fontSize = '5rem';
+            if (title) title.style.fontSize = '4rem';
+            if (x1 && x1.classList.contains('line-break')) {
+                x1.innerHTML = " X1"; // 👉 volta para mesma linha
+                x1.classList.remove('line-break');
+            }
         }
     }
 
