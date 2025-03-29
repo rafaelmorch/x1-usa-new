@@ -161,13 +161,13 @@
         const logoContainer = logo?.parentElement;
 
         if (window.innerWidth < 768) {
-            logo.style.width = '260px';
+            logo.style.width = '290px';
             if (title) title.style.fontSize = '2.5rem';
             if (x1 && !x1.classList.contains('line-break')) {
                 x1.innerHTML = "<br>X1"; // 👉 força quebra de linha
                 x1.classList.add('line-break');
             }
-            if (logoContainer) logoContainer.style.left = '2%'; // logo mais à esquerda
+            if (logoContainer) logoContainer.style.left = '0%'; // logo mais à esquerda
         } else {
             logo.style.width = '455px';
             if (title) title.style.fontSize = '4rem';
