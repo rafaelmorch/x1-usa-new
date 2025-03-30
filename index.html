@@ -1,213 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>X1 USA</title>
-    
-    <!-- 🔹 Font Awesome para ícones sociais -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>X1 USA</title>
 
-    <!-- 🔹 Link para CSS externo -->
-    <link rel="stylesheet" href="style.css">
+  <!-- 🔹 Fontes e ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    <style>
-        /* 🔹 Ajustes para telas menores */
-        @media (max-width: 768px) {
-            .experience-section h2 {
-                font-size: 1.8rem;
-            }
-            .experience-text p {
-                font-size: 1rem;
-            }
-            .register-btn {
-                font-size: 1rem;
-                padding: 12px 25px;
-            }
-        }
-    </style>
+  <style>
+    /* 🔹 Texto do lado direito com animação */
+    .video-right-text {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: right;
+      width: 35%;
+      line-height: 1.4;
+      text-shadow: 2px 2px 6px red;
+      animation: fadeInRight 1.5s ease-out;
+      z-index: 2;
+    }
+
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(50%) translateY(-50%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .video-right-text {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .experience-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .experience-text p {
+        font-size: 1rem;
+      }
+
+      .register-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- 🔹 Cabeçalho -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="Logo_X1.png" alt="X1 Logo">
-                <h1>X1 USA</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="registration.html">Registration</a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="menu-toggle">&#9776;</div>
-        </nav>
-    </header>
+  <!-- 🔹 Cabeçalho -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="Logo_X1.png" alt="X1 Logo" />
+        <h1>X1 USA</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
 
-    <!-- 🔹 Seção Hero com Vídeo -->
-<section class="hero-section" style="position: relative; width: 100%; height: 90vh; overflow: hidden;">
+  <!-- 🔹 Seção Hero com Vídeo -->
+  <section class="hero-section" style="position: relative; width: 100%; height: 90vh; overflow: hidden;">
     <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop 
-        style="width: 100%; height: 100%; object-fit: cover;"></video>
+      style="width: 100%; height: 100%; object-fit: cover;"></video>
 
-    <!-- 🔺 Texto do torneio -->
-<div class="tournament-title" style="
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    font-family: 'Rowdies', sans-serif;
-    font-size: 4rem;
-    color: rgba(255, 255, 255, 0.95); /* 🔹 15% transparente */
-    letter-spacing: 5px;
-    text-shadow: 2px 2px 10px black;
-    text-transform: uppercase;
-    text-align: center;
-    white-space: nowrap;
-">
-    <span class="tournament-text">TOURNAMENTS</span>
-    <span class="x1-text"> X1</span>
-</div>
+    <!-- 🔺 Título -->
+    <div class="tournament-title" style="
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        font-family: 'Rowdies', sans-serif;
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.95);
+        letter-spacing: 5px;
+        text-shadow: 2px 2px 10px black;
+        text-transform: uppercase;
+        text-align: center;
+        white-space: nowrap;">
+      <span class="tournament-text">TOURNAMENTS</span>
+      <span class="x1-text"> X1</span>
+    </div>
 
     <!-- 🔹 Logo -->
-    <div style="
-        position: absolute;
-        z-index: 2;
-        left: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-    ">
-<img src="Logo_X1.png" alt="Logo X1"
-    style="width: 455px; max-width: 80vw; height: auto;" class="responsive-logo">
+    <div style="position: absolute; z-index: 2; left: 5%; top: 50%; transform: translateY(-50%);">
+      <img src="Logo_X1.png" alt="Logo X1" style="width: 455px; max-width: 80vw; height: auto;" class="responsive-logo">
     </div>
 
-        <!-- 🔹 Texto do lado direito -->
-    <div style="
-        position: absolute;
-        right: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        font-family: Arial, sans-serif;
-        font-size: 1.5rem;
-        text-align: right;
-        width: 35%;
-        line-height: 1.4;
-        text-shadow: 2px 2px 10px black;
-    " class="video-right-text">
-        THE TIME HAS COME TO<br>
-        MAKE HISTORY ON THE<br>
-        FIELDS OF THE USA!
+    <!-- 🔹 Texto do lado direito -->
+    <div class="video-right-text">
+      THE TIME HAS COME TO<br>
+      MAKE HISTORY ON THE<br>
+      FIELDS OF THE USA!
     </div>
-</section>
+  </section>
 
-    
+  <!-- 🔹 Linha Divisória -->
+  <div class="section-divider"></div>
 
-    <!-- 🔹 Linha Divisória -->
-    <div class="section-divider"></div>
+  <!-- 🔹 Seção de Experiência -->
+  <section class="experience-section">
+    <h2>The Ultimate 1v1 Soccer Experience!</h2>
+    <div class="experience-container">
+      <div class="experience-text">
+        <p>
+          Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!  
+          This electrifying competition brings together the most skilled young players from around the world for a weekend of fast-paced, high-intensity action.
+        </p>
+        <p>
+          Hosted at <strong>Sofive Soccer Centers Rockville, MD</strong>, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.
+        </p>
+        <p>
+          Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,  
+          the <strong>X1 USA</strong> is where the future of soccer takes center stage.
+        </p>
+        <br>
+        <a href="registration.html" class="register-btn">Register Now</a>
+      </div>
+      <div class="experience-image">
+        <img src="segurandobola.png" alt="Player holding ball">
+      </div>
+    </div>
+  </section>
 
-    <!-- 🔹 Seção de Experiência -->
-    <section class="experience-section">
-        <h2>The Ultimate 1v1 Soccer Experience!</h2>
-        <div class="experience-container">
-            <div class="experience-text">
-                <p>
-                    Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!  
-                    This electrifying competition brings together the most skilled young players from around the world for a weekend of fast-paced, high-intensity action.
-                </p>
-                <p>
-                    Hosted at <strong>Sofive Soccer Centers Rockville, MD</strong>, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.  
-                    With every match being a head-to-head battle, expect incredible dribbles, fierce duels, and moments of pure magic on the field.
-                </p>
-                <p>
-                    Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,  
-                    the <strong>X1 USA</strong> is where the future of soccer takes center stage.
-                </p>
-                <br>
-                <a href="registration.html" class="register-btn">Register Now</a>
-            </div>
-            <div class="experience-image">
-                <img src="segurandobola.png" alt="Player holding ball">
-            </div>
-        </div>
-    </section>
+  <!-- 🔹 Linha Divisória -->
+  <div class="section-divider"></div>
 
-    <!-- 🔹 Linha Divisória -->
-    <div class="section-divider"></div>
+  <!-- 🔹 Seção Localização -->
+  <section class="location-section">
+    <h2>📍 Event Location</h2>
+    <p>The <strong>X1 USA 2025</strong> will take place at <strong>Sofive Soccer Centers Rockville, MD</strong>.</p>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.6509859323067!2d-77.16260222409691!3d38.853887371749245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c945b363d9b1%3A0x1e13ef350e421c77!2sSofence%20Soccer%20Centers%20Rockville!5e0!3m2!1sen!2sus!4v1711741833145!5m2!1sen!2sus" 
+        width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
 
-    <!-- 🔹 Seção Localização -->
-    <section class="location-section">
-        <h2>📍 Event Location</h2>
-        <p>The <strong>X1 USA 2025</strong> will take place at <strong>Sofive Soccer Centers Rockville, MD</strong>.</p>
-        <div class="map-container">
-                    <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.6509859323067!2d-77.16260222409691!3d38.853887371749245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c945b363d9b1%3A0x1e13ef350e421c77!2sSofence%20Soccer%20Centers%20Rockville!5e0!3m2!1sen!2sus!4v1711741833145!5m2!1sen!2sus" 
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        </div>
-    </section>
-
-    <!-- 🔹 Rodapé com ícones sociais -->
-<footer>
+  <!-- 🔹 Rodapé -->
+  <footer>
     <div class="social-icons">
-        <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
-            <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
-        </a>
-        <a href="https://www.facebook.com/x1usaseries" target="_blank" aria-label="Facebook">
-            <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
-        </a>
-        <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
-            <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
-        </a>
+      <a href="https://www.instagram.com/x1usaseries/" target="_blank"><img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;"></a>
+      <a href="https://www.facebook.com/x1usaseries" target="_blank"><img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;"></a>
+      <a href="https://x.com/X1USA_" target="_blank"><i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i></a>
     </div>
     <p>&copy; 2025 X1 USA. All rights reserved.</p>
-</footer>
+  </footer>
 
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
 
-    <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-            document.querySelector(".nav-links").classList.toggle("active");
-        });
-    </script>
-<script>
     function adjustHeroElements() {
-        const logo = document.querySelector('.responsive-logo');
-        const title = document.querySelector('.tournament-title');
-        const x1 = document.querySelector('.x1-text');
-        const logoContainer = logo?.parentElement;
+      const logo = document.querySelector('.responsive-logo');
+      const title = document.querySelector('.tournament-title');
+      const x1 = document.querySelector('.x1-text');
+      const logoContainer = logo?.parentElement;
 
-        if (window.innerWidth < 768) {
-            logo.style.width = '290px';
-            if (title) title.style.fontSize = '2.5rem';
-            if (x1 && !x1.classList.contains('line-break')) {
-                x1.innerHTML = "<br>X1"; // 👉 força quebra de linha
-                x1.classList.add('line-break');
-            }
-            if (logoContainer) logoContainer.style.left = '0%'; // logo mais à esquerda
-        } else {
-            logo.style.width = '455px';
-            if (title) title.style.fontSize = '4rem';
-            if (x1 && x1.classList.contains('line-break')) {
-                x1.innerHTML = " X1"; // 👉 volta para mesma linha
-                x1.classList.remove('line-break');
-            }
-            if (logoContainer) logoContainer.style.left = '5%';
+      if (window.innerWidth < 768) {
+        logo.style.width = '290px';
+        if (title) title.style.fontSize = '2.5rem';
+        if (x1 && !x1.classList.contains('line-break')) {
+          x1.innerHTML = "<br>X1";
+          x1.classList.add('line-break');
         }
+        if (logoContainer) logoContainer.style.left = '0%';
+      } else {
+        logo.style.width = '455px';
+        if (title) title.style.fontSize = '4rem';
+        if (x1 && x1.classList.contains('line-break')) {
+          x1.innerHTML = " X1";
+          x1.classList.remove('line-break');
+        }
+        if (logoContainer) logoContainer.style.left = '5%';
+      }
     }
 
     window.addEventListener('resize', adjustHeroElements);
     window.addEventListener('load', adjustHeroElements);
-</script>
-</script>
-</script>
+  </script>
+
 </body>
 </html>
