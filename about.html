@@ -45,10 +45,11 @@
     }
 
     .carousel-wrapper {
-      width: 250px;
-      height: 500px;
+      width: 325px; /* 30% maior */
+      height: 650px;
       overflow: hidden;
       border-radius: 10px;
+      flex-shrink: 0;
     }
 
     .carousel-track {
@@ -60,7 +61,7 @@
     .carousel-slide {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
       padding: 10px;
     }
 
@@ -121,17 +122,17 @@
     </nav>
   </header>
 
-  <!-- 🔹 Vídeo de topo -->
+  <!-- 🔹 Vídeo no topo -->
   <section class="hero-video">
     <video src="Shot4.mp4" autoplay muted loop playsinline></video>
     <h1>Who We Are</h1>
   </section>
 
-  <!-- 🔹 Conteúdo -->
+  <!-- 🔹 Seção principal -->
   <section class="about-section">
     <div class="content">
 
-      <!-- 🔹 Carrossel vertical -->
+      <!-- 🔹 Carrossel lateral -->
       <div class="carousel-wrapper" id="carousel-wrapper">
         <div class="carousel-track" id="carousel-track">
           <!-- Slide 1 -->
@@ -156,12 +157,12 @@
       <div class="experience-text">
         <h2>About X1 USA</h2>
         <p>
-          X1 USA was born with the mission to transform the 1v1 soccer scene in the United States. 
-          Inspired by a global movement that values individuality, skill, and creativity on the field, 
+          X1 USA was born with the mission to transform the 1v1 soccer scene in the United States.
+          Inspired by a global movement that values individuality, skill, and creativity on the field,
           X1 promotes exciting tournaments, official licensing, and initiatives that foster the growth of this innovative sport.
         </p>
         <p>
-          As a proud <strong>Non-Profit Organization 501(c)(3)</strong>, we unite athletes, fans, and brands 
+          As a proud <strong>Non-Profit Organization 501(c)(3)</strong>, we unite athletes, fans, and brands
           in authentic, electrifying, and purpose-driven sporting experiences.
         </p>
       </div>
@@ -185,7 +186,7 @@
     <p>&copy; 2025 X1 USA. All rights reserved.</p>
   </footer>
 
-  <!-- 🔹 Script do menu mobile e carrossel -->
+  <!-- 🔹 Script do menu e carrossel -->
   <script>
     document.querySelector(".menu-toggle").addEventListener("click", function () {
       document.querySelector(".nav-links").classList.toggle("active");
@@ -198,9 +199,9 @@
 
     setInterval(() => {
       currentSlide = (currentSlide + 1) % slides.length;
-      const slideHeight = slides[0].offsetHeight + 10; // height + gap
+      const slideHeight = slides[0].offsetHeight + 15; // 15px de gap
       track.style.transform = `translateY(-${currentSlide * slideHeight}px)`;
-    }, 4000); // 🔁 Troca a cada 4 segundos
+    }, 4000); // 4 segundos
   </script>
 
 </body>
