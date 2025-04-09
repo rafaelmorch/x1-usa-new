@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - X1 USA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 🔹 Cabeçalho -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="Logo_X1.png" alt="X1 Logo" />
+        <h1>X1 USA</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- 🔹 Seção About -->
+  <section class="experience-section">
+    <h2>About X1 USA</h2>
+
+    <!-- Imagem de impacto -->
+    <div style="margin: 40px auto; text-align: center;">
+      <img src="about_x1_banner.jpg" alt="X1 Action" style="max-width: 100%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    </div>
+
+    <!-- Texto principal -->
+    <div class="experience-container" style="justify-content: center;">
+      <div class="experience-text" style="max-width: 900px; text-align: center;">
+        <p style="font-size: 1.3rem; line-height: 1.8;">
+          <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
+          <br><br>
+          Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
+          <br><br>
+          Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
+          <br><br>
+          We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Rodapé -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/x1usaseries/" target="_blank">
+        <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
+      </a>
+      <a href="https://www.facebook.com/x1usaseries" target="_blank">
+        <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
+      </a>
+      <a href="https://x.com/X1USA_" target="_blank">
+        <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 X1 USA. All rights reserved.</p>
+  </footer>
+
+  <!-- 🔹 Script do menu mobile -->
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
