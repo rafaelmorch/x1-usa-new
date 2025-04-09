@@ -43,20 +43,6 @@
       }
     }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      max-width: 400px;
-      flex: 1;
-    }
-
-    .image-grid img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
     .experience-text p {
       font-size: 1.3rem;
       line-height: 1.8;
@@ -72,6 +58,39 @@
       .experience-text p {
         text-align: center;
       }
+    }
+
+    /* 🔹 Carrossel */
+    .carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 30px;
+      flex: 1;
+    }
+
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 300%; /* 3 slides */
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .carousel-slide img {
+      width: 48%;
+      border-radius: 10px;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -106,14 +125,24 @@
     <h2>About X1 USA</h2>
     <div class="experience-container" style="display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start; justify-content: center;">
 
-      <!-- 🔹 Galeria de Imagens -->
-      <div class="image-grid">
-        <img src="ab1.jpeg" alt="Image 1">
-        <img src="ab2.jpeg" alt="Image 2">
-        <img src="ab3.jpeg" alt="Image 3">
-        <img src="ab4.jpeg" alt="Image 4">
-        <img src="ab5.jpeg" alt="Image 5">
-        <img src="ab6.png" alt="Image 6">
+      <!-- 🔹 Carrossel de Imagens -->
+      <div class="carousel-wrapper">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="ab1.jpeg" alt="Image 1">
+              <img src="ab2.jpeg" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+              <img src="ab3.jpeg" alt="Image 3">
+              <img src="ab4.jpeg" alt="Image 4">
+            </div>
+            <div class="carousel-slide">
+              <img src="ab5.jpeg" alt="Image 5">
+              <img src="ab6.png" alt="Image 6">
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 🔹 Texto -->
@@ -128,7 +157,6 @@
           We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation.
         </p>
       </div>
-
     </div>
   </section>
 
@@ -148,10 +176,24 @@
     <p>&copy; 2025 X1 USA. All rights reserved.</p>
   </footer>
 
+  <!-- 🔹 Script Menu Mobile -->
   <script>
     document.querySelector(".menu-toggle").addEventListener("click", function () {
       document.querySelector(".nav-links").classList.toggle("active");
     });
+  </script>
+
+  <!-- 🔹 Script do Carrossel -->
+  <script>
+    let currentSlide = 0;
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }, 3000);
   </script>
 
 </body>
