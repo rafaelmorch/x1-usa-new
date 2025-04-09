@@ -1,29 +1,158 @@
-<section class="experience-section">
-  <h2>About X1 USA</h2>
-  <div class="experience-container" style="flex-wrap: wrap; align-items: flex-start;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - X1 USA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- 🔹 Galeria com 6 imagens (2 colunas x 3 linhas) -->
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; flex: 1; max-width: 400px;">
-      <img src="ab1.jpeg" alt="Image 1" style="width: 100%; border-radius: 10px;">
-      <img src="ab2.jpeg" alt="Image 2" style="width: 100%; border-radius: 10px;">
-      <img src="ab3.jpeg" alt="Image 3" style="width: 100%; border-radius: 10px;">
-      <img src="ab4.jpeg" alt="Image 4" style="width: 100%; border-radius: 10px;">
-      <img src="ab5.jpeg" alt="Image 5" style="width: 100%; border-radius: 10px;">
-      <img src="ab6.png"  alt="Image 6" style="width: 100%; border-radius: 10px;">
+  <style>
+    .about-hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .about-hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 4rem;
+      font-family: 'Rowdies', sans-serif;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+      z-index: 2;
+      text-align: center;
+      letter-spacing: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .about-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 400px;
+      flex: 1;
+    }
+
+    .image-grid img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .experience-text p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .experience-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .experience-text p {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Cabeçalho -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="Logo_X1.png" alt="X1 Logo" />
+        <h1>X1 USA</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- 🔹 Vídeo topo -->
+  <section class="about-hero">
+    <video src="Shot4.mp4" autoplay muted playsinline loop></video>
+    <div class="about-title">Who We Are</div>
+  </section>
+
+  <!-- 🔹 Conteúdo Principal -->
+  <section class="experience-section">
+    <h2>About X1 USA</h2>
+    <div class="experience-container" style="display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start; justify-content: center;">
+
+      <!-- 🔹 Galeria de Imagens -->
+      <div class="image-grid">
+        <img src="ab1.jpeg" alt="Image 1">
+        <img src="ab2.jpeg" alt="Image 2">
+        <img src="ab3.jpeg" alt="Image 3">
+        <img src="ab4.jpeg" alt="Image 4">
+        <img src="ab5.jpeg" alt="Image 5">
+        <img src="ab6.png" alt="Image 6">
+      </div>
+
+      <!-- 🔹 Texto -->
+      <div class="experience-text" style="flex: 2; max-width: 700px;">
+        <p>
+          <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
+          <br><br>
+          Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
+          <br><br>
+          Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
+          <br><br>
+          We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation.
+        </p>
+      </div>
+
     </div>
+  </section>
 
-    <!-- 🔹 Texto ao lado das imagens -->
-    <div class="experience-text" style="flex: 2; padding: 20px;">
-      <p style="font-size: 1.3rem; line-height: 1.8;">
-        <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
-        <br><br>
-        Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
-        <br><br>
-        Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
-        <br><br>
-        We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation.
-      </p>
+  <!-- 🔹 Rodapé -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/x1usaseries/" target="_blank">
+        <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
+      </a>
+      <a href="https://www.facebook.com/x1usaseries" target="_blank">
+        <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
+      </a>
+      <a href="https://x.com/X1USA_" target="_blank">
+        <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
+      </a>
     </div>
+    <p>&copy; 2025 X1 USA. All rights reserved.</p>
+  </footer>
 
-  </div>
-</section>
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
