@@ -28,7 +28,7 @@
       color: white;
       font-size: 4.5rem;
       font-family: 'Rowdies', sans-serif;
-      text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9); /* 🔴 sombra vermelha */
+      text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9);
     }
 
     .section-divider {
@@ -52,7 +52,7 @@
       align-items: center;
     }
 
-  .about-images {
+    .about-images {
       flex: 1;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -60,7 +60,7 @@
     }
 
     .about-images img {
-      width: 93%;
+      width: 86%; /* 🔻 reduzida em 7% de 93% */
       height: auto;
       border-radius: 10px;
       object-fit: cover;
@@ -68,13 +68,13 @@
 
     .about-text {
       flex: 1;
-      font-size: 1.1rem; /* 🔺 Aumentado em 10% */
+      font-size: 1.21rem; /* 🔺 aumentada em 10% de 1.1rem */
       background-color: white;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       border: 1px solid #ccc;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     @media (max-width: 768px) {
@@ -107,7 +107,6 @@
         <li><a href="information.html">Information</a></li>
         <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-
       </ul>
       <div class="menu-toggle">&#9776;</div>
     </nav>
