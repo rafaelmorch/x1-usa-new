@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - X1 USA</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
   <style>
     .video-banner {
-      width: 100%;
-      height: 50vh;
-      overflow: hidden;
       position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
     }
 
     .video-banner video {
@@ -26,69 +26,70 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      font-size: 4.5rem;
+      font-size: 3.5rem;
       font-family: 'Rowdies', sans-serif;
-      text-shadow: 5px 5px 11px rgba(0, 0, 0, 0.9);
+      text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9); /* 🔴 sombra vermelha */
+    }
+
+    .section-divider {
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(to right, #Ff0000, #002147);
+      margin: 20px 0 30px;
     }
 
     .about-section {
       padding: 60px 20px;
-      background: #f4f4f4;
+      background: #f5f5f5;
     }
 
     .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
       align-items: center;
     }
 
     .about-images {
       flex: 1;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
 
     .about-images img {
-      width: 93%;
+      width: 100%;
       height: auto;
       border-radius: 10px;
-      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transform: scale(0.93); /* 🔻 reduzida em 7% */
     }
 
     .about-text {
       flex: 1;
-      font-size: 1.1rem; /* 🔺 Aumentado em 10% */
-      background-color: white;
+      background: white;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border: 1px solid #ccc;
-      line-height: 1.7;
-    }
-
-    .section-divider {
-      width: 100%;
-      height: 10px;
-      background: linear-gradient(to right, #Ff0000, #002147);
-      margin: 50px 0 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-size: 1.1rem; /* 🔺 10% maior */
+      line-height: 1.8;
+      text-align: left;
+      color: #333;
     }
 
     @media (max-width: 768px) {
       .about-container {
         flex-direction: column;
-        align-items: center;
       }
 
       .about-images {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
 
-      .about-text {
-        font-size: 1rem;
+      .video-banner h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -106,15 +107,14 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="registration.html">Registration</a></li>
         <li><a href="information.html">Information</a></li>
-        <li><a href="about.html" class="active">About Us</a>
-        </li><li><a href="contact.html">Contact Us</a></li>
-        
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
       </ul>
       <div class="menu-toggle">&#9776;</div>
     </nav>
   </header>
 
-  <!-- 🔹 Vídeo com título -->
+  <!-- 🔹 Vídeo Topo -->
   <section class="video-banner">
     <video src="shot4.mp4" autoplay muted loop playsinline></video>
     <h1>Who We Are</h1>
@@ -123,35 +123,29 @@
   <!-- 🔹 Linha Divisória -->
   <div class="section-divider"></div>
 
-  <!-- 🔹 Seção About com Imagens e Texto -->
+  <!-- 🔹 Seção About -->
   <section class="about-section">
     <div class="about-container">
-      <!-- Imagens em 2 colunas / 3 linhas -->
+      
+      <!-- 🔹 Imagens (2 colunas, 3 linhas) -->
       <div class="about-images">
-        <img src="ab1.jpeg" alt="About Image 1">
-        <img src="ab2.jpeg" alt="About Image 2">
-        <img src="ab3.jpeg" alt="About Image 3">
-        <img src="ab4.jpeg" alt="About Image 4">
-        <img src="ab5.jpeg" alt="About Image 5">
-        <img src="ab6.png" alt="About Image 6">
+        <img src="ab1.jpeg" alt="About X1 Image 1">
+        <img src="ab2.jpeg" alt="About X1 Image 2">
+        <img src="ab3.jpeg" alt="About X1 Image 3">
+        <img src="ab4.jpeg" alt="About X1 Image 4">
+        <img src="ab5.jpeg" alt="About X1 Image 5">
+        <img src="ab6.png" alt="About X1 Image 6">
       </div>
 
-      <!-- Texto com fundo branco -->
+      <!-- 🔹 Texto -->
       <div class="about-text">
-        <h2>About X1 USA</h2>
-        <p>
-          <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
-          <br><br>
-          Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
-          <br><br>
-          Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
-          <br><br>
-          We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation.
-          <br><br>
-          Our vision goes beyond the pitch. We are committed to using the power of sport as a tool for social impact, leadership development, and community building. Every match is more than a game—it’s a chance for players to dream bigger, compete harder, and be seen.
-          <br><br>
-          From local showcases to international events, X1 USA is setting the stage for the future of football. Join us in rewriting the story of American soccer—one player, one goal, one moment at a time.
-        </p>
+        <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
+        <br><br>
+        Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
+        <br><br>
+        Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
+        <br><br>
+        We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation. Our goal is not only to entertain but also to empower communities and foster a lasting impact through the beautiful game.
       </div>
     </div>
   </section>
@@ -172,7 +166,7 @@
     <p>&copy; 2025 X1 USA. All rights reserved.</p>
   </footer>
 
-  <!-- 🔹 Script para menu responsivo -->
+  <!-- 🔹 Script do Menu Mobile -->
   <script>
     document.querySelector(".menu-toggle").addEventListener("click", function () {
       document.querySelector(".nav-links").classList.toggle("active");
