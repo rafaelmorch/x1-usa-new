@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    /* Estilos para o banner de vídeo no topo da página */
     .video-banner {
       position: relative;
       width: 100%;
@@ -31,15 +32,19 @@
       font-size: 4.5rem;
       font-family: 'Rowdies', sans-serif;
       text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9);
+      text-align: center; /* Garante que o texto seja centralizado, importante para responsividade */
+      white-space: nowrap; /* Evita quebra de linha em telas maiores */
     }
 
+    /* Estilos para a linha divisória */
     .section-divider {
       width: 100%;
       height: 20px;
-      background: linear-gradient(to right, #Ff0000, #002147);
+      background: linear-gradient(to right, #FF0000, #002147);
       margin: 20px 0 30px;
     }
 
+    /* Estilos para a seção "About Us" */
     .about-section {
       padding: 60px 20px;
       background: #f5f5f5;
@@ -54,20 +59,22 @@
       align-items: center;
     }
 
+    /* Estilos para o grid de imagens na seção "About Us" */
     .about-images {
       flex: 1;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas para desktop */
       gap: 10px;
     }
 
     .about-images img {
-      width: 86%;
+      width: 100%; /* Imagens preenchem a largura da célula do grid */
       height: auto;
       border-radius: 10px;
       object-fit: cover;
     }
 
+    /* Estilos para o texto da seção "About Us" */
     .about-text {
       flex: 1;
       font-size: 1.21rem;
@@ -79,24 +86,55 @@
       line-height: 1.75;
     }
 
+    /* Media Queries para Responsividade */
     @media (max-width: 768px) {
       .about-container {
-        flex-direction: column;
+        flex-direction: column; /* Pilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens na coluna */
       }
 
+      /* Ajuste para o grid de imagens em telas menores */
       .about-images {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* DUAS COLUNAS para mobile */
+        gap: 10px;
+        width: 100%; /* Ocupa 100% da largura disponível no container */
+        max-width: 400px; /* Limita a largura máxima do grid para centralização */
+        margin: 0 auto; /* Centraliza o grid horizontalmente */
       }
 
+      .about-images img {
+        width: 100%; /* Garante que as imagens preencham suas células no grid */
+      }
+
+      /* Ajuste do tamanho do título no banner de vídeo para telas menores */
       .video-banner h1 {
         font-size: 2.2rem;
+        white-space: normal; /* Permite quebra de linha em telas menores */
+        padding: 0 10px; /* Adiciona um pequeno padding para não colar nas bordas */
+      }
+
+      /* Ajuste de padding na seção about para telas menores */
+      .about-section {
+        padding: 30px 15px;
+      }
+
+      /* Ajuste da fonte do texto about para telas menores */
+      .about-text {
+        font-size: 1rem;
+        padding: 20px;
+      }
+    }
+    /* Media Query para telas muito pequenas, caso 2 colunas ainda seja muito */
+    @media (max-width: 480px) {
+      .about-images {
+        grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas, se necessário */
+        max-width: 250px; /* Ajusta a largura máxima para uma única coluna */
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔹 Cabeçalho -->
   <header>
     <nav>
       <div class="logo">
@@ -114,16 +152,13 @@
     </nav>
   </header>
 
-  <!-- 🔹 Vídeo Topo -->
   <section class="video-banner">
     <video src="shot4.mp4" autoplay muted loop playsinline></video>
     <h1>Who We Are</h1>
   </section>
 
-  <!-- 🔹 Linha Divisória -->
   <div class="section-divider"></div>
 
-  <!-- 🔹 Seção About -->
   <section class="about-section">
     <div class="about-container">
       <div class="about-images">
@@ -136,18 +171,22 @@
       </div>
 
       <div class="about-text">
-        <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
-        <br><br>
-        Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
-        <br><br>
-        Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
-        <br><br>
-        We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation. Our goal is not only to entertain but also to empower communities and foster a lasting impact through the beautiful game.
+        <p>
+          <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
+        </p>
+        <p>
+          Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
+        </p>
+        <p>
+          Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
+        </p>
+        <p>
+          We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation. Our goal is not only to entertain but also to empower communities and foster a lasting impact through the beautiful game.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 🔹 Rodapé -->
   <footer>
     <div class="social-icons">
       <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
@@ -163,7 +202,6 @@
     <p>&copy; 2025 X1 USA. All rights reserved.</p>
   </footer>
 
-  <!-- 🔹 Script do Menu Mobile -->
   <script>
     document.querySelector(".menu-toggle").addEventListener("click", function () {
       document.querySelector(".nav-links").classList.toggle("active");
