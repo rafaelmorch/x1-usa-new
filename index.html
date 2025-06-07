@@ -13,6 +13,30 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background: #002147;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo img {
+      height: 50px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Rowdies', sans-serif;
+    }
+
     .video-right-text {
       position: absolute;
       right: 5%;
@@ -43,7 +67,64 @@
       .responsive-logo { display: none; }
     }
 
-    /* Countdown styling */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .hero-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tournament-title {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      font-family: 'Rowdies', sans-serif;
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.95);
+      letter-spacing: 5px;
+      text-shadow: 2px 2px 10px black;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .experience-section {
+      padding: 60px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .experience-section h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5rem;
+      color: #002147;
+      margin-bottom: 30px;
+    }
+
+    .experience-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+
+    .register-btn {
+      margin-top: 20px;
+      background-color: #cc0000;
+      color: white;
+      padding: 14px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
     .countdown-section {
       background: #0b0f1a;
       color: white;
@@ -84,80 +165,70 @@
       font-style: italic;
       margin-top: 10px;
     }
+
+    @media (max-width: 600px) {
+      .countdown-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .countdown-grid {
+        gap: 8px;
+      }
+      .countdown-box {
+        padding: 6px;
+        min-width: 60px;
+      }
+      .countdown-number {
+        font-size: 2.8rem;
+      }
+      .countdown-label {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- 🔹 Seção Hero com Vídeo -->
-  <section class="hero-section" style="position: relative; width: 100%; height: 90vh; overflow: hidden;">
-    <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop 
-      style="width: 100%; height: 100%; object-fit: cover;"></video>
+  <!-- 🔹 Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="Logo_X1.png" alt="X1 Logo">
+    </div>
+    <h1>X1 USA</h1>
+  </header>
 
-    <!-- 🔺 Título -->
-    <div class="tournament-title" style="
-        position: absolute;
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 3;
-        font-family: 'Rowdies', sans-serif;
-        font-size: 4rem;
-        color: rgba(255, 255, 255, 0.95);
-        letter-spacing: 5px;
-        text-shadow: 2px 2px 10px black;
-        text-transform: uppercase;
-        text-align: center;
-        white-space: nowrap;">
+  <!-- 🔹 Seção Hero com Vídeo -->
+  <section class="hero-section">
+    <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop></video>
+    <div class="tournament-title">
       <span class="tournament-text">TOURNAMENTS</span>
       <span class="x1-text"> X1</span>
     </div>
-
-    <!-- 🔹 Logo -->
     <div style="position: absolute; z-index: 2; left: 5%; top: 50%; transform: translateY(-50%);">
       <img src="Logo_X1.png" alt="Logo X1" style="width: 455px; max-width: 80vw; height: auto;" class="responsive-logo">
     </div>
-
-    <!-- 🔹 Texto do lado direito -->
     <div class="video-right-text">
       THE TIME HAS COME TO<br>
       MAKE HISTORY ON THE<br>
       FIELDS OF THE USA!
     </div>
   </section>
-  
-  
-  <!-- 🔹 Linha Divisória -->
-  <div class="section-divider"></div>
 
   <!-- 🔹 Seção de Experiência -->
   <section class="experience-section">
     <h2>The Ultimate 1v1 Soccer Experience!</h2>
-    <div class="experience-container">
-      <div class="experience-text">
-        <p>
-          Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!  
-          This electrifying competition brings together the most skilled young players from around the world for a weekend of fast-paced, high-intensity action.
-<br><br>
-          Hosted at <strong>OCSC - Millenia, Orlando - FL</strong>, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.
-<br><br>
-          Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,  
-          the <strong>X1 USA</strong> is where the future of soccer takes center stage.
-        </p>
-        <br>
-        <a href="registration.html" class="register-btn">Register Now</a>
-      </div>
-      <div class="experience-image">
-        <img src="segurandobola.png" alt="Player holding ball">
-      </div>
+    <div class="experience-text">
+      <p>
+        Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!
+        Hosted at <strong>OCSC - Millenia, Orlando - FL</strong>, this event is the place where talent meets opportunity.
+      </p>
+      <a href="registration.html" class="register-btn">Register Now</a>
     </div>
   </section>
 
-  <!-- 🔹 Linha Divisória -->
-  <div class="section-divider"></div>
-  
-    <!-- 🔹 Contador regressivo -->
+  <!-- 🔹 Contador regressivo -->
   <section class="countdown-section">
-    <div class="countdown-title">Your journey to the biggest 1v1 tournament in the United States begins in</div>
+    <div class="countdown-title">Sua jornada rumo ao espetáculo do X1 começa em</div>
     <div class="countdown-grid">
       <div class="countdown-box">
         <div class="countdown-number" id="months">00</div>
@@ -182,67 +253,29 @@
     </div>
   </section>
 
-
-  <!-- 🔹 Linha Divisória -->
-  <div class="section-divider"></div>
-
- <!-- 🔹 Seção Galeria de Mídia -->
+  <!-- 🔹 Galeria de Mídia -->
   <section class="video-section" style="background: #f4f4f4; padding: 60px 20px; text-align: center;">
-  <h2 style="color: #002147; font-size: 2.5rem; margin-bottom: 40px;">Event Highlights</h2>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    <iframe src="https://drive.google.com/file/d/12-yLXT6xBcMXFOOyeaw57Qahevmnk_OH/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1-TV80YvzuJKe27Ok1YkvT_LztygzH0FY/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1d63gs9Jo-mIOX88KUOJoYY3JslhPejiW/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1zcSHNf-2shZ-HF27lTveCwsAPu8jU00P/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1C-Smb6T7LWIGybE3eXyllqDl0jUBQA4l/preview" width="320" height="240" allow="autoplay"></iframe>
-  </div>
-</section>
+    <h2 style="color: #002147; font-size: 2.5rem; margin-bottom: 40px;">Event Highlights</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      <iframe src="https://drive.google.com/file/d/12-yLXT6xBcMXFOOyeaw57Qahevmnk_OH/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1-TV80YvzuJKe27Ok1YkvT_LztygzH0FY/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1d63gs9Jo-mIOX88KUOJoYY3JslhPejiW/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1zcSHNf-2shZ-HF27lTveCwsAPu8jU00P/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1C-Smb6T7LWIGybE3eXyllqDl0jUBQA4l/preview" width="320" height="240" allow="autoplay"></iframe>
+    </div>
+  </section>
 
   <!-- 🔹 Rodapé -->
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/x1usaseries/" target="_blank"><img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;"></a>
-      <a href="https://www.facebook.com/x1usaseries" target="_blank"><img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;"></a>
-      <a href="https://x.com/X1USA_" target="_blank"><i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i></a>
+  <footer style="background: #002147; color: white; text-align: center; padding: 20px 10px;">
+    <div class="social-icons" style="margin-bottom: 10px;">
+      <a href="https://www.instagram.com/x1usaseries/" target="_blank"><img src="Instagram_icon.png" alt="Instagram" style="height: 30px; margin: 0 10px;"></a>
+      <a href="https://www.facebook.com/x1usaseries" target="_blank"><img src="Facebook_icon.png" alt="Facebook" style="height: 30px; margin: 0 10px;"></a>
+      <a href="https://x.com/X1USA_" target="_blank"><i class="fab fa-x-twitter" style="font-size: 30px; color: white; margin: 0 10px;"></i></a>
     </div>
     <p>&copy; 2025 X1 USA. All rights reserved.</p>
   </footer>
 
   <script>
-    document.querySelector(".menu-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-
-    function adjustHeroElements() {
-      const logo = document.querySelector('.responsive-logo');
-      const title = document.querySelector('.tournament-title');
-      const x1 = document.querySelector('.x1-text');
-      const logoContainer = logo?.parentElement;
-
-      if (window.innerWidth < 768) {
-        logo.style.width = '290px';
-        if (title) title.style.fontSize = '2.5rem';
-        if (x1 && !x1.classList.contains('line-break')) {
-          x1.innerHTML = "<br>X1";
-          x1.classList.add('line-break');
-        }
-        if (logoContainer) logoContainer.style.left = '0%';
-      } else {
-        logo.style.width = '455px';
-        if (title) title.style.fontSize = '4rem';
-        if (x1 && x1.classList.contains('line-break')) {
-          x1.innerHTML = " X1";
-          x1.classList.remove('line-break');
-        }
-        if (logoContainer) logoContainer.style.left = '5%';
-      }
-    }
-
-    window.addEventListener('resize', adjustHeroElements);
-    window.addEventListener('load', adjustHeroElements);
-  </script>
-    <script>
     const eventDate = new Date("2025-07-05T00:00:00").getTime();
     const countdown = () => {
       const now = new Date().getTime();
@@ -264,3 +297,5 @@
     countdown();
     setInterval(countdown, 1000);
   </script>
+</body>
+</html>
