@@ -63,7 +63,7 @@
     .about-images {
       flex: 1;
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 colunas para desktop */
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas para desktop e mobile */
       gap: 10px;
     }
 
@@ -88,25 +88,27 @@
 
     /* --- Media Queries para Responsividade --- */
 
-    /* Para telas de até 768px (tablets e celulares maiores) */
+    /* Para telas de até 768px (tablets e todos os celulares) */
     @media (max-width: 768px) {
       .about-container {
         flex-direction: column; /* Pilha os itens verticalmente */
         align-items: center; /* Centraliza os itens na coluna */
       }
 
-      /* Título "Who We Are" maior para tablets/celulares maiores */
+      /* Título "Who We Are" maior para mobile */
       .video-banner h1 {
         font-size: 3.3rem; /* Tamanho 50% maior que 2.2rem */
         white-space: normal; /* Permite quebra de linha */
         padding: 0 10px; /* Adiciona um pequeno padding */
       }
 
-      /* Garante 2 colunas para o grid de imagens nesta faixa */
+      /* Ajusta o grid de imagens para ter 2 colunas e ser menor em todas as telas mobile */
       .about-images {
-        grid-template-columns: repeat(2, 1fr); /* Garante 2 COLUNAS */
-        max-width: 400px; /* Limita a largura máxima do grid para centralização */
+        grid-template-columns: repeat(2, 1fr); /* Mantém 2 COLUNAS */
+        max-width: 320px; /* Reduz o tamanho máximo do bloco de imagens (ajuste este valor se necessário) */
+        gap: 8px; /* Reduz um pouco o espaçamento entre as imagens */
       }
+      /* As imagens individuais já têm width: 100%, então elas se ajustarão ao novo max-width do contêiner */
 
       /* Ajuste de padding e fonte do texto para telas menores */
       .about-section {
@@ -117,19 +119,7 @@
         padding: 20px;
       }
     }
-
-    /* Para telas MUITO pequenas (celulares pequenos, abaixo de 480px) */
-    @media (max-width: 480px) {
-      .video-banner h1 {
-        font-size: 2.5rem; /* Reduz um pouco mais para telas muito pequenas */
-      }
-
-      /* Muda o grid de imagens para 1 coluna em telas muito pequenas */
-      .about-images {
-        grid-template-columns: 1fr; /* Muda para 1 coluna */
-        max-width: 250px; /* Ajusta a largura máxima para uma única coluna */
-      }
-    }
+    /* A media query para 480px foi removida para garantir 2 colunas em todas as larguras mobile */
   </style>
 </head>
 <body>
