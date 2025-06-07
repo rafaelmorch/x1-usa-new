@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* 🔹 Texto do lado direito com animação */
     .video-right-text {
       position: absolute;
       right: 5%;
@@ -31,63 +31,62 @@
     }
 
     @keyframes fadeInRight {
-      0% {
-        opacity: 0;
-        transform: translateX(50%) translateY(-50%);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0) translateY(-50%);
-      }
+      0% { opacity: 0; transform: translateX(50%) translateY(-50%); }
+      100% { opacity: 1; transform: translateX(0) translateY(-50%); }
     }
 
     @media (max-width: 768px) {
-      .video-right-text {
-        display: none;
-      }
+      .video-right-text { display: none; }
+      .experience-section h2 { font-size: 1.8rem; }
+      .experience-text p { font-size: 1rem; }
+      .register-btn { font-size: 1rem; padding: 12px 25px; }
+      .responsive-logo { display: none; }
     }
 
-    @media (max-width: 768px) {
-      .experience-section h2 {
-        font-size: 1.8rem;
-      }
-
-      .experience-text p {
-        font-size: 1rem;
-      }
-
-      .register-btn {
-        font-size: 1rem;
-        padding: 12px 25px;
-      }
+    /* Countdown styling */
+    .countdown-section {
+      background: #0b0f1a;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      font-family: 'Orbitron', sans-serif;
     }
-      @media (max-width: 768px) {
-    .responsive-logo {
-      display: none;
+    .countdown-title {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      font-family: 'Bebas Neue', sans-serif;
+      color: #fff;
     }
-  }
-</style>
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .countdown-box {
+      background-color: #0b0f1a;
+      padding: 10px;
+      border-left: 2px solid white;
+    }
+    .countdown-box:first-child {
+      border-left: none;
+    }
+    .countdown-number {
+      font-size: 6rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffcc00, #ff6600, #cc0000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .countdown-label {
+      font-size: 1.5rem;
+      color: white;
+      font-style: italic;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-
-  <!-- 🔹 Cabeçalho -->
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="Logo_X1.png" alt="X1 Logo" />
-        <h1>X1 USA</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="information.html">Information</a></li>
-         <li><a href="contact.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="menu-toggle">&#9776;</div>
-    </nav>
-  </header>
 
   <!-- 🔹 Seção Hero com Vídeo -->
   <section class="hero-section" style="position: relative; width: 100%; height: 90vh; overflow: hidden;">
@@ -123,6 +122,33 @@
       THE TIME HAS COME TO<br>
       MAKE HISTORY ON THE<br>
       FIELDS OF THE USA!
+    </div>
+  </section>
+
+    <!-- 🔹 Contador regressivo -->
+  <section class="countdown-section">
+    <div class="countdown-title">Your journey to the biggest 1v1 tournament in the United States begins in</div>
+    <div class="countdown-grid">
+      <div class="countdown-box">
+        <div class="countdown-number" id="months">00</div>
+        <div class="countdown-label">meses</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="days">00</div>
+        <div class="countdown-label">dias</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="hours">00</div>
+        <div class="countdown-label">horas</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="minutes">00</div>
+        <div class="countdown-label">minutos</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="seconds">00</div>
+        <div class="countdown-label">segundos</div>
+      </div>
     </div>
   </section>
 
@@ -210,4 +236,26 @@
 
     window.addEventListener('resize', adjustHeroElements);
     window.addEventListener('load', adjustHeroElements);
+  </script>
+    <script>
+    const eventDate = new Date("2025-07-05T00:00:00").getTime();
+    const countdown = () => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("months").textContent = months.toString().padStart(2, '0');
+      document.getElementById("days").textContent = days.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    };
+
+    countdown();
+    setInterval(countdown, 1000);
   </script>
