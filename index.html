@@ -66,9 +66,9 @@
       }
     }
 
-    /* --- CSS para a Seção de Countdown (Adicionado) --- */
+    /* --- CSS para a Seção de Countdown (Atualizado) --- */
     .countdown-section {
-      background: #0b0f1a; /* Cor de fundo escura */
+      background: #001f3f; /* Azul marinho escuro */
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -77,8 +77,10 @@
     .countdown-title {
       font-size: 2.2rem;
       margin-bottom: 30px;
-      font-family: 'Bebas Neue', sans-serif; /* Usando Bebas Neue para o título do countdown */
+      font-family: 'Rowdies', sans-serif; /* Fonte 'Rowdies' como o título TOURNAMENTS X1 */
       color: #fff;
+      text-transform: uppercase; /* Para combinar com o estilo do título principal */
+      letter-spacing: 2px; /* Adicionado para um visual similar ao título principal */
     }
     .countdown-grid {
       display: flex;
@@ -129,8 +131,6 @@
       }
     }
     /* --- Fim do CSS para a Seção de Countdown --- */
-
-    /* Removido o estilo extra duplicado aqui */
   </style>
 </head>
 <body>
@@ -192,13 +192,13 @@
     <div class="experience-container">
       <div class="experience-text">
         <p>
-          Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!
+          Get ready for the **X1 USA 2025**, the premier **1v1 soccer tournament** in the United States!
           This electrifying competition brings together the most skilled young players from around the world for a weekend of fast-paced, high-intensity action.
         <br><br>
-          Hosted at <strong>OCSC - Millenia, Orlando - FL</strong>, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.
+          Hosted at **OCSC - Millenia, Orlando - FL**, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.
         <br><br>
-          Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,
-          the <strong>X1 USA</strong> is where the future of soccer takes center stage.
+          Whether you're a **player ready to compete**, a **fan looking for an unforgettable experience**, or a **scout searching for the next big talent**,
+          the **X1 USA** is where the future of soccer takes center stage.
         </p>
         <br>
         <a href="registration.html" class="register-btn">Register Now</a>
@@ -212,27 +212,27 @@
   <div class="section-divider"></div>
 
   <section class="countdown-section">
-    <div class="countdown-title">Sua jornada rumo ao espetáculo do X1 começa em</div>
+    <div class="countdown-title">Your journey to the biggest 1v1 tournament in the United States begins in</div>
     <div class="countdown-grid">
       <div class="countdown-box">
         <div class="countdown-number" id="months">00</div>
-        <div class="countdown-label">meses</div>
+        <div class="countdown-label">months</div>
       </div>
       <div class="countdown-box">
         <div class="countdown-number" id="days">00</div>
-        <div class="countdown-label">dias</div>
+        <div class="countdown-label">days</div>
       </div>
       <div class="countdown-box">
         <div class="countdown-number" id="hours">00</div>
-        <div class="countdown-label">horas</div>
+        <div class="countdown-label">hours</div>
       </div>
       <div class="countdown-box">
         <div class="countdown-number" id="minutes">00</div>
-        <div class="countdown-label">minutos</div>
+        <div class="countdown-label">minutes</div>
       </div>
       <div class="countdown-box">
         <div class="countdown-number" id="seconds">00</div>
-        <div class="countdown-label">segundos</div>
+        <div class="countdown-label">seconds</div>
       </div>
     </div>
   </section>
@@ -292,7 +292,7 @@
     window.addEventListener('resize', adjustHeroElements);
     window.addEventListener('load', adjustHeroElements);
 
-    // --- Script do Contador Regressivo (NOVA SEÇÃO ADICIONADA) ---
+    // --- Script do Contador Regressivo (Atualizado) ---
     // ATENÇÃO: Atualize esta data para a data e hora EXATAS do seu evento!
     // Formato: "AAAA-MM-DDTHH:mm:ss" (Ano-Mês-DiaTHora:Minuto:Segundo)
     const eventDate = new Date("2025-07-05T00:00:00").getTime(); // Exemplo: 5 de Julho de 2025
@@ -304,7 +304,7 @@
       // Se o evento já passou, limpa o contador
       if (distance < 0) {
         clearInterval(countdownInterval);
-        document.querySelector('.countdown-title').textContent = "O evento começou!";
+        document.querySelector('.countdown-title').textContent = "The tournament has begun!"; /* Frase atualizada para inglês */
         document.getElementById("months").textContent = "00";
         document.getElementById("days").textContent = "00";
         document.getElementById("hours").textContent = "00";
