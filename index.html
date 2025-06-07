@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* 🔹 Texto do lado direito com animação */
     .video-right-text {
       position: absolute;
       right: 5%;
@@ -45,28 +44,36 @@
       .video-right-text {
         display: none;
       }
-    }
-
-    @media (max-width: 768px) {
       .experience-section h2 {
         font-size: 1.8rem;
       }
-
       .experience-text p {
         font-size: 1rem;
       }
-
       .register-btn {
         font-size: 1rem;
         padding: 12px 25px;
       }
+      .responsive-logo {
+        display: none;
+      }
     }
-      @media (max-width: 768px) {
-    .responsive-logo {
-      display: none;
+
+    /* Countdown styling */
+    .countdown-section {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
     }
-  }
-</style>
+    .countdown-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+    }
+    #countdown {
+      font-size: 3rem;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -82,7 +89,7 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="registration.html">Registration</a></li>
         <li><a href="information.html">Information</a></li>
-         <li><a href="contact.html">About Us</a></li>
+        <li><a href="contact.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <div class="menu-toggle">&#9776;</div>
@@ -91,34 +98,14 @@
 
   <!-- 🔹 Seção Hero com Vídeo -->
   <section class="hero-section" style="position: relative; width: 100%; height: 90vh; overflow: hidden;">
-    <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop 
-      style="width: 100%; height: 100%; object-fit: cover;"></video>
-
-    <!-- 🔺 Título -->
-    <div class="tournament-title" style="
-        position: absolute;
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 3;
-        font-family: 'Rowdies', sans-serif;
-        font-size: 4rem;
-        color: rgba(255, 255, 255, 0.95);
-        letter-spacing: 5px;
-        text-shadow: 2px 2px 10px black;
-        text-transform: uppercase;
-        text-align: center;
-        white-space: nowrap;">
+    <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop style="width: 100%; height: 100%; object-fit: cover;"></video>
+    <div class="tournament-title" style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); z-index: 3; font-family: 'Rowdies', sans-serif; font-size: 4rem; color: rgba(255, 255, 255, 0.95); letter-spacing: 5px; text-shadow: 2px 2px 10px black; text-transform: uppercase; text-align: center; white-space: nowrap;">
       <span class="tournament-text">TOURNAMENTS</span>
       <span class="x1-text"> X1</span>
     </div>
-
-    <!-- 🔹 Logo -->
     <div style="position: absolute; z-index: 2; left: 5%; top: 50%; transform: translateY(-50%);">
       <img src="Logo_X1.png" alt="Logo X1" style="width: 455px; max-width: 80vw; height: auto;" class="responsive-logo">
     </div>
-
-    <!-- 🔹 Texto do lado direito -->
     <div class="video-right-text">
       THE TIME HAS COME TO<br>
       MAKE HISTORY ON THE<br>
@@ -126,7 +113,6 @@
     </div>
   </section>
 
-  <!-- 🔹 Linha Divisória -->
   <div class="section-divider"></div>
 
   <!-- 🔹 Seção de Experiência -->
@@ -135,12 +121,12 @@
     <div class="experience-container">
       <div class="experience-text">
         <p>
-          Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!  
+          Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!
           This electrifying competition brings together the most skilled young players from around the world for a weekend of fast-paced, high-intensity action.
-<br><br>
+          <br><br>
           Hosted at <strong>OCSC - Millenia, Orlando - FL</strong>, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.
-<br><br>
-          Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,  
+          <br><br>
+          Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,
           the <strong>X1 USA</strong> is where the future of soccer takes center stage.
         </p>
         <br>
@@ -152,23 +138,28 @@
     </div>
   </section>
 
-  <!-- 🔹 Linha Divisória -->
   <div class="section-divider"></div>
 
- <!-- 🔹 Seção Galeria de Mídia -->
+  <!-- 🔹 Seção Countdown -->
+  <section class="countdown-section">
+    <h2>Countdown to the Event</h2>
+    <div id="countdown">Loading...</div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- 🔹 Seção Galeria de Mídia -->
   <section class="video-section" style="background: #f4f4f4; padding: 60px 20px; text-align: center;">
-  <h2 style="color: #002147; font-size: 2.5rem; margin-bottom: 40px;">Event Highlights</h2>
+    <h2 style="color: #002147; font-size: 2.5rem; margin-bottom: 40px;">Event Highlights</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      <iframe src="https://drive.google.com/file/d/12-yLXT6xBcMXFOOyeaw57Qahevmnk_OH/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1-TV80YvzuJKe27Ok1YkvT_LztygzH0FY/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1d63gs9Jo-mIOX88KUOJoYY3JslhPejiW/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1zcSHNf-2shZ-HF27lTveCwsAPu8jU00P/preview" width="320" height="240" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1C-Smb6T7LWIGybE3eXyllqDl0jUBQA4l/preview" width="320" height="240" allow="autoplay"></iframe>
+    </div>
+  </section>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    <iframe src="https://drive.google.com/file/d/12-yLXT6xBcMXFOOyeaw57Qahevmnk_OH/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1-TV80YvzuJKe27Ok1YkvT_LztygzH0FY/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1d63gs9Jo-mIOX88KUOJoYY3JslhPejiW/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1zcSHNf-2shZ-HF27lTveCwsAPu8jU00P/preview" width="320" height="240" allow="autoplay"></iframe>
-    <iframe src="https://drive.google.com/file/d/1C-Smb6T7LWIGybE3eXyllqDl0jUBQA4l/preview" width="320" height="240" allow="autoplay"></iframe>
-  </div>
-</section>
-
-  <!-- 🔹 Rodapé -->
   <footer>
     <div class="social-icons">
       <a href="https://www.instagram.com/x1usaseries/" target="_blank"><img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;"></a>
@@ -210,7 +201,30 @@
 
     window.addEventListener('resize', adjustHeroElements);
     window.addEventListener('load', adjustHeroElements);
-  </script>
 
+    // Countdown
+    const eventDate = new Date("2025-07-05T00:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance <= 0) {
+        countdownElement.innerHTML = "The event has started!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
