@@ -31,65 +31,108 @@
     }
 
     @keyframes fadeInRight {
-      0% {
-        opacity: 0;
-        transform: translateX(50%) translateY(-50%);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0) translateY(-50%);
-      }
+      0% { opacity: 0; transform: translateX(50%) translateY(-50%); }
+      100% { opacity: 1; transform: translateX(0) translateY(-50%); }
     }
 
     @media (max-width: 768px) {
-      .video-right-text {
-        display: none;
-      }
-      .experience-section h2 {
-        font-size: 1.8rem;
-      }
-      .experience-text p {
-        font-size: 1rem;
-      }
-      .register-btn {
-        font-size: 1rem;
-        padding: 12px 25px;
-      }
-      .responsive-logo {
-        display: none;
-      }
+      .video-right-text { display: none; }
+      .experience-section h2 { font-size: 1.8rem; }
+      .experience-text p { font-size: 1rem; }
+      .register-btn { font-size: 1rem; padding: 12px 25px; }
+      .responsive-logo { display: none; }
     }
 
     /* Countdown styling */
     .countdown-section {
-      background: #001f3f;
+      background: #0b0f1a;
       color: white;
       text-align: center;
       padding: 60px 20px;
       font-family: 'Orbitron', sans-serif;
     }
-    .countdown-section h2 {
-      font-size: 2.8rem;
+    .countdown-title {
+      font-size: 2.2rem;
       margin-bottom: 30px;
+      font-family: 'Bebas Neue', sans-serif;
+      color: #fff;
     }
-    #countdown {
-      font-size: 8rem;
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    .countdown-box {
+      background-color: #0b0f1a;
+      padding: 10px;
+      border-left: 2px solid white;
+    }
+    .countdown-box:first-child {
+      border-left: none;
+    }
+    .countdown-number {
+      font-size: 6rem;
       font-weight: bold;
-      letter-spacing: 3px;
       background: linear-gradient(90deg, #ffcc00, #ff6600, #cc0000);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: pulse 1.2s infinite;
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    .countdown-label {
+      font-size: 1.5rem;
+      color: white;
+      font-style: italic;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
+
+<section class="countdown-section">
+  <div class="countdown-title">Sua jornada rumo ao espetáculo do X1 começa em</div>
+  <div class="countdown-grid">
+    <div class="countdown-box">
+      <div class="countdown-number" id="months">00</div>
+      <div class="countdown-label">meses</div>
+    </div>
+    <div class="countdown-box">
+      <div class="countdown-number" id="days">00</div>
+      <div class="countdown-label">dias</div>
+    </div>
+    <div class="countdown-box">
+      <div class="countdown-number" id="hours">00</div>
+      <div class="countdown-label">horas</div>
+    </div>
+    <div class="countdown-box">
+      <div class="countdown-number" id="minutes">00</div>
+      <div class="countdown-label">minutos</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const eventDate = new Date("2025-07-05T00:00:00").getTime();
+  const countdown = () => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+    const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("months").textContent = months.toString().padStart(2, '0');
+    document.getElementById("days").textContent = days.toString().padStart(2, '0');
+    document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+  };
+
+  countdown();
+  setInterval(countdown, 1000);
+</script>
+
+</body>
+</html>
+
 
   <!-- 🔹 Cabeçalho -->
   <header>
@@ -155,7 +198,7 @@
 
   <!-- 🔹 Seção Countdown -->
   <section class="countdown-section">
-    <h2>Countdown to the Event</h2>
+    <h2>Your journey to the biggest 1v1 tournament in the United States begins in</h2>
     <div id="countdown">Loading...</div>
   </section>
 
