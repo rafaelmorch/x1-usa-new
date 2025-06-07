@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>X1 USA</title>
 
-  <!-- 🔹 Fontes e ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="style.css">
 
   <style>
+    /* CSS Geral e de Layout */
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Arial', sans-serif; /* Usando Arial como fallback geral */
     }
 
+    /* Cabeçalho */
     header {
       background: #002147;
       color: white;
@@ -28,45 +28,54 @@
       align-items: center;
     }
 
+    header .logo {
+        display: flex;
+        align-items: center;
+    }
+
     header .logo img {
       height: 50px;
+      margin-right: 10px; /* Espaço entre logo e título */
     }
 
     header h1 {
       margin: 0;
       font-family: 'Rowdies', sans-serif;
+      font-size: 2.2rem; /* Tamanho do título do cabeçalho */
     }
 
-    .video-right-text {
-      position: absolute;
-      right: 5%;
-      top: 50%;
-      transform: translateY(-50%);
-      color: white;
-      font-family: Arial, sans-serif;
-      font-size: 2.1rem;
-      font-weight: bold;
-      text-align: right;
-      width: 35%;
-      line-height: 1.4;
-      text-shadow: 2px 2px 6px red;
-      animation: fadeInRight 1.5s ease-out;
-      z-index: 2;
+    nav .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
     }
 
-    @keyframes fadeInRight {
-      0% { opacity: 0; transform: translateX(50%) translateY(-50%); }
-      100% { opacity: 1; transform: translateX(0) translateY(-50%); }
+    nav .nav-links li {
+        margin-left: 30px;
     }
 
-    @media (max-width: 768px) {
-      .video-right-text { display: none; }
-      .experience-section h2 { font-size: 1.8rem; }
-      .experience-text p { font-size: 1rem; }
-      .register-btn { font-size: 1rem; padding: 12px 25px; }
-      .responsive-logo { display: none; }
+    nav .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
     }
 
+    nav .nav-links a:hover,
+    nav .nav-links a.active {
+        color: #ffcc00; /* Cor de destaque ao passar o mouse ou para o link ativo */
+    }
+
+    .menu-toggle {
+        display: none; /* Escondido por padrão em telas maiores */
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    /* Seção Hero */
     .hero-section {
       position: relative;
       width: 100%;
@@ -96,6 +105,30 @@
       white-space: nowrap;
     }
 
+    /* Texto do lado direito com animação */
+    .video-right-text {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 2.1rem;
+      font-weight: bold;
+      text-align: right;
+      width: 35%;
+      line-height: 1.4;
+      text-shadow: 2px 2px 6px red;
+      animation: fadeInRight 1.5s ease-out;
+      z-index: 2;
+    }
+
+    @keyframes fadeInRight {
+      0% { opacity: 0; transform: translateX(50%) translateY(-50%); }
+      100% { opacity: 1; transform: translateX(0) translateY(-50%); }
+    }
+
+    /* Seção de Experiência */
     .experience-section {
       padding: 60px 20px;
       background: #f4f4f4;
@@ -103,17 +136,47 @@
     }
 
     .experience-section h2 {
-      font-family: 'Bebas Neue', cursive;
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 2.5rem;
       color: #002147;
       margin-bottom: 30px;
     }
 
-    .experience-text {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.2rem;
+    .experience-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 30px;
     }
+
+    .experience-text {
+        flex: 1;
+        min-width: 300px; /* Garante que o texto não fique muito estreito */
+        text-align: left;
+    }
+
+    .experience-text p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .experience-image {
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+    }
+
+    .experience-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px; /* Adicionado para um visual mais suave */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    }
+
 
     .register-btn {
       margin-top: 20px;
@@ -123,8 +186,22 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
+      display: inline-block; /* Garante que o padding funcione */
+      transition: background-color 0.3s ease;
     }
 
+    .register-btn:hover {
+        background-color: #990000; /* Cor mais escura ao passar o mouse */
+    }
+
+    /* Linha Divisória */
+    .section-divider {
+        height: 5px;
+        background: linear-gradient(90deg, #002147, #ffcc00, #cc0000);
+        width: 100%;
+    }
+
+    /* Seção de Countdown */
     .countdown-section {
       background: #0b0f1a;
       color: white;
@@ -166,7 +243,110 @@
       margin-top: 10px;
     }
 
-    @media (max-width: 600px) {
+    /* Galeria de Mídia */
+    .video-section {
+        background: #f4f4f4;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .video-section h2 {
+        color: #002147;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    /* Rodapé */
+    footer {
+      background: #002147;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    footer .social-icons {
+        margin-bottom: 10px;
+    }
+
+    footer .social-icons a {
+        margin: 0 10px;
+        display: inline-block; /* Para garantir alinhamento */
+    }
+
+    footer .social-icons img {
+        height: 30px;
+        vertical-align: middle; /* Para alinhar com ícones de fonte */
+    }
+
+    footer .social-icons .fab {
+        font-size: 30px;
+        color: white;
+        vertical-align: middle;
+        transition: color 0.3s ease;
+    }
+
+    footer .social-icons .fab:hover {
+        color: #ffcc00; /* Cor de destaque ao passar o mouse */
+    }
+
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      /* Cabeçalho */
+      header {
+        padding: 15px 20px;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav .nav-links {
+        display: none; /* Esconde o menu em telas pequenas */
+        flex-direction: column;
+        width: 100%;
+        background: #002147;
+        position: absolute;
+        top: 80px; /* Ajuste para ficar abaixo do header */
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 10;
+      }
+      nav .nav-links.active {
+        display: flex; /* Mostra o menu quando ativo */
+      }
+      nav .nav-links li {
+        margin: 10px 0;
+      }
+      .menu-toggle {
+        display: block; /* Mostra o ícone de hambúrguer */
+      }
+
+      /* Seção Hero */
+      .tournament-title {
+        font-size: 2.5rem; /* Ajustado via JS também, mas bom ter aqui */
+        letter-spacing: 2px;
+        top: 50px;
+      }
+      .video-right-text {
+        display: none; /* Esconde o texto da direita em telas pequenas */
+      }
+      .responsive-logo {
+        display: none; /* Esconde o logo grande em telas pequenas */
+      }
+
+      /* Seção de Experiência */
+      .experience-section h2 { font-size: 1.8rem; }
+      .experience-text p { font-size: 1rem; }
+      .register-btn { font-size: 1rem; padding: 12px 25px; }
+      .experience-container {
+        flex-direction: column; /* Empilha texto e imagem em telas pequenas */
+        gap: 20px;
+      }
+      .experience-text, .experience-image {
+        text-align: center;
+      }
+
+      /* Countdown */
       .countdown-title {
         font-size: 1.2rem;
         margin-bottom: 20px;
@@ -184,29 +364,44 @@
       .countdown-label {
         font-size: 0.9rem;
       }
+
+      /* Galeria de Mídia */
+      .video-section h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔹 Cabeçalho -->
   <header>
-    <div class="logo">
-      <img src="Logo_X1.png" alt="X1 Logo">
-    </div>
-    <h1>X1 USA</h1>
+    <nav>
+      <div class="logo">
+        <img src="Logo_X1.png" alt="X1 Logo" />
+        <h1>X1 USA</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="information.html">Information</a></li>
+        <li><a href="contact.html">About Us</a></li> <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
   </header>
 
-  <!-- 🔹 Seção Hero com Vídeo -->
   <section class="hero-section">
     <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop></video>
+
     <div class="tournament-title">
       <span class="tournament-text">TOURNAMENTS</span>
       <span class="x1-text"> X1</span>
     </div>
+
     <div style="position: absolute; z-index: 2; left: 5%; top: 50%; transform: translateY(-50%);">
       <img src="Logo_X1.png" alt="Logo X1" style="width: 455px; max-width: 80vw; height: auto;" class="responsive-logo">
     </div>
+
     <div class="video-right-text">
       THE TIME HAS COME TO<br>
       MAKE HISTORY ON THE<br>
@@ -214,19 +409,32 @@
     </div>
   </section>
 
-  <!-- 🔹 Seção de Experiência -->
+  <div class="section-divider"></div>
+
   <section class="experience-section">
     <h2>The Ultimate 1v1 Soccer Experience!</h2>
-    <div class="experience-text">
-      <p>
-        Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!
-        Hosted at <strong>OCSC - Millenia, Orlando - FL</strong>, this event is the place where talent meets opportunity.
-      </p>
-      <a href="registration.html" class="register-btn">Register Now</a>
+    <div class="experience-container">
+      <div class="experience-text">
+        <p>
+          Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!
+          This electrifying competition brings together the most skilled young players from around the world for a weekend of fast-paced, high-intensity action.
+        <br><br>
+          Hosted at <strong>OCSC - Millenia, Orlando - FL</strong>, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.
+        <br><br>
+          Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,
+          the <strong>X1 USA</strong> is where the future of soccer takes center stage.
+        </p>
+        <br>
+        <a href="registration.html" class="register-btn">Register Now</a>
+      </div>
+      <div class="experience-image">
+        <img src="segurandobola.png" alt="Player holding ball">
+      </div>
     </div>
   </section>
 
-  <!-- 🔹 Contador regressivo -->
+  <div class="section-divider"></div>
+
   <section class="countdown-section">
     <div class="countdown-title">Sua jornada rumo ao espetáculo do X1 começa em</div>
     <div class="countdown-grid">
@@ -253,9 +461,10 @@
     </div>
   </section>
 
-  <!-- 🔹 Galeria de Mídia -->
-  <section class="video-section" style="background: #f4f4f4; padding: 60px 20px; text-align: center;">
-    <h2 style="color: #002147; font-size: 2.5rem; margin-bottom: 40px;">Event Highlights</h2>
+  <div class="section-divider"></div>
+
+ <section class="video-section">
+    <h2>Event Highlights</h2>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
       <iframe src="https://drive.google.com/file/d/12-yLXT6xBcMXFOOyeaw57Qahevmnk_OH/preview" width="320" height="240" allow="autoplay"></iframe>
       <iframe src="https://drive.google.com/file/d/1-TV80YvzuJKe27Ok1YkvT_LztygzH0FY/preview" width="320" height="240" allow="autoplay"></iframe>
@@ -265,28 +474,82 @@
     </div>
   </section>
 
-  <!-- 🔹 Rodapé -->
-  <footer style="background: #002147; color: white; text-align: center; padding: 20px 10px;">
-    <div class="social-icons" style="margin-bottom: 10px;">
-      <a href="https://www.instagram.com/x1usaseries/" target="_blank"><img src="Instagram_icon.png" alt="Instagram" style="height: 30px; margin: 0 10px;"></a>
-      <a href="https://www.facebook.com/x1usaseries" target="_blank"><img src="Facebook_icon.png" alt="Facebook" style="height: 30px; margin: 0 10px;"></a>
-      <a href="https://x.com/X1USA_" target="_blank"><i class="fab fa-x-twitter" style="font-size: 30px; color: white; margin: 0 10px;"></i></a>
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/x1usaseries/" target="_blank"><img src="Instagram_icon.png" alt="Instagram" class="social-img"></a>
+      <a href="https://www.facebook.com/x1usaseries" target="_blank"><img src="Facebook_icon.png" alt="Facebook" class="social-img"></a>
+      <a href="https://x.com/X1USA_" target="_blank"><i class="fab fa-x-twitter"></i></a>
     </div>
     <p>&copy; 2025 X1 USA. All rights reserved.</p>
   </footer>
 
   <script>
+    // Script do Menu Responsivo
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+
+    // Script de Ajuste de Elementos do Hero
+    function adjustHeroElements() {
+      const logo = document.querySelector('.responsive-logo');
+      const title = document.querySelector('.tournament-title');
+      const x1 = document.querySelector('.x1-text');
+      const logoContainer = logo?.parentElement;
+
+      if (window.innerWidth < 768) {
+        if (logo) logo.style.width = '290px';
+        if (title) title.style.fontSize = '2.5rem';
+        if (x1 && !x1.classList.contains('line-break')) {
+          x1.innerHTML = "<br>X1";
+          x1.classList.add('line-break');
+        }
+        if (logoContainer) logoContainer.style.left = '0%';
+      } else {
+        if (logo) logo.style.width = '455px';
+        if (title) title.style.fontSize = '4rem';
+        if (x1 && x1.classList.contains('line-break')) {
+          x1.innerHTML = " X1";
+          x1.classList.remove('line-break');
+        }
+        if (logoContainer) logoContainer.style.left = '5%';
+      }
+    }
+
+    window.addEventListener('resize', adjustHeroElements);
+    window.addEventListener('load', adjustHeroElements);
+
+    // Script do Contador Regressivo
+    // ATENÇÃO: Atualize esta data para a data e hora EXATAS do seu evento!
+    // Formato: "AAAA-MM-DDTHH:mm:ss" (Ano-Mês-DiaTHora:Minuto:Segundo)
     const eventDate = new Date("2025-07-05T00:00:00").getTime();
+
     const countdown = () => {
       const now = new Date().getTime();
       const distance = eventDate - now;
 
-      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+      // Se o evento já passou, limpa o contador
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.querySelector('.countdown-title').textContent = "O evento começou!";
+        document.getElementById("months").textContent = "00";
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        return; // Sai da função para não calcular mais
+      }
+
+      // Cálculo de meses (aproximado)
+      const daysInMonthAvg = 30.4375; // Média de dias por mês
+      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * daysInMonthAvg));
+      const remainingTimeAfterMonths = distance % (1000 * 60 * 60 * 24 * daysInMonthAvg);
+
+      const days = Math.floor(remainingTimeAfterMonths / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+      // Atualiza os elementos HTML
       document.getElementById("months").textContent = months.toString().padStart(2, '0');
       document.getElementById("days").textContent = days.toString().padStart(2, '0');
       document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
@@ -294,8 +557,9 @@
       document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
     };
 
-    countdown();
-    setInterval(countdown, 1000);
+    // Inicia o contador
+    countdown(); // Chama uma vez para exibir imediatamente
+    const countdownInterval = setInterval(countdown, 1000); // Atualiza a cada segundo
   </script>
 </body>
 </html>
