@@ -29,10 +29,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      font-size: 4.5rem;
+      font-size: 4.5rem; /* Tamanho padrão para desktop */
       font-family: 'Rowdies', sans-serif;
       text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9);
-      text-align: center; /* Garante que o texto seja centralizado, importante para responsividade */
+      text-align: center;
       white-space: nowrap; /* Evita quebra de linha em telas maiores */
     }
 
@@ -86,7 +86,8 @@
       line-height: 1.75;
     }
 
-    /* Media Queries para Responsividade */
+    /* --- Media Queries para Responsividade --- */
+
     /* Para telas de até 768px (tablets e celulares maiores) */
     @media (max-width: 768px) {
       .about-container {
@@ -94,47 +95,39 @@
         align-items: center; /* Centraliza os itens na coluna */
       }
 
-      /* Ajuste para o grid de imagens em telas menores (2 colunas) */
-      .about-images {
-        grid-template-columns: repeat(2, 1fr); /* Garante 2 COLUNAS para mobile nesta faixa */
-        gap: 10px;
-        width: 100%; /* Ocupa 100% da largura disponível no container */
-        max-width: 400px; /* Limita a largura máxima do grid para centralização */
-        margin: 0 auto; /* Centraliza o grid horizontalmente */
-      }
-
-      .about-images img {
-        width: 100%; /* Garante que as imagens preencham suas células no grid */
-      }
-
-      /* Ajuste do tamanho do título no banner de vídeo para telas menores */
+      /* Título "Who We Are" maior para tablets/celulares maiores */
       .video-banner h1 {
-        font-size: 3.3rem; /* AUMENTADO EM 50% - 2.2rem * 1.5 = 3.3rem */
-        white-space: normal; /* Permite quebra de linha em telas menores */
-        padding: 0 10px; /* Adiciona um pequeno padding para não colar nas bordas */
+        font-size: 3.3rem; /* Tamanho 50% maior que 2.2rem */
+        white-space: normal; /* Permite quebra de linha */
+        padding: 0 10px; /* Adiciona um pequeno padding */
       }
 
-      /* Ajuste de padding na seção about para telas menores */
+      /* Garante 2 colunas para o grid de imagens nesta faixa */
+      .about-images {
+        grid-template-columns: repeat(2, 1fr); /* Garante 2 COLUNAS */
+        max-width: 400px; /* Limita a largura máxima do grid para centralização */
+      }
+
+      /* Ajuste de padding e fonte do texto para telas menores */
       .about-section {
         padding: 30px 15px;
       }
-
-      /* Ajuste da fonte do texto about para telas menores */
       .about-text {
         font-size: 1rem;
         padding: 20px;
       }
     }
 
-    /* Media Query para telas MUITO pequenas (celulares menores) */
-    /* Se a tela for menor que 480px, as imagens mudam para 1 coluna */
+    /* Para telas MUITO pequenas (celulares pequenos, abaixo de 480px) */
     @media (max-width: 480px) {
-      .about-images {
-        grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
-        max-width: 250px; /* Ajusta a largura máxima para uma única coluna */
-      }
       .video-banner h1 {
         font-size: 2.5rem; /* Reduz um pouco mais para telas muito pequenas */
+      }
+
+      /* Muda o grid de imagens para 1 coluna em telas muito pequenas */
+      .about-images {
+        grid-template-columns: 1fr; /* Muda para 1 coluna */
+        max-width: 250px; /* Ajusta a largura máxima para uma única coluna */
       }
     }
   </style>
