@@ -67,12 +67,12 @@
       }
     }
 
-    /* --- CSS para a Seção de Countdown e Sponsor (CORREÇÕES DE MARGEM APLICADAS) --- */
+    /* --- CSS para a Seção de Countdown e Sponsor (Ajustes Finais) --- */
     .countdown-section {
       background: #001f3f; /* Azul marinho escuro */
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px 60px 20px; /* Padding ajustado para mais respiro */
       font-family: 'Orbitron', sans-serif; /* Usando a fonte Orbitron para os números */
     }
     .countdown-title {
@@ -88,7 +88,7 @@
       justify-content: center;
       gap: 40px; /* Espaçamento entre as caixas */
       flex-wrap: wrap; /* Para quebrar em várias linhas em telas menores */
-      margin-bottom: 10px; /* Margem reduzida: era 30px, agora 10px */
+      margin-bottom: 10px; /* Margem reduzida */
     }
     .countdown-box {
       padding: 10px;
@@ -114,21 +114,20 @@
       font-size: 1.5rem;
       color: white;
       font-style: italic;
-      margin-top: 5px; /* Margem reduzida: era 10px, agora 5px */
+      margin-top: 5px; /* Margem reduzida */
     }
 
-    /* --- Estilos para a seção do Sponsor (MARGENS AJUSTADAS) --- */
+    /* --- Estilos para a seção do Sponsor (Ajustes Finais de Margem e Tamanho) --- */
     .sponsor-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* Removido o gap: 10px; pois o margin-bottom da imagem controla o espaço */
-      margin-top: 10px; /* Margem reduzida: era 20px, agora 10px */
+      margin-top: 40px; /* Aumentado para afastar do countdown */
     }
     .sponsor-container img {
-      max-width: 60%; /* Aumenta para aproximadamente 3x o tamanho anterior e torna responsivo */
+      max-width: 30%; /* Tamanho da imagem reduzido */
       height: auto;
-      margin-bottom: 5px; /* Adicionado pequena margem abaixo da imagem */
+      margin-bottom: 5px; /* Pequena margem abaixo da imagem */
     }
     .sponsor-text {
       font-size: 1.2rem;
@@ -160,11 +159,13 @@
         margin-top: 2px; /* Ajuste para telas menores */
       }
       .sponsor-container img {
-        max-width: 80%; /* Garante que a imagem continue responsiva em telas menores */
+        max-width: 50%; /* Tamanho da imagem para mobile */
         margin-bottom: 3px; /* Ajuste para telas menores */
       }
       .sponsor-text {
         font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
       }
     }
     /* --- Fim do CSS para a Seção de Countdown --- */
