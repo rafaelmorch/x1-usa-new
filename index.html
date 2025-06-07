@@ -85,53 +85,56 @@
     .countdown-grid {
       display: flex;
       justify-content: center;
-      gap: 40px; /* Espaçamento entre as caixas */
-      flex-wrap: wrap; /* Para quebrar em várias linhas em telas menores */
-      margin-bottom: 10px; /* Adicionado margem abaixo do contador para separar do sponsor */
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 10px; /* Reduzida a margem abaixo do contador */
     }
     .countdown-box {
       padding: 10px;
-      border-left: 2px solid white; /* Linha divisória entre os elementos do contador */
-      text-align: center; /* Garante que o texto dentro da caixa esteja centralizado */
-      display: flex; /* Mantém flexbox para alinhamento vertical */
-      flex-direction: column; /* Coloca número e label um abaixo do outro */
-      justify-content: center; /* Centraliza verticalmente */
-      align-items: center; /* Centraliza horizontalmente */
+      border-left: 2px solid white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .countdown-box:first-child {
-      border-left: none; /* Remove a borda esquerda do primeiro elemento para não ficar sobrando */
+      border-left: none;
     }
     .countdown-number {
       font-size: 6rem;
       font-weight: bold;
-      background: linear-gradient(90deg, #ffcc00, #ff6600, #cc0000); /* Gradiente de cor */
-      -webkit-background-clip: text; /* Para aplicar o gradiente ao texto */
-      -webkit-text-fill-color: transparent; /* Para o texto usar o gradiente */
-      line-height: 1; /* Reduz o espaço acima/abaixo do número */
+      background: linear-gradient(90deg, #ffcc00, #ff6600, #cc0000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
     }
     .countdown-label {
       font-size: 1.5rem;
       color: white;
       font-style: italic;
-      margin-top: 10px;
+      margin-top: 5px; /* Reduzida a margem superior da label */
     }
 
-    /* --- Estilos para a seção do Sponsor (RESPONSIVO E MAIOR) --- */
+    /* --- Estilos para a seção do Sponsor (AJUSTADO PARA MARGENS MENORES) --- */
     .sponsor-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
-      margin-top: 20px; /* Espaçamento extra acima do sponsor */
+      /* Removido o gap aqui, já que o margin-bottom no p e img será mais preciso */
+      margin-top: 10px; /* Reduzida a margem acima do sponsor */
     }
     .sponsor-container img {
-      max-width: 60%; /* Aumenta para aproximadamente 3x o tamanho anterior e torna responsivo */
+      max-width: 60%;
       height: auto;
+      margin-bottom: 5px; /* Adicionado pequena margem abaixo da imagem */
     }
     .sponsor-text {
       font-size: 1.2rem;
       font-style: italic;
       color: #ccc;
+      margin-top: 0; /* Garante que não há margem extra acima do texto */
+      margin-bottom: 0; /* Garante que não há margem extra abaixo do texto */
     }
 
     /* Media queries para o countdown (responsividade) */
@@ -142,7 +145,7 @@
       }
       .countdown-grid {
         gap: 8px;
-        margin-bottom: 20px; /* Ajuste a margem para telas menores */
+        margin-bottom: 10px; /* Ajuste a margem para telas menores */
       }
       .countdown-box {
         padding: 6px;
@@ -153,9 +156,11 @@
       }
       .countdown-label {
         font-size: 0.9rem;
+        margin-top: 2px; /* Ajuste para telas menores */
       }
       .sponsor-container img {
-        max-width: 80%; /* Garante que a imagem continue responsiva em telas menores */
+        max-width: 80%;
+        margin-bottom: 3px; /* Ajuste para telas menores */
       }
       .sponsor-text {
         font-size: 1rem;
