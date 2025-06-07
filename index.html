@@ -66,7 +66,7 @@
       }
     }
 
-    /* --- CSS para a Seção de Countdown (Ajustado NOVAMENTE) --- */
+    /* --- CSS para a Seção de Countdown e Sponsor (Ajustado) --- */
     .countdown-section {
       background: #001f3f; /* Azul marinho escuro */
       color: white;
@@ -87,6 +87,7 @@
       justify-content: center;
       gap: 40px; /* Espaçamento entre as caixas */
       flex-wrap: wrap; /* Para quebrar em várias linhas em telas menores */
+      margin-bottom: 30px; /* Adicionado margem abaixo do contador para separar do sponsor */
     }
     .countdown-box {
       padding: 10px;
@@ -107,13 +108,30 @@
       -webkit-background-clip: text; /* Para aplicar o gradiente ao texto */
       -webkit-text-fill-color: transparent; /* Para o texto usar o gradiente */
       line-height: 1; /* Reduz o espaço acima/abaixo do número */
-      /* display: block; */ /* Pode ajudar a garantir que ele ocupe a própria linha */
     }
     .countdown-label {
       font-size: 1.5rem;
       color: white;
       font-style: italic;
       margin-top: 10px;
+    }
+
+    /* --- Estilos para a seção do Sponsor --- */
+    .sponsor-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px; /* Espaçamento extra acima do sponsor */
+    }
+    .sponsor-container img {
+      max-width: 200px; /* Ajuste o tamanho conforme necessário */
+      height: auto;
+    }
+    .sponsor-text {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #ccc;
     }
 
     /* Media queries para o countdown (responsividade) */
@@ -124,6 +142,7 @@
       }
       .countdown-grid {
         gap: 8px;
+        margin-bottom: 20px; /* Ajuste a margem para telas menores */
       }
       .countdown-box {
         padding: 6px;
@@ -134,6 +153,12 @@
       }
       .countdown-label {
         font-size: 0.9rem;
+      }
+      .sponsor-container img {
+        max-width: 150px;
+      }
+      .sponsor-text {
+        font-size: 1rem;
       }
     }
     /* --- Fim do CSS para a Seção de Countdown --- */
@@ -240,6 +265,10 @@
         <div class="countdown-number" id="seconds">00</div>
         <div class="countdown-label">seconds</div>
       </div>
+    </div>
+    <div class="sponsor-container">
+      <img src="pernambuquinha.png" alt="Pernambuquinha Sponsor">
+      <p class="sponsor-text">Sponsor</p>
     </div>
   </section>
 
