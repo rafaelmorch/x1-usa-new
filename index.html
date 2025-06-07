@@ -66,7 +66,7 @@
       }
     }
 
-    /* --- CSS para a Seção de Countdown (Atualizado) --- */
+    /* --- CSS para a Seção de Countdown (Ajustado NOVAMENTE) --- */
     .countdown-section {
       background: #001f3f; /* Azul marinho escuro */
       color: white;
@@ -89,16 +89,13 @@
       flex-wrap: wrap; /* Para quebrar em várias linhas em telas menores */
     }
     .countdown-box {
-      /* background-color: #0b0f1a; /* Pode ser removido se o background da seção já for o mesmo */
       padding: 10px;
       border-left: 2px solid white; /* Linha divisória entre os elementos do contador */
-      
-      /* --- Novas propriedades para centralização --- */
-      display: flex;
-      flex-direction: column;
+      text-align: center; /* Garante que o texto dentro da caixa esteja centralizado */
+      display: flex; /* Mantém flexbox para alinhamento vertical */
+      flex-direction: column; /* Coloca número e label um abaixo do outro */
       justify-content: center; /* Centraliza verticalmente */
       align-items: center; /* Centraliza horizontalmente */
-      /* --- Fim das novas propriedades --- */
     }
     .countdown-box:first-child {
       border-left: none; /* Remove a borda esquerda do primeiro elemento para não ficar sobrando */
@@ -109,6 +106,8 @@
       background: linear-gradient(90deg, #ffcc00, #ff6600, #cc0000); /* Gradiente de cor */
       -webkit-background-clip: text; /* Para aplicar o gradiente ao texto */
       -webkit-text-fill-color: transparent; /* Para o texto usar o gradiente */
+      line-height: 1; /* Reduz o espaço acima/abaixo do número */
+      /* display: block; */ /* Pode ajudar a garantir que ele ocupe a própria linha */
     }
     .countdown-label {
       font-size: 1.5rem;
