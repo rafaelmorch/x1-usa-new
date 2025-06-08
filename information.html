@@ -11,8 +11,10 @@
         .info-section {
             position: relative;
             width: 100%;
-            height: 100vh;
+            height: auto; /* Altera para auto para acomodar o conteúdo extra */
+            min-height: 100vh; /* Garante que ela ainda ocupe a altura da viewport */
             display: flex;
+            flex-direction: column; /* Conteúdo em coluna */
             justify-content: center;
             align-items: center;
             color: white;
@@ -21,6 +23,8 @@
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                         url('fundinfo.png') no-repeat center center;
             background-size: cover;
+            background-attachment: fixed; /* Opcional: faz o background fixo ao rolar */
+            padding: 80px 20px; /* Adiciona padding para o conteúdo não colar nas bordas */
         }
 
         /* 🔹 Conteúdo sobreposto */
@@ -28,61 +32,147 @@
             position: relative;
             z-index: 1;
             max-width: 800px;
-            padding: 20px;
+            padding: 30px; /* Aumenta o padding interno */
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Adiciona uma sombra */
+            margin-top: 80px; /* Espaçamento para o cabeçalho */
+            margin-bottom: 20px;
         }
 
         .info-section h2 {
             font-size: 3rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* Aumenta a margem */
             text-transform: uppercase;
+            font-family: 'Rowdies', sans-serif; /* Adicionado para consistência */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Sombra para o título */
         }
 
         .info-section p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.25rem; /* Aumenta um pouco o texto */
+            margin-bottom: 25px; /* Aumenta a margem */
+            line-height: 1.6;
         }
 
         /* 🔹 Caixa de Informação Transparente */
         .info-box {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.85); /* Mais opaco para melhor leitura */
             color: black;
-            padding: 15px;
+            padding: 18px; /* Aumenta o padding */
             border-radius: 8px;
             margin-bottom: 15px;
-            font-size: 1.3rem;
+            font-size: 1.4rem; /* Aumenta a fonte */
             font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra para info-box */
+        }
+
+        /* 🔹 Flyer do Evento */
+        .event-flyer-container {
+            margin-top: 40px; /* Espaço acima do flyer */
+            margin-bottom: 40px; /* Espaço abaixo do flyer */
+            text-align: center;
+        }
+
+        .event-flyer {
+            max-width: 550px; /* Tamanho do flyer na página */
+            width: 100%; /* Garante responsividade */
+            height: auto;
+            border: 5px solid white; /* Borda branca para destacar */
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra mais pronunciada */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event-flyer:hover {
+            transform: scale(1.02); /* Leve zoom ao passar o mouse */
         }
 
         /* 🔹 Botões */
         .button-container {
-            margin-top: 20px;
+            margin-top: 30px; /* Aumenta a margem acima dos botões */
+            display: flex; /* Para centralizar e espaçar os botões */
+            flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+            justify-content: center;
+            gap: 20px; /* Espaçamento entre os botões */
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(to right, #Ff0000, #002147);
+            background: linear-gradient(to right, #FF0000, #002147);
             color: white;
             text-decoration: none;
-            padding: 15px 30px;
+            padding: 18px 35px; /* Aumenta o padding dos botões */
             border-radius: 30px;
-            font-size: 1.3rem;
+            font-size: 1.4rem; /* Aumenta a fonte dos botões */
             font-weight: bold;
             transition: transform 0.2s, box-shadow 0.3s;
-            margin: 10px;
+            margin: 10px; /* Mantém um pequeno margin para compatibilidade */
         }
 
         .btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
         }
 
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            .info-section {
+                padding: 60px 15px; /* Ajusta padding para mobile */
+            }
+            .info-content {
+                padding: 25px;
+                margin-top: 60px; /* Ajusta margem superior */
+            }
+            .info-section h2 {
+                font-size: 2.5rem;
+            }
+            .info-section p {
+                font-size: 1.1rem;
+            }
+            .info-box {
+                font-size: 1.15rem;
+                padding: 15px;
+            }
+            .event-flyer {
+                max-width: 400px; /* Reduz um pouco mais para tablets */
+                width: 90%;
+            }
+            .btn {
+                padding: 14px 28px;
+                font-size: 1.1rem;
+                margin: 8px;
+            }
+            .button-container {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-section h2 {
+                font-size: 2rem;
+            }
+            .info-section p {
+                font-size: 1rem;
+            }
+            .info-box {
+                font-size: 1rem;
+            }
+            .event-flyer {
+                max-width: 300px; /* Ajusta para telas de celular pequenas */
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .button-container {
+                flex-direction: column; /* Coloca os botões em coluna em telas muito pequenas */
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- 🔹 Cabeçalho -->
     <header>
         <nav>
             <div class="logo">
@@ -96,20 +186,25 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle">&#9776;</div> <!-- Ícone de menu para mobile -->
-        </nav>
+            <div class="menu-toggle">&#9776;</div> </nav>
     </header>
 
-    <!-- 🔹 Seção de Informações com Imagem -->
     <section class="info-section">
         <div class="info-content">
             <h2>Event Information</h2>
             <p>The X1 USA 2025 is the ultimate 1v1 soccer tournament, providing young athletes the chance to showcase their skills on a world-class stage.</p>
 
-<div class="info-box">📍 Location: OCSC - Millenia - 3516 President Barack Obama Pkwy, Orlando, FL 32811</div>
-<div class="info-box">📆 Date: July 5, 2025</div>
-<div class="info-box">⚽ Age Groups: U11, U13, U15, and U18</div>
+            <div class="info-box">📍 Location: OCSC - Millenia - 3516 President Barack Obama Pkwy, Orlando, FL 32811</div>
+            <div class="info-box">📆 Date: July 5, 2025</div>
+            <div class="info-box">⚽ Age Groups: U11, U13, U15, and U18</div>
             
+            <div class="event-flyer-container">
+                <h3>Official Event Flyer</h3>
+                <a href="flyerX1.JPG" target="_blank">
+                    <img src="flyerX1.JPG" alt="X1 USA Tournament Official Flyer" class="event-flyer">
+                </a>
+                <p style="font-size: 1rem; margin-top: 15px; color: white;">Click the flyer to view in full size.</p>
+            </div>
             <div class="button-container">
                 <a href="Regulation X1 USA.pdf" class="btn" target="_blank">📜 View Regulations</a>
                 <a href="Planejamento X1 Florida - 2025.xlsx" class="btn" target="_blank">📅 View Match Schedule</a>
@@ -117,21 +212,20 @@
         </div>
     </section>
 
-    <!-- 🔹 Rodapé -->
-<footer>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
-            <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank" aria-label="Facebook">
-            <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
-        </a>
-        <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
-            <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
-        </a>
-    </div>
-    <p>&copy; 2025 X1 USA. All rights reserved.</p>
-</footer>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
+                <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank" aria-label="Facebook">
+                <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
+                <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 X1 USA. All rights reserved.</p>
+    </footer>
 
     <script>
         document.querySelector(".menu-toggle").addEventListener("click", function () {
