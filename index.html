@@ -129,7 +129,7 @@
         .sponsor-container {
             display: flex; /* Adiciona flexbox para alinhar os itens lado a lado */
             justify-content: center; /* Centraliza os itens horizontalmente */
-            gap: 30px; /* Espaçamento entre os itens de patrocinador */
+            gap: 60px; /* Aumentado o espaçamento entre os itens de patrocinador para o dobro (de 30px para 60px) */
             flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
             align-items: flex-end; /* Alinha a base das caixas, útil se as imagens tiverem alturas diferentes */
 
@@ -138,7 +138,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             margin-left: auto;
             margin-right: auto;
-            max-width: 800px;
+            max-width: 1000px; /* Aumentado de 800px para 1000px para acomodar imagens maiores */
         }
         .sponsor-item {
             display: flex;
@@ -147,12 +147,12 @@
             text-align: center;
         }
         .sponsor-item img {
-            max-width: 200px; /* Aumentado de 150px para 200px para desktop */
+            max-width: 300px; /* Aumentado de 150px para 300px para desktop (dobro) */
             height: auto;
             margin-bottom: 5px;
         }
         .sponsor-text {
-            font-size: 1.3rem; /* Aumentado o tamanho da fonte para o desktop */
+            font-size: 2.6rem; /* Aumentado o tamanho da fonte para o dobro (de 1.3rem para 2.6rem) */
             font-style: italic;
             color: #ccc;
             margin-top: 0;
@@ -182,16 +182,16 @@
             }
             .sponsor-container {
                 flex-direction: column; /* Em mobile, empilha os itens verticalmente */
-                gap: 20px; /* Ajuste o espaçamento vertical entre os itens de patrocinador */
+                gap: 40px; /* Aumentado o espaçamento vertical entre os itens de patrocinador para mobile (de 20px para 40px) */
                 margin-top: 30px; /* Ajuste a margem superior para mobile */
                 padding-top: 15px; /* Ajuste o padding superior para mobile */
             }
             .sponsor-item img {
-                max-width: 60%; /* Ajustado para 60% para serem maiores no mobile, mas ainda se adequarem */
+                max-width: 100%; /* Ajustado para 100% para que a imagem tente preencher a largura do sponsor-item no mobile */
                 margin-bottom: 3px; /* Ajuste para telas menores */
             }
             .sponsor-text {
-                font-size: 1.1rem; /* Aumentado para o mobile */
+                font-size: 2.2rem; /* Aumentado o tamanho da fonte para o dobro (de 1.1rem para 2.2rem) para mobile */
                 margin-top: 0;
                 margin-bottom: 0;
             }
