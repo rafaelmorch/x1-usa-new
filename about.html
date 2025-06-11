@@ -195,6 +195,29 @@
                 margin-bottom: 20px;
             }
 
+            /* Redefinição da ordem para o layout mobile */
+            /* ab1, ab3, ab5 na primeira coluna (valores ímpares para order) */
+            /* ab2, ab4, ab6 na segunda coluna (valores pares para order) */
+            .about-images .image-row:nth-child(1) img:nth-child(1) { /* ab1.jpeg */
+                order: 1; /* Primeira coluna, primeira linha */
+            }
+            .about-images .image-row:nth-child(1) img:nth-child(2) { /* ab3.jpeg */
+                order: 3; /* Primeira coluna, segunda linha */
+            }
+            .about-images .image-row:nth-child(1) img:nth-child(3) { /* ab5.jpeg */
+                order: 5; /* Primeira coluna, terceira linha */
+            }
+            .about-images .image-row:nth-child(2) img:nth-child(1) { /* ab2.jpeg */
+                order: 2; /* Segunda coluna, primeira linha */
+            }
+            .about-images .image-row:nth-child(2) img:nth-child(2) { /* ab4.jpeg */
+                order: 4; /* Segunda coluna, segunda linha */
+            }
+            .about-images .image-row:nth-child(2) img:nth-child(3) { /* ab6.png */
+                order: 6; /* Segunda coluna, terceira linha */
+            }
+
+
             .about-images .image-row {
                 display: contents; /* Faz com que as divs image-row não afetem o layout do grid pai no mobile */
             }
