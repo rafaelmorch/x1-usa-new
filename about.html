@@ -231,7 +231,12 @@
                 margin-right: auto;
             }
             .about-images .image-row {
-                grid-template-columns: repeat(3, 1fr); /* Define 3 colunas para as linhas de imagem no desktop */
+                display: flex; /* Garante que as imagens fiquem em linha */
+                justify-content: space-around; /* Distribui o espaço entre as imagens */
+            }
+            .about-images .image-row img {
+                max-width: 30%; /* Define uma largura máxima para cada imagem (ajuste conforme necessário) */
+                flex: none; /* Impede que as imagens cresçam demais */
             }
             .about-container {
                 align-items: stretch;
