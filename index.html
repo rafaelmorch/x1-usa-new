@@ -146,13 +146,13 @@
             align-items: center;
             text-align: center;
         }
-        /* Estilo genérico para todas as imagens de sponsor-item */
+        /* Estilo genérico para todas as imagens de sponsor-item (aplicado à Radio Brazil) */
         .sponsor-item img {
-            max-width: 300px; /* Tamanho base para imagens, Radio Brazil usará este */
+            max-width: 300px; /* Tamanho base para imagens no desktop */
             height: auto;
             margin-bottom: 5px;
         }
-        /* Estilo específico para a imagem do patrocinador principal (Pernambuquinha) */
+        /* Estilo específico para a imagem do patrocinador principal (Pernambuquinha) no desktop */
         .sponsor-item img.main-sponsor-img {
             max-width: 450px; /* 1.5x de 300px = 450px para desktop */
         }
@@ -164,7 +164,7 @@
             margin-bottom: 0;
         }
 
-        /* Media queries para o countdown (responsividade) */
+        /* Media queries para o mobile */
         @media (max-width: 600px) {
             .countdown-title {
                 font-size: 1.2rem;
@@ -191,14 +191,15 @@
                 margin-top: 30px; /* Ajuste a margem superior para mobile */
                 padding-top: 15px; /* Ajuste o padding superior para mobile */
             }
+            /* Tamanho base para imagens no mobile */
             .sponsor-item img {
-                max-width: 100%; /* Ajustado para 100% para que a imagem tente preencher a largura do sponsor-item no mobile */
+                max-width: 80%; /* Ajustado para 80% do item pai no mobile */
                 margin-bottom: 3px; /* Ajuste para telas menores */
             }
             /* Ajuste específico para a imagem do patrocinador principal (Pernambuquinha) no mobile */
             .sponsor-item img.main-sponsor-img {
-                max-width: 150%; /* 1.5x de 100% do seu item pai, ou seja, ficará maior que a rádio */
-                                 /* Alternativamente, você pode usar um valor fixo, ex: 150px, ou 90% */
+                max-width: 120%; /* 1.5x de 80% = 120% para mobile, ou um valor fixo que você achar melhor */
+                                 /* Alternativamente, tente 'max-width: 200px;' se preferir um tamanho fixo em pixels */
             }
             .sponsor-text {
                 font-size: 2.2rem; /* Aumentado o tamanho da fonte para o dobro (de 1.1rem para 2.2rem) para mobile */
