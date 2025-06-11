@@ -1,298 +1,296 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LEMPWRQZ5W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEMPWRQZ5W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-LEMPWRQZ5W');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - X1 USA</title>
-  <link rel="icon" type="image/png" href="Logo_X1.png">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        gtag('config', 'G-LEMPWRQZ5W');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - X1 USA</title>
+    <link rel="icon" type="image/png" href="Logo_X1.png">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    /* Estilos para o banner de vídeo no topo da página */
-    .video-banner {
-      position: relative;
-      width: 100%;
-      height: 60vh;
-      overflow: hidden;
-    }
+    <style>
+        /* Estilos para o banner de vídeo no topo da página */
+        .video-banner {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
 
-    .video-banner video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .video-banner video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .video-banner h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 4.5rem; /* Tamanho padrão para desktop */
-      font-family: 'Rowdies', sans-serif;
-      text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9);
-      text-align: center;
-      white-space: nowrap; /* Evita quebra de linha em telas maiores */
-    }
+        .video-banner h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 4.5rem; /* Tamanho padrão para desktop */
+            font-family: 'Rowdies', sans-serif;
+            text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9);
+            text-align: center;
+            white-space: nowrap; /* Evita quebra de linha em telas maiores */
+        }
 
-    /* Estilos para a linha divisória */
-    .section-divider {
-      width: 100%;
-      height: 20px;
-      background: linear-gradient(to right, #FF0000, #002147);
-      margin: 20px 0 30px;
-    }
+        /* Estilos para a linha divisória */
+        .section-divider {
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to right, #FF0000, #002147);
+            margin: 20px 0 30px;
+        }
 
-    /* Estilos para a seção "About Us" */
-    .about-section {
-      padding: 60px 20px;
-      background: #f5f5f5;
-    }
+        /* Estilos para a seção "About Us" */
+        .about-section {
+            padding: 60px 20px;
+            background: #f5f5f5;
+        }
 
-    .about-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-      align-items: stretch; /* Estica o container de texto para ter a mesma altura do container de imagens no desktop */
-    }
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: stretch; /* Estica o container de texto para ter a mesma altura do container de imagens no desktop */
+        }
 
-    /* Estilos para o grid de imagens na seção "About Us" */
-    .about-images {
-      flex: 1;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 colunas para desktop e mobile */
-      gap: 10px;
-    }
+        /* Estilos para o grid de imagens na seção "About Us" */
+        .about-images {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 colunas para desktop e mobile */
+            gap: 10px;
+        }
 
-    .about-images img {
-      width: 100%; /* Imagens preenchem a largura da célula do grid */
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+        .about-images img {
+            width: 100%; /* Imagens preenchem a largura da célula do grid */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
 
-    /* Estilos para o texto da seção "About Us" */
-    .about-text {
-      flex: 1;
-      font-size: 1.21rem;
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border: 1px solid #ccc;
-      line-height: 1.75;
-    }
+        /* Estilos para o texto da seção "About Us" */
+        .about-text {
+            flex: 1;
+            font-size: 1.21rem;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ccc;
+            line-height: 1.75;
+        }
 
-    /* --- Estilos para a nova seção "Be a Sponsor" --- */
-    .about-sponsor-section {
-      padding: 80px 20px; /* Mais padding para destaque */
-      background: linear-gradient(to right, #002147, #FF0000); /* Um gradiente para diferenciá-la */
-      color: white;
-      text-align: center;
-      margin-top: 30px; /* Espaçamento da seção anterior */
-      border-top: 5px solid #fff; /* Uma borda superior para separar */
-      border-bottom: 5px solid #fff; /* Uma borda inferior */
-    }
+        /* --- Estilos para a nova seção "Be a Sponsor" --- */
+        .about-sponsor-section {
+            padding: 80px 20px; /* Mais padding para destaque */
+            background: linear-gradient(to right, #002147, #FF0000); /* Um gradiente para diferenciá-la */
+            color: white;
+            text-align: center;
+            margin-top: 30px; /* Espaçamento da seção anterior */
+            border-top: 5px solid #fff; /* Uma borda superior para separar */
+            border-bottom: 5px solid #fff; /* Uma borda inferior */
+        }
 
-    .about-sponsor-section .sponsor-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        .about-sponsor-section .sponsor-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    .about-sponsor-section h2 {
-      font-size: 3rem;
-      margin-bottom: 25px;
-      font-family: 'Rowdies', sans-serif;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    }
+        .about-sponsor-section h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            font-family: 'Rowdies', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
 
-    .about-sponsor-section p {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
+        .about-sponsor-section p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
 
-    .about-sponsor-section .button {
-      display: inline-block;
-      background-color: #fff;
-      color: #002147;
-      padding: 15px 30px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: 2px solid #fff;
-    }
+        .about-sponsor-section .button {
+            display: inline-block;
+            background-color: #fff;
+            color: #002147;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid #fff;
+        }
 
-    .about-sponsor-section .button:hover {
-      background-color: #FF0000; /* Vermelho no hover */
-      color: white;
-      border-color: white;
-    }
+        .about-sponsor-section .button:hover {
+            background-color: #FF0000; /* Vermelho no hover */
+            color: white;
+            border-color: white;
+        }
 
-    /* --- Media Queries para Responsividade --- */
+        /* --- Media Queries para Responsividade --- */
 
-    /* Para telas de até 768px (tablets e todos os celulares) */
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column; /* Pilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens na coluna */
-      }
+        /* Para telas de até 768px (tablets e todos os celulares) */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column; /* Pilha os itens verticalmente */
+                align-items: center; /* Centraliza os itens na coluna */
+            }
 
-      /* Título "Who We Are" maior para mobile */
-      .video-banner h1 {
-        font-size: 3.3rem; /* Tamanho 50% maior que 2.2rem */
-        white-space: normal; /* Permite quebra de linha */
-        padding: 0 10px; /* Adiciona um pequeno padding */
-      }
+            /* Título "Who We Are" maior para mobile */
+            .video-banner h1 {
+                font-size: 3.3rem; /* Tamanho 50% maior que 2.2rem */
+                white-space: normal; /* Permite quebra de linha */
+                padding: 0 10px; /* Adiciona um pequeno padding */
+            }
 
-      /* Ajusta o grid de imagens para ter 2 colunas e ser menor em todas as telas mobile */
-      .about-images {
-        grid-template-columns: repeat(2, 1fr); /* Mantém 2 COLUNAS */
-        max-width: 320px; /* Reduz o tamanho máximo do bloco de imagens (ajuste este valor se necessário) */
-        gap: 8px; /* Reduz um pouco o espaçamento entre as imagens */
-      }
-      /* As imagens individuais já têm width: 100%, então elas se ajustarão ao novo max-width do contêiner */
+            /* Ajusta o grid de imagens para ter 2 colunas e ser menor em todas as telas mobile */
+            .about-images {
+                grid-template-columns: repeat(2, 1fr); /* Mantém 2 COLUNAS */
+                max-width: 320px; /* Reduz o tamanho máximo do bloco de imagens (ajuste este valor se necessário) */
+                gap: 8px; /* Reduz um pouco o espaçamento entre as imagens */
+            }
+            /* As imagens individuais já têm width: 100%, então elas se ajustarão ao novo max-width do contêiner */
 
-      /* Ajuste de padding e fonte do texto para telas menores */
-      .about-section {
-        padding: 30px 15px;
-      }
-      .about-text {
-        font-size: 1rem;
-        padding: 20px;
-      }
+            /* Ajuste de padding e fonte do texto para telas menores */
+            .about-section {
+                padding: 30px 15px;
+            }
+            .about-text {
+                font-size: 1rem;
+                padding: 20px;
+            }
 
-      /* Media Queries para a nova seção "Be a Sponsor" */
-      .about-sponsor-section {
-        padding: 60px 15px;
-      }
-      .about-sponsor-section h2 {
-        font-size: 2.2rem;
-      }
-      .about-sponsor-section p {
-        font-size: 1rem;
-      }
-      .about-sponsor-section .button {
-        padding: 12px 25px;
-        font-size: 1rem;
-      }
-    }
-    /* A media query para 480px foi removida para garantir 2 colunas em todas as larguras mobile */
-  </style>
+            /* Media Queries para a nova seção "Be a Sponsor" */
+            .about-sponsor-section {
+                padding: 60px 15px;
+            }
+            .about-sponsor-section h2 {
+                font-size: 2.2rem;
+            }
+            .about-sponsor-section p {
+                font-size: 1rem;
+            }
+            .about-sponsor-section .button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+        /* A media query para 480px foi removida para garantir 2 colunas em todas as larguras mobile */
+    </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="Logo_X1.png" alt="X1 Logo">
-        <h1>X1 USA</h1>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="information.html">Information</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="menu-toggle">&#9776;</div>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Logo_X1.png" alt="X1 Logo">
+                <h1>X1 USA</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
 
-  <section class="video-banner">
-    <video src="shot4.mp4" autoplay muted loop playsinline></video>
-    <h1>Who We Are</h1>
-  </section>
+    <section class="video-banner">
+        <video src="shot4.mp4" autoplay muted loop playsinline></video>
+        <h1>Who We Are</h1>
+    </section>
 
-  <div class="section-divider"></div>
+    <div class="section-divider"></div>
 
-  <section class="about-section">
-    <div class="about-container">
-      <div class="about-images">
-        <img src="ab1.jpeg" alt="About X1 Image 1">
-        <img src="ab2.jpeg" alt="About X1 Image 2">
-        <img src="ab3.jpeg" alt="About X1 Image 3">
-        <img src="ab4.jpeg" alt="About X1 Image 4">
-        <img src="ab5.jpeg" alt="About X1 Image 5">
-        <img src="ab6.png" alt="About X1 Image 6">
-      </div>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-images">
+                <img src="ab1.jpeg" alt="About X1 Image 1">
+                <img src="ab2.jpeg" alt="About X1 Image 2">
+                <img src="ab3.jpeg" alt="About X1 Image 3">
+                <img src="ab4.jpeg" alt="About X1 Image 4">
+                <img src="ab5.jpeg" alt="About X1 Image 5">
+                <img src="ab6.png" alt="About X1 Image 6">
+            </div>
 
-<div class="about-text">
-  <p>
-    <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
-  </p>
-  <p>
-    Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
-  </p>
-  <p>
-    Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
-  </p>
-  <p>
-    We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation. Our goal is not only to entertain but also to empower communities and foster a lasting impact through the beautiful game.
-  </p>
+            <div class="about-text">
+                <p>
+                    <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
+                </p>
+                <p>
+                    Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
+                </p>
+                <p>
+                    Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
+                </p>
+                <p>
+                    We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation. Our goal is not only to entertain but also to empower communities and foster a lasting impact through the beautiful game.
+                </p>
 
-  <p>
-    Leading this movement is <strong><a href="https://www.instagram.com/l.emilio11_official/" target="_blank">Luciano Emílio</a></strong>, a former Brazilian forward with a successful international soccer career and a recognized name in the sport, who serves as CEO of the X1 USA project. His extensive experience, which includes stints with clubs in Brazil, Germany, Mexico, Honduras, and the United States – where he became especially known for his performance in Major League Soccer (MLS) – provides him with a deep understanding of both the global and local soccer landscapes.
-  </p>
+                <p>
+                    Leading this movement is <strong><a href="https://www.instagram.com/l.emilio11_official/" target="_blank">Luciano Emílio</a></strong>, a former Brazilian forward with a successful international soccer career and a recognized name in the sport, who serves as CEO of the X1 USA project. His extensive experience, which includes stints with clubs in Brazil, Germany, Mexico, Honduras, and the United States – where he became especially known for his performance in Major League Soccer (MLS) – provides him with a deep understanding of both the global and local soccer landscapes.
+                </p>
 
-  <p>
-    In 2007, while playing for D.C. United, Luciano Emílio was named MLS MVP, won the Golden Boot as the league's top scorer, and was also awarded MLS Newcomer of the Year and selected for the MLS Best XI. These achievements, along with titles such as the MLS Supporters’ Shield Champion (2007) and the US Open Cup Champion (2008) with D.C. United, and national championships in Honduras and Mexico, demonstrate his capacity for excellence and leadership on the field.
-  </p>
+                <p>
+                    In 2007, while playing for D.C. United, Luciano Emílio was named MLS MVP, won the Golden Boot as the league's top scorer, and was also awarded MLS Newcomer of the Year and selected for the MLS Best XI. These achievements, along with titles such as the MLS Supporters’ Shield Champion (2007) and the US Open Cup Champion (2008) with D.C. United, and national championships in Honduras and Mexico, demonstrate his capacity for excellence and leadership on the field.
+                </p>
 
-  <p>
-    Now, as CEO, Luciano Emílio leads the expansion of X1 USA across the country, bringing his vision, experience, and credibility to position 1v1 soccer as a new force in the American sports scene. His transition from a top-tier athlete to an executive leader at X1 USA reflects a commitment to the development of the sport and the creation of new opportunities for emerging talents, perfectly aligning with the organization's mission to transform the 1v1 soccer landscape in the United States.
-  </p>
-</div>
-    </div>
-  </section>
+                <p>
+                    Now, as CEO, Luciano Emílio leads the expansion of X1 USA across the country, bringing his vision, experience, and credibility to position 1v1 soccer as a new force in the American sports scene. His transition from a top-tier athlete to an executive leader at X1 USA reflects a commitment to the development of the sport and the creation of new opportunities for emerging talents, perfectly aligning with the organization's mission to transform the 1v1 soccer landscape in the United States.
+                </p>
+            </div>
+        </div>
+    </section>
 
-<section class="about-sponsor-section">
-  <div class="sponsor-content">
-    <h2>Be a Sponsor</h2>
- <p>Support X1 USA's mission to empower young athletes and grow the 1v1 soccer movement. Your sponsorship directly contributes to creating impactful opportunities, funding tournaments, and expanding our grassroots initiatives.</p>
+    <section class="about-sponsor-section">
+        <div class="sponsor-content">
+            <h2>Be a Sponsor</h2>
+            <p>Support X1 USA's mission to empower young athletes and grow the 1v1 soccer movement. Your sponsorship directly contributes to creating impactful opportunities, funding tournaments, and expanding our grassroots initiatives.</p>
 
-<p>As a 501(c)(3) Non-Profit Organization, your investment in X1 USA is tax-deductible, directly fueling our commitment to transform lives through the power of sport. Partner with us to gain visibility, connect with a passionate community, and make a real difference in youth sports. We offer various sponsorship levels designed to meet your objectives.</p>
+            <p>As a 501(c)(3) Non-Profit Organization, your investment in X1 USA is tax-deductible, directly fueling our commitment to transform lives through the power of sport. Partner with us to gain visibility, connect with a passionate community, and make a real difference in youth sports. We offer various sponsorship levels designed to meet your objectives.</p>
 
-    <a href="contact.html" class="button">Contact Us to Learn More</a>
-  </div>
-</section>
+            <p><strong>Contact me directly at <a href="mailto:luciano.emilio@usax1.com">luciano.emilio@usax1.com</a>. I'll be happy to answer all your questions and discuss how we can build a successful and impactful partnership together.</strong></p>
+        </div>
+    </section>
 
-  <footer>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
-        <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank" aria-label="Facebook">
-        <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
-      </a>
-      <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
-        <i class="fab fa-x-twitter" style="font-size: 30px; color: white; margin-left: 10px;"></i>
-      </a>
-    </div>
-    <p>&copy; 2025 X1 USA. All rights reserved.</p>
-  </footer>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
+                <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank" aria-label="Facebook">
+                <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
+                <i class="fab fa-x-twitter" style="font-size: 30px; color: white; margin-left: 10px;"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 X1 USA. All rights reserved.</p>
+    </footer>
 
-  <script>
-    document.querySelector(".menu-toggle").addEventListener("click", function () {
-      document.querySelector(".nav-links").classList.toggle("active");
-    });
-  </script>
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>
