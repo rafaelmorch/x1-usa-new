@@ -2,201 +2,282 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEMPWRQZ5W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-LEMPWRQZ5W');
-</script>
+        gtag('config', 'G-LEMPWRQZ5W');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>X1 USA</title>
-<link rel="icon" type="image/png" href="Logo_X1.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>About Us - X1 USA</title>
+    <link rel="icon" type="image/png" href="Logo_X1.png">
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        /* 🔹 Texto do lado direito com animação */
-        .video-right-text {
+        /* Estilos para o banner de vídeo no topo da página */
+        .video-banner {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        .video-banner video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-banner h1 {
             position: absolute;
-            right: 5%;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
             color: white;
-            font-family: Arial, sans-serif;
-            font-size: 2.1rem;
-            font-weight: bold;
-            text-align: right;
-            width: 35%;
-            line-height: 1.4;
-            text-shadow: 2px 2px 6px red;
-            animation: fadeInRight 1.5s ease-out;
-            z-index: 2;
-        }
-
-        @keyframes fadeInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(50%) translateY(-50%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0) translateY(-50%);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .video-right-text {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .experience-section h2 {
-                font-size: 1.8rem;
-            }
-
-            .experience-text p {
-                font-size: 1rem;
-            }
-
-            .register-btn {
-                font-size: 1rem;
-                padding: 12px 25px;
-            }
-        }
-        @media (max-width: 768px) {
-            .responsive-logo {
-                display: none;
-            }
-        }
-
-        /* --- CSS para a Seção de Countdown (Restaurado) --- */
-        .countdown-section {
-            background: #001f3f; /* Azul marinho escuro */
-            color: white;
+            font-size: 4.5rem; /* Tamanho padrão para desktop */
+            font-family: 'Rowdies', sans-serif;
+            text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.9);
             text-align: center;
-            padding: 60px 20px; /* Padding padrão para top/bottom e laterais */
-            font-family: 'Orbitron', sans-serif; /* Usando a fonte Orbitron para os números */
-        }
-        .countdown-title {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-            font-family: 'Rowdies', sans-serif; /* Fonte 'Rowdies' como o título TOURNAMENTS X1 */
-            color: #fff;
-            text-transform: uppercase; /* Para combinar com o estilo do título principal */
-            letter-spacing: 2px; /* Adicionado para um visual similar ao título principal */
-        }
-        .countdown-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px; /* Espaçamento entre as caixas */
-            flex-wrap: wrap; /* Para quebrar em várias linhas em telas menores */
-            margin-bottom: 10px; /* Margem reduzida */
-        }
-        .countdown-box {
-            padding: 10px;
-            border-left: 2px solid white; /* Linha divisória entre os elementos do contador */
-            text-align: center; /* Garante que o texto dentro da caixa esteja centralizado */
-            display: flex; /* Mantém flexbox para alinhamento vertical */
-            flex-direction: column; /* Coloca número e label um abaixo do outro */
-            justify-content: center; /* Centraliza verticalmente */
-            align-items: center; /* Centraliza horizontalmente */
-        }
-        .countdown-box:first-child {
-            border-left: none; /* Remove a borda esquerda do primeiro elemento para não ficar sobrando */
-        }
-        .countdown-number {
-            font-size: 6rem;
-            font-weight: bold;
-            background: linear-gradient(90deg, #ffcc00, #ff6600, #cc0000); /* Gradiente de cor */
-            -webkit-background-clip: text; /* Para aplicar o gradiente ao texto */
-            -webkit-text-fill-color: transparent; /* Para o texto usar o gradiente */
-            line-height: 1; /* Reduz o espaço acima/abaixo do número */
-        }
-        .countdown-label {
-            font-size: 1.5rem;
-            color: white;
-            font-style: italic;
-            margin-top: 5px; /* Margem reduzida */
+            white-space: nowrap; /* Evita quebra de linha em telas maiores */
         }
 
-        /* --- Estilos para a seção do Sponsor (na Experience Section) --- */
-        .sponsor-container {
-            display: flex; /* Adiciona flexbox para alinhar os itens lado a lado */
-            justify-content: center; /* Centraliza os itens horizontalmente */
-            gap: 30px; /* Espaçamento entre os itens de patrocinador */
-            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
-            align-items: flex-end; /* Alinha a base das caixas, útil se as imagens tiverem alturas diferentes */
+        /* Estilos para a linha divisória */
+        .section-divider {
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to right, #FF0000, #002147);
+            margin: 20px 0 30px;
+        }
 
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 800px;
+        /* Estilos para a seção "About Us" */
+        .about-section {
+            padding: 60px 20px;
+            background: #f5f5f5;
         }
-        .sponsor-item {
+
+        .about-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: flex-start; /* Alinha os itens ao topo no layout de desktop */
+            flex-direction: column; /* Coloca os itens em coluna por padrão para facilitar a ordem no desktop */
         }
-        .sponsor-item img {
-            max-width: 150px; /* Reduza o tamanho da imagem para que duas caibam lado a lado confortavelmente */
+
+        /* Estilos para o grid de imagens na seção "About Us" */
+        .about-images {
+            width: 100%;
+            display: flex; /* Usamos flexbox para controlar as linhas de imagem no desktop */
+            flex-direction: column; /* Coloca as linhas de imagem em coluna no desktop */
+            gap: 10px; /* Espaçamento entre as linhas de imagem */
+            margin-bottom: 20px;
+        }
+
+        .about-images .image-row {
+            display: flex; /* Faz as imagens dentro da linha serem flexíveis */
+            gap: 10px;
+            width: 100%;
+        }
+
+        .about-images .image-row img {
+            flex: 1; /* Faz as imagens ocuparem o mesmo espaço em cada linha */
+            width: 100%; /* Garante que preencham o espaço flexível */
             height: auto;
-            margin-bottom: 5px;
-        }
-        .sponsor-text {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: #ccc;
-            margin-top: 0;
-            margin-bottom: 0;
+            border-radius: 10px;
+            object-fit: cover;
         }
 
-        /* Media queries para o countdown (responsividade) */
-        @media (max-width: 600px) {
-            .countdown-title {
-                font-size: 1.2rem;
+        /* Estilos para o texto da seção "About Us" */
+        .about-text {
+            font-size: 1.21rem;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ccc;
+            line-height: 1.75;
+            width: 100%;
+        }
+
+        /* Espaçamento entre os parágrafos */
+        .about-text p {
+            margin-bottom: 1em; /* Adiciona espaço abaixo de cada parágrafo */
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0; /* Remove a margem do último parágrafo para não ter espaçamento extra no final do bloco de texto */
+        }
+
+
+        /* --- Estilos para a nova seção "Be a Sponsor" --- */
+        .about-sponsor-section {
+            padding: 80px 20px;
+            background: linear-gradient(to right, #002147, #FF0000);
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 5px solid #fff;
+            border-bottom: 5px solid #fff;
+        }
+
+        .about-sponsor-section .sponsor-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-sponsor-section h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            font-family: 'Rowdies', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .about-sponsor-section p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .about-sponsor-section .button {
+            display: inline-block;
+            background-color: #fff;
+            color: #002147;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid #fff;
+        }
+
+        .about-sponsor-section .button:hover {
+            background-color: #FF0000;
+            color: white;
+            border-color: white;
+        }
+
+        /* Estilo para o fundo transparente do e-mail */
+        .email-highlight {
+            background-color: rgba(255, 255, 255, 0.2); /* Branco com 20% de opacidade */
+            padding: 3px 6px; /* Um pouco de preenchimento para o fundo */
+            border-radius: 4px; /* Cantos levemente arredondados */
+            display: inline-block; /* Garante que padding e margem funcionem corretamente */
+        }
+
+        /* --- Media Queries para Responsividade --- */
+
+        /* Para telas de até 768px (tablets e todos os celulares) */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Título "Who We Are" maior para mobile */
+            .video-banner h1 {
+                font-size: 3.3rem;
+                white-space: normal;
+                padding: 0 10px;
+            }
+
+            /* Ajusta o grid de imagens para ter 2 colunas e ser menor em todas as telas mobile */
+            .about-images {
+                display: grid; /* Volta para o comportamento de grid no mobile */
+                grid-template-columns: repeat(2, 1fr); /* Mantém 2 COLUNAS */
+                max-width: 320px;
+                gap: 8px;
                 margin-bottom: 20px;
             }
-            .countdown-grid {
-                gap: 8px;
-                margin-bottom: 10px; /* Ajuste para telas menores */
+
+            /* Redefinição da ordem para o layout mobile */
+            /* ab1, ab3, ab5 na primeira coluna (valores ímpares para order) */
+            /* ab2, ab4, ab6 na segunda coluna (valores pares para order) */
+            .about-images .image-row:nth-child(1) img:nth-child(1) { /* ab1.jpeg */
+                order: 1; /* Primeira coluna, primeira linha */
             }
-            .countdown-box {
-                padding: 6px;
-                min-width: 60px;
+            .about-images .image-row:nth-child(1) img:nth-child(2) { /* ab3.jpeg */
+                order: 3; /* Primeira coluna, segunda linha */
             }
-            .countdown-number {
-                font-size: 2.8rem;
+            .about-images .image-row:nth-child(1) img:nth-child(3) { /* ab5.jpeg */
+                order: 5; /* Primeira coluna, terceira linha */
             }
-            .countdown-label {
-                font-size: 0.9rem;
-                margin-top: 2px; /* Ajuste para telas menores */
+            .about-images .image-row:nth-child(2) img:nth-child(1) { /* ab2.jpeg */
+                order: 2; /* Segunda coluna, primeira linha */
             }
-            .sponsor-container {
-                flex-direction: column; /* Em mobile, empilha os itens verticalmente */
-                gap: 20px; /* Ajuste o espaçamento vertical entre os itens de patrocinador */
-                margin-top: 30px; /* Ajuste a margem superior para mobile */
-                padding-top: 15px; /* Ajuste o padding superior para mobile */
+            .about-images .image-row:nth-child(2) img:nth-child(2) { /* ab4.jpeg */
+                order: 4; /* Segunda coluna, segunda linha */
             }
-            .sponsor-item img {
-                max-width: 80%; /* Tamanho da imagem para mobile */
-                margin-bottom: 3px; /* Ajuste para telas menores */
+            .about-images .image-row:nth-child(2) img:nth-child(3) { /* ab6.png */
+                order: 6; /* Segunda coluna, terceira linha */
             }
-            .sponsor-text {
+
+
+            .about-images .image-row {
+                display: contents; /* Faz com que as divs image-row não afetem o layout do grid pai no mobile */
+            }
+
+            .about-images .image-row img {
+                width: 100%; /* Imagens preenchem a largura da célula do grid */
+                height: auto;
+                flex: none; /* Remove o flexbox para as imagens individuais no mobile */
+            }
+
+            /* Ajuste de padding e fonte do texto para telas menores */
+            .about-section {
+                padding: 30px 15px;
+            }
+            .about-text {
                 font-size: 1rem;
-                margin-top: 0;
-                margin-bottom: 0;
+                padding: 20px;
+            }
+
+            /* Media Queries para a nova seção "Be a Sponsor" */
+            .about-sponsor-section {
+                padding: 60px 15px;
+            }
+            .about-sponsor-section h2 {
+                font-size: 2.2rem;
+            }
+            .about-sponsor-section p {
+                font-size: 1rem;
+            }
+            .about-sponsor-section .button {
+                padding: 12px 25px;
+                font-size: 1rem;
             }
         }
-        /* --- Fim do CSS para a Seção de Countdown e Sponsor --- */
+
+        /* Estilos específicos para telas maiores (desktop) */
+        @media (min-width: 769px) {
+            .about-images {
+                grid-template-columns: unset; /* Remove o grid setting do about-images no desktop */
+                max-width: 980px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .about-images .image-row {
+                display: flex; /* Garante que as imagens fiquem em linha */
+                justify-content: space-around; /* Distribui o espaço entre as imagens */
+            }
+            .about-images .image-row img {
+                max-width: 30%; /* Define uma largura máxima para cada imagem (ajuste conforme necessário) */
+                flex: none; /* Impede que as imagens cresçam demais */
+            }
+            .about-container {
+                align-items: stretch;
+            }
+            .about-text {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 980px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -204,136 +285,93 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="Logo_X1.png" alt="X1 Logo" />
+                <img src="Logo_X1.png" alt="X1 Logo">
                 <h1>X1 USA</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="registration.html">Registration</a></li>
                 <li><a href="information.html">Information</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <div class="menu-toggle">&#9776;</div>
         </nav>
     </header>
 
-    <section class="hero-section" style="position: relative; width: 100%; height: 90vh; overflow: hidden;">
-        <video id="heroVideo" src="VideoSite.mp4" autoplay muted playsinline loop
-            style="width: 100%; height: 100%; object-fit: cover;"></video>
-
-        <div class="tournament-title" style="
-                position: absolute;
-                top: 70px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 3;
-                font-family: 'Rowdies', sans-serif;
-                font-size: 4rem;
-                color: rgba(255, 255, 255, 0.95);
-                letter-spacing: 5px;
-                text-shadow: 2px 2px 10px black;
-                text-transform: uppercase;
-                text-align: center;
-                white-space: nowrap;">
-            <span class="tournament-text">TOURNAMENTS</span>
-            <span class="x1-text"> X1</span>
-        </div>
-
-        <div style="position: absolute; z-index: 2; left: 5%; top: 50%; transform: translateY(-50%);">
-            <img src="Logo_X1.png" alt="Logo X1" style="width: 455px; max-width: 80vw; height: auto;" class="responsive-logo">
-        </div>
-
-        <div class="video-right-text">
-            THE TIME HAS COME TO<br>
-            MAKE HISTORY ON THE<br>
-            FIELDS OF THE USA!
-        </div>
+    <section class="video-banner">
+        <video src="shot4.mp4" autoplay muted loop playsinline></video>
+        <h1>Who We Are</h1>
     </section>
 
     <div class="section-divider"></div>
 
-    <section class="experience-section">
-        <h2>The Ultimate 1v1 Soccer Experience!</h2>
-        <div class="experience-container">
-            <div class="experience-text">
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-images">
+                <div class="image-row">
+                    <img src="ab1.jpeg" alt="About X1 Image 1">
+                    <img src="ab3.jpeg" alt="About X1 Image 3">
+                    <img src="ab5.jpeg" alt="About X1 Image 5">
+                </div>
+                <div class="image-row">
+                    <img src="ab2.jpeg" alt="About X1 Image 2">
+                    <img src="ab4.jpeg" alt="About X1 Image 4">
+                    <img src="ab6.png" alt="About X1 Image 6">
+                </div>
+            </div>
+
+            <div class="about-text">
                 <p>
-                    Get ready for the <strong>X1 USA 2025</strong>, the premier <strong>1v1 soccer tournament</strong> in the United States!
-                    This electrifying competition brings together the most skilled young players from around the world for a weekend of fast-paced, high-intensity action.
-                    <br><br>
-                    Hosted at <strong>OCSC - Millenia, Orlando - FL</strong>, this state-of-the-art stadium provides the perfect stage for rising stars to showcase their talent.
-                    <br><br>
-                    Whether you're a <strong>player ready to compete</strong>, a <strong>fan looking for an unforgettable experience</strong>, or a <strong>scout searching for the next big talent</strong>,
-                    the <strong>X1 USA</strong> is where the future of soccer takes center stage.
+                    <strong>X1 USA</strong> is a registered <strong>501(c)(3) Non-Profit Organization</strong> with a mission to transform the 1v1 soccer landscape in the United States.
                 </p>
-                <br>
-                <a href="registration.html" class="register-btn">Register Now</a>
-            </div>
-            <div class="experience-image">
-                <img src="segurandobola.png" alt="Player holding ball">
-            </div>
-        </div>
-        <div class="sponsor-container">
-            <div class="sponsor-item">
-                <a href="https://www.instagram.com/pernambuquinhausa/" target="_blank">
-                    <img src="pernambuquinha.png" alt="Pernambuquinha Sponsor">
-                </a>
-                <p class="sponsor-text">Sponsor</p>
-            </div>
+                <p>
+                    Inspired by a global movement that celebrates individuality, skill, and creativity, X1 USA creates a dynamic platform that empowers young athletes to express themselves on and off the field.
+                </p>
+                <p>
+                    Through high-energy tournaments, official licensing, and grassroots initiatives, we are building a powerful culture around the 1v1 format—one that unites players, families, fans, and brands in purpose-driven, electrifying sports experiences.
+                </p>
+                <p>
+                    We believe in creating opportunities, amplifying talent, and growing the game in innovative ways that inspire the next generation. Our goal is not only to entertain but also to empower communities and foster a lasting impact through the beautiful game.
+                </p>
 
-     <div class="sponsor-item">
-    <img src="https://usax1.com/radiobrazil.png" alt="Radio Brazil" style="width: 150px;">
-    <p class="sponsor-text">Media Support</p>
-</div>
-        </div>
-    </section>
+                <p>
+                    Leading this movement is <strong><a href="https://www.instagram.com/l.emilio11_official/" target="_blank">Luciano Emílio</a></strong>, a former Brazilian forward with a successful international soccer career and a recognized name in the sport, who serves as CEO of the X1 USA project. His extensive experience, which includes stints with clubs in Brazil, Germany, Mexico, Honduras, and the United States – where he became especially known for his performance in Major League Soccer (MLS) – provides him with a deep understanding of both the global and local soccer landscapes.
+                </p>
 
-    <div class="section-divider"></div>
+                <p>
+                    In 2007, while playing for D.C. United, Luciano Emílio was named MLS MVP, won the Golden Boot as the league's top scorer, and was also awarded MLS Newcomer of the Year and selected for the MLS Best XI. These achievements, along with titles suchs as the MLS Supporters’ Shield Champion (2007) and the US Open Cup Champion (2008) with D.C. United, and national championships in Honduras and Mexico, demonstrate his capacity for excellence and leadership on the field.
+                </p>
 
-    <section class="countdown-section">
-        <div class="countdown-title">Your journey to the biggest 1v1 tournament in the United States begins in</div>
-        <div class="countdown-grid">
-            <div class="countdown-box">
-                <div class="countdown-number" id="months">00</div>
-                <div class="countdown-label">months</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="days">00</div>
-                <div class="countdown-label">days</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="hours">00</div>
-                <div class="countdown-label">hours</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="minutes">00</div>
-                <div class="countdown-label">minutes</div>
-            </div>
-            <div class="countdown-box">
-                <div class="countdown-number" id="seconds">00</div>
-                <div class="countdown-label">seconds</div>
+                <p>
+                    Now, as CEO, Luciano Emílio leads the expansion of X1 USA across the country, bringing his vision, experience, and credibility to position 1v1 soccer as a new force in the American sports scene. His transition from a top-tier athlete to an executive leader at X1 USA reflects a commitment to the development of the sport and the creation of new opportunities for emerging talents, perfectly aligning with the organization's mission to transform the 1v1 soccer landscape in the United States.
+                </p>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
+    <section class="about-sponsor-section">
+        <div class="sponsor-content">
+            <h2>Be a Sponsor</h2>
+            <p>Support X1 USA's mission to empower young athletes and grow the 1v1 soccer movement. Your sponsorship directly contributes to creating impactful opportunities, funding tournaments, and expanding our grassroots initiatives.</p>
 
-    <section class="video-section" style="background: #f4f4f4; padding: 60px 20px; text-align: center;">
-        <h2 style="color: #002147; font-size: 2.5rem; margin-bottom: 40px;">Event Highlights</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-            <iframe src="https://drive.google.com/file/d/12-yLXT6xBcMXFOOyeaw57Qahevmnk_OH/preview" width="320" height="240" allow="autoplay"></iframe>
-            <iframe src="https://drive.google.com/file/d/1-TV80YvzuJKe27Ok1YkvT_LztygzH0FY/preview" width="320" height="240" allow="autoplay"></iframe>
-            <iframe src="https://drive.google.com/file/d/1d63gs9Jo-mIOX88KUOJoYY3JslhPejiW/preview" width="320" height="240" allow="autoplay"></iframe>
-            <iframe src="https://drive.google.com/file/d/1zcSHNf-2shZ-HF27lTveCwsAPu8jU00P/preview" width="320" height="240" allow="autoplay"></iframe>
-            <iframe src="https://drive.google.com/file/d/1C-Smb6T7LWIGybE3eXyllqDl0jUBQA4l/preview" width="320" height="240" allow="autoplay"></iframe>
+            <p>As a 501(c) (3) Non-Profit Organization, your investment in X1 USA is tax-deductible, directly fueling our commitment to transform lives through the power of sport. Partner with us to gain visibility, connect with a passionate community, and make a real difference in youth sports. We offer various sponsorship levels designed to meet your objectives.</p>
+
+            <p><strong>Contact me directly at <a href="mailto:luciano.emilio@usax1.com"><span class="email-highlight">luciano.emilio@usax1.com</span></a>. I'll be happy to answer all your questions and discuss how we can build a successful and impactful partnership together.</strong></p>
         </div>
     </section>
 
     <footer>
         <div class="social-icons">
-            <a href="https://www.instagram.com/x1usaseries/" target="_blank"><img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;"></a>
-            <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank"><img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;"></a>
-            <a href="https://x.com/X1USA_" target="_blank"><i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i></a>
+            <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
+                <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank" aria-label="Facebook">
+                <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
+                <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
+            </a>
         </div>
         <p>&copy; 2025 X1 USA. All rights reserved.</p>
     </footer>
@@ -342,78 +380,7 @@
         document.querySelector(".menu-toggle").addEventListener("click", function () {
             document.querySelector(".nav-links").classList.toggle("active");
         });
-
-        function adjustHeroElements() {
-            const logo = document.querySelector('.responsive-logo');
-            const title = document.querySelector('.tournament-title');
-            const x1 = document.querySelector('.x1-text');
-            const logoContainer = logo?.parentElement;
-
-            if (window.innerWidth < 768) {
-                logo.style.width = '290px';
-                if (title) title.style.fontSize = '2.5rem';
-                if (x1 && !x1.classList.contains('line-break')) {
-                    x1.innerHTML = "<br>X1";
-                    x1.classList.add('line-break');
-                }
-                if (logoContainer) logoContainer.style.left = '0%';
-            } else {
-                logo.style.width = '455px';
-                if (title) title.style.fontSize = '4rem';
-                if (x1 && x1.classList.contains('line-break')) {
-                    x1.innerHTML = " X1";
-                    x1.classList.remove('line-break');
-                }
-                if (logoContainer) logoContainer.style.left = '5%';
-            }
-        }
-
-        window.addEventListener('resize', adjustHeroElements);
-        window.addEventListener('load', adjustHeroElements);
-
-        // --- Script do Contador Regressivo ---
-        // ATENÇÃO: Atualize esta data para a data e hora EXATAS do seu evento!
-        // Formato: "AAAA-MM-DDTHH:mm:ss" (Ano-Mês-DiaTHora:Minuto:Segundo)
-        const eventDate = new Date("2025-07-05T00:00:00").getTime(); // Exemplo: 5 de Julho de 2025
-
-        const countdown = () => {
-            const now = new Date().getTime();
-            const distance = eventDate - now;
-
-            // Se o evento já passou, limpa o contador
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.querySelector('.countdown-title').textContent = "The tournament has begun!"; /* Frase atualizada para inglês */
-                document.getElementById("months").textContent = "00";
-                document.getElementById("days").textContent = "00";
-                document.getElementById("hours").textContent = "00";
-                document.getElementById("minutes").textContent = "00";
-                document.getElementById("seconds").textContent = "00";
-                return; // Sai da função para não calcular mais
-            }
-
-            // Cálculo de meses (aproximado)
-            const daysInMonthAvg = 30.4375; // Média de dias por mês para o cálculo aproximado
-            const months = Math.floor(distance / (1000 * 60 * 60 * 24 * daysInMonthAvg));
-            const remainingTimeAfterMonths = distance % (1000 * 60 * 60 * 24 * daysInMonthAvg);
-
-            const days = Math.floor(remainingTimeAfterMonths / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Atualiza os elementos HTML
-            document.getElementById("months").textContent = months.toString().padStart(2, '0');
-            document.getElementById("days").textContent = days.toString().padStart(2, '0');
-            document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
-        };
-
-        // Inicia o contador
-        countdown(); // Chama uma vez para exibir imediatamente
-        const countdownInterval = setInterval(countdown, 1000); // Atualiza a cada segundo
-        // --- Fim do Script do Contador Regressivo ---
     </script>
+
 </body>
 </html>
