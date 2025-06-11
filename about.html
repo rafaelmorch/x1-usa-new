@@ -71,14 +71,22 @@
 
         /* Estilos para o grid de imagens na seção "About Us" */
         .about-images {
-            width: 100%; /* Garante que o grid de imagens ocupe a largura total no layout de desktop */
-            display: grid;
-            gap: 10px;
-            margin-bottom: 20px; /* Adiciona espaço abaixo das imagens */
+            width: 100%;
+            display: flex; /* Usamos flexbox para controlar as linhas de imagem no desktop */
+            flex-direction: column; /* Coloca as linhas de imagem em coluna no desktop */
+            gap: 10px; /* Espaçamento entre as linhas de imagem */
+            margin-bottom: 20px;
         }
 
-        .about-images img {
-            width: 100%; /* Imagens preenchem a largura da célula do grid */
+        .about-images .image-row {
+            display: flex; /* Faz as imagens dentro da linha serem flexíveis */
+            gap: 10px;
+            width: 100%;
+        }
+
+        .about-images .image-row img {
+            flex: 1; /* Faz as imagens ocuparem o mesmo espaço em cada linha */
+            width: 100%; /* Garante que preencham o espaço flexível */
             height: auto;
             border-radius: 10px;
             object-fit: cover;
@@ -93,19 +101,28 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border: 1px solid #ccc;
             line-height: 1.75;
-            /* flex: 1; Removido para controlar a ordem visual */
-            width: 100%; /* Garante que o texto ocupe a largura total no layout de desktop */
+            width: 100%;
         }
+
+        /* Espaçamento entre os parágrafos */
+        .about-text p {
+            margin-bottom: 1em; /* Adiciona espaço abaixo de cada parágrafo */
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0; /* Remove a margem do último parágrafo para não ter espaçamento extra no final do bloco de texto */
+        }
+
 
         /* --- Estilos para a nova seção "Be a Sponsor" --- */
         .about-sponsor-section {
-            padding: 80px 20px; /* Mais padding para destaque */
-            background: linear-gradient(to right, #002147, #FF0000); /* Um gradiente para diferenciá-la */
+            padding: 80px 20px;
+            background: linear-gradient(to right, #002147, #FF0000);
             color: white;
             text-align: center;
-            margin-top: 30px; /* Espaçamento da seção anterior */
-            border-top: 5px solid #fff; /* Uma borda superior para separar */
-            border-bottom: 5px solid #fff; /* Uma borda inferior */
+            margin-top: 30px;
+            border-top: 5px solid #fff;
+            border-bottom: 5px solid #fff;
         }
 
         .about-sponsor-section .sponsor-content {
@@ -140,7 +157,7 @@
         }
 
         .about-sponsor-section .button:hover {
-            background-color: #FF0000; /* Vermelho no hover */
+            background-color: #FF0000;
             color: white;
             border-color: white;
         }
@@ -150,25 +167,35 @@
         /* Para telas de até 768px (tablets e todos os celulares) */
         @media (max-width: 768px) {
             .about-container {
-                flex-direction: column; /* Pilha os itens verticalmente */
-                align-items: center; /* Centraliza os itens na coluna */
+                flex-direction: column;
+                align-items: center;
             }
 
             /* Título "Who We Are" maior para mobile */
             .video-banner h1 {
-                font-size: 3.3rem; /* Tamanho 50% maior que 2.2rem */
-                white-space: normal; /* Permite quebra de linha */
-                padding: 0 10px; /* Adiciona um pequeno padding */
+                font-size: 3.3rem;
+                white-space: normal;
+                padding: 0 10px;
             }
 
             /* Ajusta o grid de imagens para ter 2 colunas e ser menor em todas as telas mobile */
             .about-images {
+                display: grid; /* Volta para o comportamento de grid no mobile */
                 grid-template-columns: repeat(2, 1fr); /* Mantém 2 COLUNAS */
-                max-width: 320px; /* Reduz o tamanho máximo do bloco de imagens (ajuste este valor se necessário) */
-                gap: 8px; /* Reduz um pouco o espaçamento entre as imagens */
-                margin-bottom: 20px; /* Mantém algum espaço abaixo das imagens no mobile também */
+                max-width: 320px;
+                gap: 8px;
+                margin-bottom: 20px;
             }
-            /* As imagens individuais já têm width: 100%, então elas se ajustarão ao novo max-width do contêiner */
+
+            .about-images .image-row {
+                display: contents; /* Faz com que as divs image-row não afetem o layout do grid pai no mobile */
+            }
+
+            .about-images .image-row img {
+                width: 100%; /* Imagens preenchem a largura da célula do grid */
+                height: auto;
+                flex: none; /* Remove o flexbox para as imagens individuais no mobile */
+            }
 
             /* Ajuste de padding e fonte do texto para telas menores */
             .about-section {
@@ -198,18 +225,21 @@
         /* Estilos específicos para telas maiores (desktop) */
         @media (min-width: 769px) {
             .about-images {
-                grid-template-columns: repeat(3, 1fr); /* 3 colunas para desktop */
-                max-width: 980px; /* Ajuste a largura máxima conforme necessário */
+                grid-template-columns: unset; /* Remove o grid setting do about-images no desktop */
+                max-width: 980px;
                 margin-left: auto;
                 margin-right: auto;
             }
+            .about-images .image-row {
+                grid-template-columns: repeat(3, 1fr); /* Define 3 colunas para as linhas de imagem no desktop */
+            }
             .about-container {
-                align-items: stretch; /* Restaura o esticamento vertical para o texto e as imagens (agora o container de texto vem depois) */
+                align-items: stretch;
             }
             .about-text {
                 margin-left: auto;
                 margin-right: auto;
-                max-width: 980px; /* Mantém a largura máxima do texto alinhada com as imagens */
+                max-width: 980px;
             }
         }
     </style>
@@ -243,12 +273,16 @@
     <section class="about-section">
         <div class="about-container">
             <div class="about-images">
-                <img src="ab1.jpeg" alt="About X1 Image 1">
-                <img src="ab2.jpeg" alt="About X1 Image 2">
-                <img src="ab3.jpeg" alt="About X1 Image 3">
-                <img src="ab4.jpeg" alt="About X1 Image 4">
-                <img src="ab5.jpeg" alt="About X1 Image 5">
-                <img src="ab6.png" alt="About X1 Image 6">
+                <div class="image-row">
+                    <img src="ab1.jpeg" alt="About X1 Image 1">
+                    <img src="ab3.jpeg" alt="About X1 Image 3">
+                    <img src="ab5.jpeg" alt="About X1 Image 5">
+                </div>
+                <div class="image-row">
+                    <img src="ab2.jpeg" alt="About X1 Image 2">
+                    <img src="ab4.jpeg" alt="About X1 Image 4">
+                    <img src="ab6.png" alt="About X1 Image 6">
+                </div>
             </div>
 
             <div class="about-text">
