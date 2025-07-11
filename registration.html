@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - X1 USA</title>
-    <link rel="stylesheet" href="style.css"> <!-- Mantém o CSS externo -->
+    <link rel="stylesheet" href="style.css">
     <style>
         /* 🔹 Seção de Registro com Fundo */
         .registration-section {
             position: relative;
             width: 100%;
-            height: 50vh; /* 🔹 Altura reduzida */
+            height: 50vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,14 +33,14 @@
 
         @media (max-width: 768px) {
             .registration-section h2 {
-                font-size: 2.5rem; /* 🔹 Reduz tamanho no celular */
+                font-size: 2.5rem;
             }
         }
 
         /* 🔹 Seção de Detalhes do Torneio */
         .challenge-section {
             background-color: #f4f4f4;
-            padding: 40px 20px 80px; /* 🔹 Reduzi o padding superior */
+            padding: 40px 20px 80px;
             text-align: center;
         }
 
@@ -107,6 +107,39 @@
                 max-width: 100%;
             }
         }
+
+        /* 🔹 Seção Localização (Atualizada) */
+        .location-section {
+            background-color: #f4f4f4;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .location-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #002147;
+            margin-bottom: 15px;
+        }
+
+        .location-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .map-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -125,7 +158,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle">&#9776;</div> <!-- Ícone de menu para mobile -->
+            <div class="menu-toggle">&#9776;</div>
         </nav>
     </header>
 
@@ -145,7 +178,7 @@
                 <p>
                     The <strong>X1 USA 2025</strong> is the premier 1v1 tournament in the U.S., designed to help young players showcase their skills and compete in an intense and thrilling environment.
                     With participants from around the world, the tournament provides the perfect stage for top talent in a highly competitive atmosphere.
-<br><br>
+                    <br><br>
                     Don't miss out! Register now and secure your spot in this unparalleled experience of skill, competition, and passion.
                 </p>
                 <a href="https://usax1.com/registration_form.html" class="register-btn" target="_blank">Register Now</a>
@@ -156,76 +189,42 @@
         </div>
     </section>
 
-<!-- 🔹 Linha Divisória -->
-<div class="section-divider"></div>
+    <!-- 🔹 Linha Divisória -->
+    <div class="section-divider"></div>
     
-<!-- 🔹 Seção Localização -->
-<section class="location-section">
-  <h2>📍 Event Location</h2>
-  <p>The next X1 USA event will take place at <strong>OCSC - Millenia, 3516 President Barack Obama Pkwy, Orlando, FL 32811</strong>.</p>
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.715531409548!2d-81.4235786!3d28.5086607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77f496853f305%3A0xa1e5460a0f9ef260!2s3516%20President%20Barack%20Obama%20Pkwy%2C%20Orlando%2C%20FL%2032811!5e0!3m2!1sen!2sus!4v1717022947157!5m2!1sen!2sus"
-      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
+    <!-- 🔹 Seção Localização (Atualizada para Clarksburg Village) -->
+    <section class="location-section">
+      <h2>📍 Event Location</h2>
+      <p>The next X1 USA event will take place at <strong>Clarksburg Village Local Park North, 23501 Clarksburg Square Rd, Boyds, MD 20841</strong>.</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.037185943993!2d-77.2797226!3d39.2196834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b62b3f1a1c8e0d%3A0x8a1e5c1c1b1b1b1b!2sClarksburg%20Village%20Local%20Park%20North!5e0!3m2!1sen!2sus!4v1717022947157!5m2!1sen!2sus"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
 
-<style>
-  .location-section {
-    background-color: #f4f4f4;
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .location-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #002147;
-    margin-bottom: 15px;
-  }
-
-  .location-section p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #333;
-  }
-
-  .map-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .map-container iframe {
-    width: 100%;
-    height: 450px;
-    border: none;
-  }
-</style>
     <!-- 🔹 Rodapé -->
-<footer>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
-            <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank" aria-label="Facebook">
-            <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
-        </a>
-        <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
-            <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
-        </a>
-    </div>
-    <p>&copy; 2025 X1 USA. All rights reserved.</p>
-</footer>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
+                <img src="Instagram_icon.png" alt="Instagram" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61576905851182&sk=followers" target="_blank" aria-label="Facebook">
+                <img src="Facebook_icon.png" alt="Facebook" class="social-img" style="height: 30px;">
+            </a>
+            <a href="https://x.com/X1USA_" target="_blank" aria-label="X / Twitter">
+                <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 X1 USA. All rights reserved.</p>
+    </footer>
 
     <script>
         document.querySelector(".menu-toggle").addEventListener("click", function () {
             document.querySelector(".nav-links").classList.toggle("active");
         });
     </script>
-
 </body>
 </html>
