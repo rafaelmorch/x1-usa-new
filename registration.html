@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEMPWRQZ5W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LEMPWRQZ5W');
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - X1 USA</title>
+    <link rel="icon" type="image/png" href="Logo_X1.png">
     <link rel="stylesheet" href="style.css">
     <style>
         /* 🔹 Seção de Registro com Fundo */
@@ -37,114 +45,49 @@
             }
         }
 
-        /* 🔹 Seção de Detalhes do Torneio */
-        .challenge-section {
-            background-color: #f4f4f4;
-            padding: 40px 20px 80px;
-            text-align: center;
-        }
-
-        .challenge-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .challenge-text {
-            flex: 1;
-            text-align: left;
-            font-size: 1.3rem;
-            color: #333;
-            line-height: 1.6;
-            max-width: 600px;
-        }
-
-        .challenge-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .challenge-image img {
-            max-width: 80%;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        /* 🔹 Botão */
-        .register-btn {
-            display: inline-block;
-            background: linear-gradient(to right, #Ff0000, #051094);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1.3rem;
-            transition: transform 0.2s;
-            margin-top: 10px;
-        }
-
-        .register-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* 🔹 Responsividade */
-        @media (max-width: 768px) {
-            .challenge-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .challenge-text {
-                text-align: center;
-            }
-
-            .challenge-image img {
-                max-width: 100%;
-            }
-        }
-
-        /* 🔹 Seção Localização */
-        .location-section {
-            background-color: #f4f4f4;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .location-section h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #002147;
-            margin-bottom: 15px;
-        }
-
-        .location-section p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .map-container {
+        /* 🔹 Estilos para a seção de incorporação do Canva */
+        .canva-embed-container {
             max-width: 1000px;
-            margin: 0 auto;
-            border-radius: 10px;
-            overflow: hidden;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        .map-container iframe {
+        .canva-embed {
+            position: relative; 
+            width: 100%; 
+            height: 0; 
+            padding-top: 56.2225%;
+            padding-bottom: 0; 
+            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+            margin-top: 1.6em; 
+            margin-bottom: 0.9em; 
+            overflow: hidden;
+            border-radius: 8px; 
+            will-change: transform;
+        }
+
+        .canva-embed iframe {
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            border: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 🔹 Linha Divisória */
+        .section-divider {
             width: 100%;
-            height: 450px;
-            border: none;
+            height: 20px;
+            background: linear-gradient(to right, #FF0000, #002147);
+            margin: 20px 0 30px;
         }
     </style>
 </head>
 <body>
 
-    <!-- 🔹 Cabeçalho -->
     <header>
         <nav>
             <div class="logo">
@@ -158,54 +101,28 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle">&#9776;</div>
+            <div class="menu-toggle">☰</div>
         </nav>
     </header>
 
-    <!-- 🔹 Seção de Registro -->
     <section class="registration-section">
         <h2>REGISTRATION</h2>
     </section>
 
-    <!-- 🔹 Linha Divisória -->
     <div class="section-divider"></div>
 
-    <!-- 🔹 Seção de Detalhes do Torneio -->
-    <section class="challenge-section">
-        <div class="challenge-container">
-            <div class="challenge-text">
-                <h2 style="color: #002147;">The Ultimate 1v1 Challenge!</h2>
-                <p>
-                    The <strong>X1 USA 2025</strong> is the premier 1v1 tournament in the U.S., designed to help young players showcase their skills and compete in an intense and thrilling environment.
-                    With participants from around the world, the tournament provides the perfect stage for top talent in a highly competitive atmosphere.
-                    <br><br>
-                    Don't miss out! Register now and secure your spot in this unparalleled experience of skill, competition, and passion.
-                </p>
-                <a href="https://usax1.com/registration_form.html" class="register-btn" target="_blank">Register Now</a>
-            </div>
-            <div class="challenge-image">
-                <img src="bolaquebrandovidro.png" alt="Player holding ball">
-            </div>
+    <section class="canva-embed-container">
+        <div class="canva-embed">
+            <iframe loading="lazy" 
+                src="https://www.canva.com/design/DAGxSElHGMg/XWKuWYA1DfKVwCnSMWLFsg/view?embed" 
+                allowfullscreen="allowfullscreen" 
+                allow="fullscreen">
+            </iframe>
         </div>
     </section>
 
-    <!-- 🔹 Linha Divisória -->
     <div class="section-divider"></div>
-    
-    <!-- 🔹 Seção Localização (Atualizada) -->
-    <section class="location-section">
-      <h2>📍 Event Location</h2>
-      <p>The next X1 USA event will take place at <strong>12510 Blue Sky Dr, Clarksburg, MD 20871</strong>.</p>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.345632693765!2d-77.2759879242696!3d39.23429177172247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b62b3a1a1a1a1b%3A0x8a1e5c1c1b1b1b1b!2s12510%20Blue%20Sky%20Dr%2C%20Clarksburg%2C%20MD%2020871!5e0!3m2!1sen!2sus!4v1717022947157!5m2!1sen!2sus"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </section>
 
-    <!-- 🔹 Rodapé -->
     <footer>
         <div class="social-icons">
             <a href="https://www.instagram.com/x1usaseries/" target="_blank" aria-label="Instagram">
@@ -218,7 +135,7 @@
                 <i class="fab fa-x-twitter" style="font-size: 30px; color: white;"></i>
             </a>
         </div>
-        <p>&copy; 2025 X1 USA. All rights reserved.</p>
+        <p>© 2025 X1 USA. All rights reserved.</p>
     </footer>
 
     <script>
