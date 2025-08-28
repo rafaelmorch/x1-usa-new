@@ -16,27 +16,21 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            /* Adiciona um pequeno padding no topo para garantir que o menu não fique colado no topo */
+            /* Garante que o conteúdo não fique grudado no header e no footer */
             padding-top: 60px;
         }
-        /* Estilos para a seção de incorporação do Canva, centralizando-a */
-        .canva-embed-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
 
+        /* Estilos do Canva para responsividade, sem o container limitador */
         .canva-embed {
             position: relative; 
             width: 100%; 
+            padding-top: 56.2225%; /* Mantém a proporção de 16:9 (altura do vídeo) */
             height: 0; 
-            padding-top: 56.2225%;
-            padding-bottom: 0; 
             box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
-            margin-top: 1.6em; 
-            margin-bottom: 0.9em; 
+            margin-top: 0; /* Remove a margem superior */
+            margin-bottom: 0; /* Remove a margem inferior */
             overflow: hidden;
-            border-radius: 8px; 
+            border-radius: 0; /* Remove o border-radius para ser full-width */
             will-change: transform;
         }
 
@@ -50,6 +44,7 @@
             padding: 0;
             margin: 0;
         }
+
     </style>
 </head>
 <body>
@@ -71,15 +66,13 @@
         </nav>
     </header>
 
-    <section class="canva-embed-container">
-        <div class="canva-embed">
-            <iframe loading="lazy" 
-                src="https://www.canva.com/design/DAGxSElHGMg/XWKuWYA1DfKVwCnSMWLFsg/view?embed" 
-                allowfullscreen="allowfullscreen" 
-                allow="fullscreen">
-            </iframe>
-        </div>
-    </section>
+    <div class="canva-embed">
+        <iframe loading="lazy" 
+            src="https://www.canva.com/design/DAGxSElHGMg/XWKuWYA1DfKVwCnSMWLFsg/view?embed" 
+            allowfullscreen="allowfullscreen" 
+            allow="fullscreen">
+        </iframe>
+    </div>
 
     <footer>
         <div class="social-icons">
