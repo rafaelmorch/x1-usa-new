@@ -20,18 +20,22 @@
             padding-top: 60px;
         }
 
-        /* Estilos do Canva para responsividade, sem o container limitador */
+        /* Estilos do Canva para responsividade aprimorada no celular */
         .canva-embed {
             position: relative; 
             width: 100%; 
-            padding-top: 56.2225%; /* Mantém a proporção de 16:9 (altura do vídeo) */
+            /* Ajuste a proporção para uma altura maior, ideal para vertical no celular */
+            /* Por exemplo, 150% dará o dobro da altura padrão 16:9 (que seria 56.2225%) */
+            /* Você pode experimentar com este valor, como 100%, 120%, 180% */
+            padding-top: 150%; /* Aumenta a altura para conteúdo vertical */
             height: 0; 
-            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
-            margin-top: 0; /* Remove a margem superior */
-            margin-bottom: 0; /* Remove a margem inferior */
+            box-shadow: none; /* Remove a sombra */
+            margin: 0; 
             overflow: hidden;
-            border-radius: 0; /* Remove o border-radius para ser full-width */
+            border-radius: 0; 
             will-change: transform;
+            /* Garante uma altura mínima para evitar que o conteúdo suma */
+            min-height: 800px; /* Altura mínima para o iframe, ajuste se necessário */
         }
 
         .canva-embed iframe {
@@ -43,6 +47,26 @@
             border: none; 
             padding: 0;
             margin: 0;
+        }
+
+        /* Ajustes específicos para telas muito pequenas, se o Canva precisar de mais altura */
+        @media (max-width: 480px) {
+            .canva-embed {
+                padding-top: 200%; /* Ainda mais altura para celulares pequenos */
+                min-height: 1000px; /* Garante que haja bastante espaço */
+            }
+        }
+
+        /* Se precisar centralizar o conteúdo em desktops novamente, podemos reintroduzir um container */
+        @media (min-width: 769px) {
+            .canva-embed {
+                max-width: 1200px; /* Volta a limitar a largura em telas maiores */
+                margin: 40px auto; /* Centraliza */
+                padding-top: 56.2225%; /* Volta à proporção original para desktop */
+                border-radius: 8px; /* Restaura o arredondamento */
+                box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); /* Restaura a sombra */
+                min-height: unset; /* Remove a altura mínima para desktop */
+            }
         }
 
     </style>
