@@ -15,37 +15,11 @@
     <link rel="icon" type="image/png" href="Logo_X1.png">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* 🔹 Seção de Registro com Fundo */
-        .registration-section {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('./Stadium.png') no-repeat center center;
-            background-size: cover;
+        body {
+            /* Adiciona um pequeno padding no topo para garantir que o menu não fique colado no topo */
+            padding-top: 60px;
         }
-
-        /* 🔹 Texto "REGISTRATION" Responsivo */
-        .registration-section h2 {
-            font-family: 'Lato', sans-serif;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-size: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .registration-section h2 {
-                font-size: 2.5rem;
-            }
-        }
-
-        /* 🔹 Estilos para a seção de incorporação do Canva */
+        /* Estilos para a seção de incorporação do Canva, centralizando-a */
         .canva-embed-container {
             max-width: 1000px;
             margin: 40px auto;
@@ -76,14 +50,6 @@
             padding: 0;
             margin: 0;
         }
-
-        /* 🔹 Linha Divisória */
-        .section-divider {
-            width: 100%;
-            height: 20px;
-            background: linear-gradient(to right, #FF0000, #002147);
-            margin: 20px 0 30px;
-        }
     </style>
 </head>
 <body>
@@ -105,12 +71,6 @@
         </nav>
     </header>
 
-    <section class="registration-section">
-        <h2>REGISTRATION</h2>
-    </section>
-
-    <div class="section-divider"></div>
-
     <section class="canva-embed-container">
         <div class="canva-embed">
             <iframe loading="lazy" 
@@ -120,8 +80,6 @@
             </iframe>
         </div>
     </section>
-
-    <div class="section-divider"></div>
 
     <footer>
         <div class="social-icons">
