@@ -14,15 +14,21 @@
     <title>Registration - X1 USA</title>
     <link rel="icon" type="image/png" href="Logo_X1.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
+        /* Aplicando a fonte a todos os elementos da página */
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
         /* 🔹 ESTILOS DA SEÇÃO PRINCIPAL (HEADER) */
         .hero-section {
-            background-image: url('fundoInscri.jpg'); /* O nome do seu arquivo de imagem */
+            background-image: url('fundoInscri.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             width: 100%;
-            height: 100vh; /* Ocupa a altura total da tela */
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -39,30 +45,30 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem para o texto se destacar */
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
 
         .hero-content {
-            z-index: 2; /* Garante que o conteúdo fique acima do overlay escuro */
+            z-index: 2;
             padding: 0 20px;
         }
         
         .hero-content h1 {
-            font-size: 6rem; /* Tamanho grande */
+            font-size: 6rem;
             font-weight: bold;
             margin-bottom: 0;
             line-height: 1.2;
         }
 
         .hero-content h2 {
-            font-size: 3rem; /* Tamanho médio */
+            font-size: 3rem;
             margin-top: 0;
             line-height: 1.2;
         }
 
         .hero-content p {
-            font-size: 1.5rem; /* Tamanho pequeno */
+            font-size: 1.5rem;
             font-style: italic;
             margin-top: 10px;
         }
@@ -81,14 +87,14 @@
         .divider-line {
             height: 1px;
             background-color: #fff;
-            flex-grow: 1; /* A linha cresce para preencher o espaço */
+            flex-grow: 1;
         }
 
         .divider-square {
             width: 10px;
             height: 10px;
             background-color: #fff;
-            transform: rotate(45deg); /* Gira o quadrado para parecer um diamante */
+            transform: rotate(45deg);
             margin: 0 10px;
         }
 
