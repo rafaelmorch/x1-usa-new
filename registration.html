@@ -50,7 +50,7 @@
         /* 🔹 ESTILOS DA SEÇÃO PRINCIPAL (HEADER) */
         .hero-section {
             width: 100%;
-            height: 70vh; /* Altura reduzida para deixar mais compacto */
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -89,11 +89,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%; /* Linha agora ocupa a largura total */
+            width: 100%;
             padding: 0 20px;
             z-index: 2;
-            margin-top: 20px; /* Espaço reduzido */
-            margin-bottom: 20px; /* Espaço reduzido */
+            margin-top: 0; /* Removendo o espaço superior */
+            margin-bottom: 20px; /* Mantendo um espaço para a próxima seção */
         }
         .divider-line {
             height: 1px;
@@ -110,7 +110,7 @@
         }
         /* 🔹 ESTILOS DA NOVA SEÇÃO DE OPÇÕES */
         .options-section {
-            padding: 30px 20px; /* Espaço reduzido */
+            padding: 30px 20px;
             color: #fff;
             text-align: center;
         }
@@ -118,20 +118,20 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px; /* Espaço reduzido entre as caixas */
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
         .option-item {
-            flex: 1 1 300px; /* Flexbox: Cresce, encolhe e tem uma base de 300px */
-            background-color: rgba(34, 34, 34, 0.5); /* Fundo semi-transparente para as caixas */
+            flex: 1 1 300px;
+            background-color: rgba(34, 34, 34, 0.5);
             border: 1px solid #fff;
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.3s ease, background-color 0.3s ease;
             text-decoration: none;
             color: inherit;
-            min-height: 200px; /* Altura mínima para as caixas, ajuste se precisar */
+            min-height: 200px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -168,7 +168,7 @@
                 align-items: center;
             }
             .option-item {
-                flex-basis: 100%; /* Ocupa a largura total em telas pequenas */
+                flex-basis: 100%;
                 max-width: 400px;
             }
         }
