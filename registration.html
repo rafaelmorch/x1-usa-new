@@ -17,10 +17,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Define a fonte padrão para o corpo, que será herdada pelo cabeçalho */
+        /* Define o fundo para toda a página */
         body {
             font-family: Arial, sans-serif;
-            background-color: #000;
+            background-image: url('fundoInscri.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+        }
+        /* Camada escura que cobre toda a página */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparência para ver o fundo */
+            z-index: -1; /* Garante que ela fique atrás do conteúdo */
         }
 
         /* Aplicando a fonte "Bebas Neue" para o cabeçalho, como no site original */
@@ -35,10 +49,6 @@
 
         /* 🔹 ESTILOS DA SEÇÃO PRINCIPAL (HEADER) */
         .hero-section {
-            background-image: url('fundoInscri.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             width: 100%;
             height: 100vh;
             display: flex;
@@ -49,18 +59,7 @@
             color: #fff;
             position: relative;
         }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
+        
         .hero-content {
             z-index: 2;
             padding: 0 20px;
@@ -109,7 +108,7 @@
         }
         /* 🔹 ESTILOS DA NOVA SEÇÃO DE OPÇÕES */
         .options-section {
-            background-color: #000;
+            /* Fundo escuro removido, pois o overlay já faz isso */
             padding: 60px 20px;
             color: #fff;
             text-align: center;
@@ -124,7 +123,7 @@
         }
         .option-item {
             flex: 1 1 300px; /* Flexbox: Cresce, encolhe e tem uma base de 300px */
-            background-color: #222;
+            background-color: rgba(34, 34, 34, 0.5); /* Fundo semi-transparente para as caixas */
             border: 1px solid #fff;
             padding: 20px;
             border-radius: 10px;
@@ -138,7 +137,7 @@
         }
         .option-item:hover {
             transform: translateY(-10px);
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.7);
         }
         .option-item h3 {
             font-family: 'Rowdies', sans-serif;
@@ -175,6 +174,7 @@
     </style>
 </head>
 <body>
+    <div class="background-overlay"></div>
 
     <header>
         <nav>
