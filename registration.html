@@ -15,60 +15,95 @@
     <link rel="icon" type="image/png" href="Logo_X1.png">
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            /* Garante que o conteúdo não fique grudado no header e no footer */
-            padding-top: 60px;
+        /* 🔹 ESTILOS DA SEÇÃO PRINCIPAL (HEADER) */
+        .hero-section {
+            background-image: url('fundoInscri.jpg'); /* O nome do seu arquivo de imagem */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh; /* Ocupa a altura total da tela */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
         }
 
-        /* Estilos do Canva para responsividade aprimorada no celular */
-        .canva-embed {
-            position: relative; 
-            width: 100%; 
-            /* Ajuste a proporção para uma altura maior, ideal para vertical no celular */
-            /* Por exemplo, 150% dará o dobro da altura padrão 16:9 (que seria 56.2225%) */
-            /* Você pode experimentar com este valor, como 100%, 120%, 180% */
-            padding-top: 150%; /* Aumenta a altura para conteúdo vertical */
-            height: 0; 
-            box-shadow: none; /* Remove a sombra */
-            margin: 0; 
-            overflow: hidden;
-            border-radius: 0; 
-            will-change: transform;
-            /* Garante uma altura mínima para evitar que o conteúdo suma */
-            min-height: 800px; /* Altura mínima para o iframe, ajuste se necessário */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem para o texto se destacar */
+            z-index: 1;
         }
 
-        .canva-embed iframe {
-            position: absolute; 
-            width: 100%; 
-            height: 100%; 
-            top: 0; 
-            left: 0; 
-            border: none; 
-            padding: 0;
-            margin: 0;
+        .hero-content {
+            z-index: 2; /* Garante que o conteúdo fique acima do overlay escuro */
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 6rem; /* Tamanho grande */
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 1.2;
         }
 
-        /* Ajustes específicos para telas muito pequenas, se o Canva precisar de mais altura */
-        @media (max-width: 480px) {
-            .canva-embed {
-                padding-top: 200%; /* Ainda mais altura para celulares pequenos */
-                min-height: 1000px; /* Garante que haja bastante espaço */
+        .hero-content h2 {
+            font-size: 3rem; /* Tamanho médio */
+            margin-top: 0;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem; /* Tamanho pequeno */
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* 🔹 ESTILOS DA LINHA DIVISÓRIA */
+        .divider-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
+            z-index: 2;
+        }
+
+        .divider-line {
+            height: 1px;
+            background-color: #fff;
+            flex-grow: 1; /* A linha cresce para preencher o espaço */
+        }
+
+        .divider-square {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            transform: rotate(45deg); /* Gira o quadrado para parecer um diamante */
+            margin: 0 10px;
+        }
+
+        /* 🔹 Responsividade */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
             }
         }
-
-        /* Se precisar centralizar o conteúdo em desktops novamente, podemos reintroduzir um container */
-        @media (min-width: 769px) {
-            .canva-embed {
-                max-width: 1200px; /* Volta a limitar a largura em telas maiores */
-                margin: 40px auto; /* Centraliza */
-                padding-top: 56.2225%; /* Volta à proporção original para desktop */
-                border-radius: 8px; /* Restaura o arredondamento */
-                box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); /* Restaura a sombra */
-                min-height: unset; /* Remove a altura mínima para desktop */
-            }
-        }
-
     </style>
 </head>
 <body>
@@ -90,13 +125,19 @@
         </nav>
     </header>
 
-    <div class="canva-embed">
-        <iframe loading="lazy" 
-            src="https://www.canva.com/design/DAGxSElHGMg/XWKuWYA1DfKVwCnSMWLFsg/view?embed" 
-            allowfullscreen="allowfullscreen" 
-            allow="fullscreen">
-        </iframe>
-    </div>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>X1 USA</h1>
+            <h2>TOURNAMENT</h2>
+            <p>DISCOVER OUR OPTIONS</p>
+        </div>
+
+        <div class="divider-container">
+            <div class="divider-line"></div>
+            <div class="divider-square"></div>
+            <div class="divider-line"></div>
+        </div>
+    </section>
 
     <footer>
         <div class="social-icons">
