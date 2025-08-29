@@ -82,7 +82,7 @@
             font-size: 1.5rem;
             font-style: normal;
             margin-top: 10px;
-            margin-bottom: 0; /* Removendo o espaço abaixo do parágrafo */
+            margin-bottom: 40px; /* Mais espaço abaixo do parágrafo */
         }
 
         /* 🔹 ESTILOS DA LINHA DIVISÓRIA */
@@ -93,8 +93,6 @@
             width: 100%;
             padding: 0 20px;
             z-index: 2;
-            margin-top: 0; /* Removendo o espaço superior */
-            margin-bottom: 20px; /* Mantendo um espaço para a próxima seção */
         }
         .divider-line {
             height: 1px;
@@ -103,10 +101,10 @@
         }
 
         .divider-square {
-            width: 10px;
-            height: 10px;
+            width: 20%;        /* Agora ocupa 20% da largura do container */
+            height: 1px;        /* Mesma altura da linha */
             background-color: #fff;
-            transform: rotate(45deg);
+            transform: none;    /* Remove a rotação para virar um retângulo */
             margin: 0 10px;
         }
         /* 🔹 ESTILOS DA NOVA SEÇÃO DE OPÇÕES */
@@ -200,14 +198,15 @@
             <h1>X1 USA</h1>
             <h2>TOURNAMENT</h2>
             <p>DISCOVER OUR OPTIONS</p>
-            <div class="divider-container">
-                <div class="divider-line"></div>
-                <div class="divider-square"></div>
-                <div class="divider-line"></div>
-            </div>
         </div>
     </section>
     
+    <div class="divider-container">
+        <div class="divider-line"></div>
+        <div class="divider-square"></div>
+        <div class="divider-line"></div>
+    </div>
+
     <section class="options-section">
         <div class="options-container">
             <a href="https://pci.jotform.com/form/252384822978168" class="option-item" target="_blank">
