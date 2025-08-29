@@ -14,10 +14,21 @@
     <title>Registration - X1 USA</title>
     <link rel="icon" type="image/png" href="Logo_X1.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Aplicando a fonte a todos os elementos da página */
+        /* Define a fonte padrão para o corpo, que será herdada pelo cabeçalho */
         body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Aplicando a fonte "Bebas Neue" para o cabeçalho, como no site original */
+        header .logo h1 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        /* Aplicando a fonte "Rowdies" apenas à nova seção principal */
+        .hero-section * {
             font-family: 'Rowdies', sans-serif;
         }
 
@@ -69,7 +80,7 @@
 
         .hero-content p {
             font-size: 1.5rem;
-            font-style: normal; /* Removendo o itálico para combinar com a fonte */
+            font-style: normal;
             margin-top: 10px;
         }
 
@@ -78,12 +89,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 80%;
-            max-width: 600px;
-            margin-top: 20px;
+            width: 100%; /* Linha agora ocupa a largura total */
+            padding: 0 20px;
             z-index: 2;
         }
-
         .divider-line {
             height: 1px;
             background-color: #fff;
@@ -136,11 +145,11 @@
             <h1>X1 USA</h1>
             <h2>TOURNAMENT</h2>
             <p>DISCOVER OUR OPTIONS</p>
-            <div class="divider-container">
-                <div class="divider-line"></div>
-                <div class="divider-square"></div>
-                <div class="divider-line"></div>
-            </div>
+        </div>
+        <div class="divider-container">
+            <div class="divider-line"></div>
+            <div class="divider-square"></div>
+            <div class="divider-line"></div>
         </div>
     </section>
 
