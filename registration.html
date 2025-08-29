@@ -19,7 +19,6 @@
     <style>
         /* Define o fundo para toda a página */
         body {
-            font-family: Arial, sans-serif;
             background-image: url('fundoInscri.jpg');
             background-size: cover;
             background-position: center;
@@ -37,11 +36,8 @@
             z-index: -1; /* Garante que ela fique atrás do conteúdo */
         }
 
-        /* Aplicando a fonte "Bebas Neue" para o cabeçalho, garantindo que não seja substituída */
-        header .logo h1 {
-            font-family: 'Bebas Neue', sans-serif !important;
-        }
-
+        /* Removendo a fonte do cabeçalho daqui, pois ela está em style.css */
+        
         /* Aplicando a fonte "Rowdies" apenas à nova seção principal */
         .hero-section * {
             font-family: 'Rowdies', sans-serif;
@@ -169,7 +165,7 @@
             }
             .option-item {
                 flex-basis: 100%;
-                width: 100%; /* Garante que a largura seja 100% */
+                width: 100%;
             }
         }
     </style>
