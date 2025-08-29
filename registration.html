@@ -20,6 +20,7 @@
         /* Define a fonte padrão para o corpo, que será herdada pelo cabeçalho */
         body {
             font-family: Arial, sans-serif;
+            background-color: #000;
         }
 
         /* Aplicando a fonte "Bebas Neue" para o cabeçalho, como no site original */
@@ -106,6 +107,50 @@
             transform: rotate(45deg);
             margin: 0 10px;
         }
+        /* 🔹 ESTILOS DA NOVA SEÇÃO DE OPÇÕES */
+        .options-section {
+            background-color: #000;
+            padding: 60px 20px;
+            color: #fff;
+            text-align: center;
+        }
+        .options-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .option-item {
+            flex: 1 1 300px; /* Flexbox: Cresce, encolhe e tem uma base de 300px */
+            background-color: #222;
+            border: 1px solid #fff;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            min-height: 200px; /* Altura mínima para as caixas, ajuste se precisar */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .option-item:hover {
+            transform: translateY(-10px);
+            background-color: #444;
+        }
+        .option-item h3 {
+            font-family: 'Rowdies', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .option-item p {
+            font-family: 'Rowdies', sans-serif;
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-top: 0;
+        }
 
         /* 🔹 Responsividade */
         @media (max-width: 768px) {
@@ -117,6 +162,14 @@
             }
             .hero-content p {
                 font-size: 1rem;
+            }
+            .options-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .option-item {
+                flex-basis: 100%; /* Ocupa a largura total em telas pequenas */
+                max-width: 400px;
             }
         }
     </style>
@@ -150,6 +203,22 @@
             <div class="divider-line"></div>
             <div class="divider-square"></div>
             <div class="divider-line"></div>
+        </div>
+    </section>
+
+    <section class="options-section">
+        <div class="options-container">
+            <a href="https://pci.jotform.com/form/252384822978168" class="option-item" target="_blank">
+                <h3>X1 USA ADULT 1V1</h3>
+                <p>WASHINGTON DC<br>11/15/2025</p>
+            </a>
+            <a href="https://pci.jotform.com/form/251547414948162" class="option-item" target="_blank">
+                <h3>X1 USA KIDS 3V3</h3>
+                <p>WASHINGTON DC<br>11/16/2025</p>
+            </a>
+            <a href="https://socceremporiumstore.us/?srsltid=AfmBOornQ4MZMkakR7pKY7eQURUknXq87aB5mK_4Io7y17kKHt6ognit" class="option-item" target="_blank">
+                <h3>Conheça os produtos X1 USA</h3>
+            </a>
         </div>
     </section>
 
