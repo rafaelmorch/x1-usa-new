@@ -36,6 +36,17 @@
             z-index: -1;
         }
 
+        /* Estilos do logo no cabeçalho */
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        .header-logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        
         /* Aplicando a fonte "Rowdies" apenas à nova seção principal */
         .hero-section * {
             font-family: 'Rowdies', sans-serif;
@@ -51,9 +62,17 @@
             align-items: center;
             text-align: center;
             color: #fff;
-            position: relative;
+            position: relative; /* Necessário para posicionar o logo no corpo */
         }
         
+        /* 🔹 NOVO LOGO NO CORPO DA PÁGINA */
+        .body-logo {
+            position: absolute;
+            top: 50px; /* Ajuste a distância do topo conforme necessário */
+            left: 50px; /* Ajuste a distância da esquerda conforme necessário */
+            width: 150px; /* Tamanho do logo no corpo */
+        }
+
         .hero-content {
             z-index: 2;
             padding: 0 20px;
@@ -78,7 +97,7 @@
             margin-top: 10px;
             margin-bottom: 40px;
         }
-
+        
         /* 🔹 ESTILOS DA LINHA DIVISÓRIA */
         .divider-container {
             display: flex;
@@ -171,7 +190,8 @@
                 flex-basis: 100%;
                 width: 100%;
             }
-            .header-logo {
+            /* Esconde o logo do corpo em telas pequenas */
+            .body-logo {
                 display: none;
             }
         }
@@ -198,6 +218,7 @@
     </header>
 
     <section class="hero-section">
+        <img src="Logo_X1.png" alt="X1 USA Logo" class="body-logo">
         <div class="hero-content">
             <h1>X1 USA</h1>
             <h2>TOURNAMENT</h2>
