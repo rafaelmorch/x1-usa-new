@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LEMPWRQZ5W"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEMPWRQZ5W"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -74,6 +73,12 @@
             font-size: 1.4rem; /* Aumenta a fonte */
             font-weight: bold;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra para info-box */
+        }
+
+        /* 🔹 Novo estilo para destacar o texto */
+        .highlight-text {
+            font-size: 1.2em; /* Aumenta em 20% em relação ao texto da caixa */
+            font-weight: bold; /* Garante que fique em negrito */
         }
 
         /* 🔹 Flyer do Evento */
@@ -206,7 +211,7 @@
 
             <div class="info-box">📍 Location: 2400 Bel Pre Road S. Spring, MD 20906 (Argyle Middle School)</div>
             <div class="info-box">📆 Date: November 15 and 16, 2025</div>
-            <div class="info-box">⚽ Age Groups: 1v1 Aduts, and 3v3 U11, U13 and U15</div>
+            <div class="info-box">⚽ Age Groups: <span class="highlight-text">1v1</span> Aduts, and <span class="highlight-text">3v3</span> U11, U13 and U15</div>
             
             <div class="event-flyer-container">
                 <h3>Official Event Flyer</h3>
@@ -243,4 +248,5 @@
     </script>
 
 </body>
-</html>
+    </html>
+    
