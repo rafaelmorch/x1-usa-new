@@ -23,22 +23,22 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+            background-attachment: fixed;
         }
-        /* Camada escura que cobre toda a página */
         .background-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Transparência para ver o fundo */
-            z-index: -1; /* Garante que ela fique atrás do conteúdo */
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
         }
 
-        /* Removendo a fonte do cabeçalho daqui, pois ela está em style.css */
-        
-        /* Aplicando a fonte "Rowdies" apenas à nova seção principal */
+        header .logo h1 {
+            font-family: 'Bebas Neue', sans-serif !important;
+        }
+
         .hero-section * {
             font-family: 'Rowdies', sans-serif;
         }
@@ -147,7 +147,13 @@
             opacity: 0.7;
             margin-top: 0;
         }
-
+        /* Estilo para as imagens dentro das caixas de opção */
+        .option-item img {
+            width: 100%; /* Garante que a imagem ocupe 100% da largura da caixa */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px; /* Adiciona um espaço abaixo da imagem */
+        }
         /* 🔹 Responsividade */
         @media (max-width: 768px) {
             .hero-content h1 {
@@ -174,9 +180,9 @@
     <div class="background-overlay"></div>
 
     <header>
+        <img src="Logo_X1.png" alt="X1 Logo" class="header-logo-desktop">
         <nav>
             <div class="logo">
-                <img src="Logo_X1.png" alt="X1 Logo">
                 <h1>X1 USA</h1>
             </div>
             <ul class="nav-links">
@@ -207,14 +213,17 @@
     <section class="options-section">
         <div class="options-container">
             <a href="https://pci.jotform.com/form/252384822978168" class="option-item" target="_blank">
+                <img src="Regis1.jpeg" alt="X1 USA Adult 1v1">
                 <h3>X1 USA ADULT 1V1</h3>
                 <p>WASHINGTON DC<br>11/15/2025</p>
             </a>
             <a href="https://pci.jotform.com/form/251547414948162" class="option-item" target="_blank">
+                <img src="Regis2.jpeg" alt="X1 USA Kids 3v3">
                 <h3>X1 USA KIDS 3V3</h3>
                 <p>WASHINGTON DC<br>11/16/2025</p>
             </a>
             <a href="https://socceremporiumstore.us/?srsltid=AfmBOornQ4MZMkakR7pKY7eQURUknXq87aB5mK_4Io7y17kKHt6ognit" class="option-item" target="_blank">
+                <img src="Regis3.jpeg" alt="Conheça os produtos X1 USA">
                 <h3>Conheça os produtos X1 USA</h3>
             </a>
         </div>
